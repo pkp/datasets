@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict A8ra9pqhTltJU5mQa1ZqIyV8uftKGdA8lXTEnkrkarn9qu2eceBHBJF5IQvdsV8
+\restrict mur9JTqDzjZupJofPDEKlVgmTIr9RJvqCc9AUEbvHV8WUsLj06oLxUIPshIpOZY
 
 -- Dumped from database version 16.16 (Ubuntu 16.16-1.pgdg24.04+1)
 -- Dumped by pg_dump version 16.16 (Ubuntu 16.16-1.pgdg24.04+1)
@@ -4811,36 +4811,36 @@ COPY public.data_object_tombstones (tombstone_id, data_object_id, date_deleted, 
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	1	0	1	0	3	8	2026-11-14 12:10:16
-2	1	1	3	1	3	1	2026-11-14 12:10:29
-3	1	0	4	0	3	7	2026-11-14 12:10:35
-4	2	0	1	0	3	8	2026-11-14 12:12:36
-5	2	2	3	1	6	11	2026-11-14 12:12:48
-6	3	0	1	0	3	8	2026-11-14 12:13:08
-7	3	3	3	1	3	1	2026-11-14 12:13:18
-8	5	0	1	0	3	8	2026-11-14 12:13:49
-9	5	4	3	1	3	1	2026-11-14 12:13:59
-10	5	0	4	0	3	7	2026-11-14 12:14:04
-11	6	0	1	0	3	8	2026-11-14 12:14:26
-12	6	5	3	1	3	1	2026-11-14 12:14:36
-13	6	0	4	0	3	7	2026-11-14 12:14:42
-14	7	0	1	0	3	8	2026-11-14 12:15:01
-15	9	0	1	0	3	8	2026-11-14 12:15:48
-16	9	7	3	1	3	1	2026-11-14 12:15:58
-17	9	0	4	0	3	7	2026-11-14 12:16:03
-18	10	0	1	0	3	8	2026-11-14 12:16:25
-19	12	0	1	0	3	8	2026-11-14 12:17:18
-20	13	0	1	0	3	8	2026-11-14 12:17:43
-21	13	10	3	1	3	2	2026-11-14 12:18:29
-22	15	0	1	0	3	8	2026-11-14 12:18:55
-23	15	11	3	1	3	1	2026-11-14 12:19:05
-24	15	0	4	0	3	7	2026-11-14 12:19:10
-25	17	0	1	0	3	8	2026-11-14 12:19:42
-26	17	12	3	1	3	1	2026-11-14 12:19:52
-27	17	0	4	0	3	7	2026-11-14 12:19:57
-28	18	0	1	0	3	9	2026-11-14 12:21:15
-29	19	0	1	0	3	8	2026-11-14 12:21:30
-30	19	13	3	1	3	1	2026-11-14 12:21:40
+1	1	0	1	0	3	8	2026-11-15 12:45:09
+2	1	1	3	1	3	1	2026-11-15 12:45:20
+3	1	0	4	0	3	7	2026-11-15 12:45:25
+4	2	0	1	0	3	8	2026-11-15 12:47:02
+5	2	2	3	1	6	11	2026-11-15 12:47:11
+6	3	0	1	0	3	8	2026-11-15 12:47:26
+7	3	3	3	1	3	1	2026-11-15 12:47:34
+8	5	0	1	0	3	8	2026-11-15 12:47:58
+9	5	4	3	1	3	1	2026-11-15 12:48:06
+10	5	0	4	0	3	7	2026-11-15 12:48:10
+11	6	0	1	0	3	8	2026-11-15 12:48:26
+12	6	5	3	1	3	1	2026-11-15 12:48:34
+13	6	0	4	0	3	7	2026-11-15 12:48:38
+14	7	0	1	0	3	8	2026-11-15 12:48:52
+15	9	0	1	0	3	8	2026-11-15 12:49:29
+16	9	7	3	1	3	1	2026-11-15 12:49:37
+17	9	0	4	0	3	7	2026-11-15 12:49:41
+18	10	0	1	0	3	8	2026-11-15 12:49:57
+19	12	0	1	0	3	8	2026-11-15 12:50:38
+20	13	0	1	0	3	8	2026-11-15 12:50:58
+21	13	10	3	1	3	2	2026-11-15 12:51:33
+22	15	0	1	0	3	8	2026-11-15 12:51:52
+23	15	11	3	1	3	1	2026-11-15 12:52:00
+24	15	0	4	0	3	7	2026-11-15 12:52:04
+25	17	0	1	0	3	8	2026-11-15 12:52:27
+26	17	12	3	1	3	1	2026-11-15 12:52:35
+27	17	0	4	0	3	7	2026-11-15 12:52:38
+28	18	0	1	0	3	9	2026-11-15 12:53:31
+29	19	0	1	0	3	8	2026-11-15 12:53:43
+30	19	13	3	1	3	1	2026-11-15 12:53:51
 \.
 
 
@@ -4849,78 +4849,78 @@ COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, st
 --
 
 COPY public.email_log (log_id, assoc_type, assoc_id, sender_id, date_sent, event_type, from_address, recipients, cc_recipients, bcc_recipients, subject, body) FROM stdin;
-1	1048585	1	17	2026-11-14 12:10:12	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Alan Mwandenga" <amwandenga@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Alan Mwandenga:<br />\n<br />\nThank you for submitting the manuscript, &quot;Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/1' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/1</a><br />\nUsername: amwandenga<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-2	1048585	1	3	2026-11-14 12:10:20	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Julie Janssen:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence"<br><br></p>\r\n<p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-3	1048585	1	3	2026-11-14 12:10:24	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Aisla McCrae:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence"<br><br></p>\r\n<p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-4	1048585	1	3	2026-11-14 12:10:28	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence"<br><br></p>\r\n<p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-5	1048585	1	3	2026-11-14 12:10:30	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Alan Mwandenga" <amwandenga@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Alan Mwandenga:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-6	1048585	1	3	2026-11-14 12:10:35	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Alan Mwandenga" <amwandenga@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Alan Mwandenga:<br><br>The editing of your submission, "Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence," is complete. We are now sending it to production.<br><br>Submission URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">http://localhost/index.php/publicknowledge/authorDashboard/submission/1</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-7	1048585	2	18	2026-11-14 12:12:31	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Carlo Corino" <ccorino@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Carlo Corino:<br />\n<br />\nThank you for submitting the manuscript, &quot;The influence of lactation on the quantity and quality of cashmere production&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/2' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/2</a><br />\nUsername: ccorino<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-8	1048585	2	6	2026-11-14 12:12:48	805306372	"Minoti Inoue" <minoue@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	\N	\N	[JPKJPK] Editor Recommendation	<p>Daniel Barnes, David Buskins, Stephanie Berardo:<br><br>The recommendation regarding the submission to Journal of Public Knowledge, "The influence of lactation on the quantity and quality of cashmere production" is: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-9	1048585	3	19	2026-11-14 12:13:04	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Catherine Kwantes" <ckwantes@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Catherine Kwantes:<br />\n<br />\nThank you for submitting the manuscript, &quot;The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/3' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/3</a><br />\nUsername: ckwantes<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-10	1048585	3	3	2026-11-14 12:13:13	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Aisla McCrae:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=3' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=3</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence"<br><br></p>\r\n<p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-11	1048585	3	3	2026-11-14 12:13:16	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=3' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=3</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence"<br><br></p>\r\n<p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-12	1048585	3	3	2026-11-14 12:13:18	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Catherine Kwantes" <ckwantes@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Catherine Kwantes:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-13	1048585	4	20	2026-11-14 12:13:35	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Craig Montgomerie" <cmontgomerie@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Craig Montgomerie:<br />\n<br />\nThank you for submitting the manuscript, &quot;Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/4' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/4</a><br />\nUsername: cmontgomerie<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-14	1048585	4	20	2026-11-14 12:13:35	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Mark Irvine" <mirvine@mailinator.com>	\N	\N	[JPKJPK] Submission Acknowledgement	Hello,<br />\n<br />\nCraig Montgomerie has submitted the manuscript, &quot;Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice&quot; to Journal of Public Knowledge. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-15	1048585	5	21	2026-11-14 12:13:45	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Diaga Diouf:<br />\n<br />\nThank you for submitting the manuscript, &quot;Genetic transformation of forest trees&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/5' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/5</a><br />\nUsername: ddiouf<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-16	1048585	5	3	2026-11-14 12:13:54	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Paul Hudson:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Genetic transformation of forest trees," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Genetic transformation of forest trees"<br><br></p>\r\n<p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-17	1048585	5	3	2026-11-14 12:13:57	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Genetic transformation of forest trees," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Genetic transformation of forest trees"<br><br></p>\r\n<p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-18	1048585	5	3	2026-11-14 12:13:59	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Diaga Diouf:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "Genetic transformation of forest trees".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-19	1048585	5	3	2026-11-14 12:14:04	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Diaga Diouf:<br><br>The editing of your submission, "Genetic transformation of forest trees," is complete. We are now sending it to production.<br><br>Submission URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">http://localhost/index.php/publicknowledge/authorDashboard/submission/5</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-20	1048585	6	22	2026-11-14 12:14:22	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Dana Phillips" <dphillips@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Dana Phillips:<br />\n<br />\nThank you for submitting the manuscript, &quot;Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/6' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/6</a><br />\nUsername: dphillips<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-21	1048585	6	3	2026-11-14 12:14:31	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Julie Janssen:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=6' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=6</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement"<br><br></p>\r\n<p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-22	1048585	6	3	2026-11-14 12:14:35	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=6' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=6</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement"<br><br></p>\r\n<p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-23	1048585	6	3	2026-11-14 12:14:36	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dana Phillips" <dphillips@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Dana Phillips:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-24	1048585	6	3	2026-11-14 12:14:42	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dana Phillips" <dphillips@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Dana Phillips:<br><br>The editing of your submission, "Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement," is complete. We are now sending it to production.<br><br>Submission URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/6">http://localhost/index.php/publicknowledge/authorDashboard/submission/6</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-25	1048585	7	23	2026-11-14 12:14:56	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Domatilia Sokoloff" <dsokoloff@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Domatilia Sokoloff:<br />\n<br />\nThank you for submitting the manuscript, &quot;Developing efficacy beliefs in the classroom&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/7' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/7</a><br />\nUsername: dsokoloff<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-26	1048585	7	3	2026-11-14 12:15:05	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Paul Hudson:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Developing efficacy beliefs in the classroom," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Developing efficacy beliefs in the classroom"<br><br></p>\r\n<p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-27	1048585	7	3	2026-11-14 12:15:09	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Aisla McCrae:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Developing efficacy beliefs in the classroom," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Developing efficacy beliefs in the classroom"<br><br></p>\r\n<p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-28	1048585	7	3	2026-11-14 12:15:13	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Developing efficacy beliefs in the classroom," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Developing efficacy beliefs in the classroom"<br><br></p>\r\n<p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-29	1048585	7	8	2026-11-14 12:15:17	1073741829	"Paul Hudson" <phudson@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	\N	\N	[JPKJPK] Able to Review	Editors:<br />\n<br />\nI am able and willing to review the submission, &quot;Developing efficacy beliefs in the classroom,&quot; for Journal of Public Knowledge. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-12-12, if not before.<br />\n<br />\nPaul Hudson<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-30	1048585	8	24	2026-11-14 12:15:34	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Elinor Ostrom" <eostrom@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Elinor Ostrom:<br />\n<br />\nThank you for submitting the manuscript, &quot;Traditions and Trends in the Study of the Commons&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/8' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/8</a><br />\nUsername: eostrom<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-31	1048585	8	24	2026-11-14 12:15:34	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Frank van Laerhoven" <fvanlaerhoven@mailinator.com>	\N	\N	[JPKJPK] Submission Acknowledgement	Hello,<br />\n<br />\nElinor Ostrom has submitted the manuscript, &quot;Traditions and Trends in the Study of the Commons&quot; to Journal of Public Knowledge. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-32	1048585	9	25	2026-11-14 12:15:43	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Fabio Paglieri" <fpaglieri@mailinator.com>	\N	minoue@mailinator.com	[JPKJPK] Submission Acknowledgement	Fabio Paglieri:<br />\n<br />\nThank you for submitting the manuscript, &quot;Hansen &amp; Pinto: Reason Reclaimed&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/9' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/9</a><br />\nUsername: fpaglieri<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-33	1048585	9	3	2026-11-14 12:15:53	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Julie Janssen:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Hansen &amp; Pinto: Reason Reclaimed," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=9' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=9</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Hansen &amp; Pinto: Reason Reclaimed"<br><br></p>\r\n<p>None.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-34	1048585	9	3	2026-11-14 12:15:57	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Hansen &amp; Pinto: Reason Reclaimed," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=9' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=9</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Hansen &amp; Pinto: Reason Reclaimed"<br><br></p>\r\n<p>None.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-35	1048585	9	3	2026-11-14 12:15:58	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Fabio Paglieri" <fpaglieri@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Fabio Paglieri:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "Hansen &amp; Pinto: Reason Reclaimed".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-36	1048585	9	3	2026-11-14 12:16:03	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Fabio Paglieri" <fpaglieri@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Fabio Paglieri:<br><br>The editing of your submission, "Hansen &amp; Pinto: Reason Reclaimed," is complete. We are now sending it to production.<br><br>Submission URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/9">http://localhost/index.php/publicknowledge/authorDashboard/submission/9</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-37	1048585	10	26	2026-11-14 12:16:20	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"John Novak" <jnovak@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	John Novak:<br />\n<br />\nThank you for submitting the manuscript, &quot;Condensing Water Availability Models to Focus on Specific Water Management Systems&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/10' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/10</a><br />\nUsername: jnovak<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-38	1048585	10	3	2026-11-14 12:16:30	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Aisla McCrae:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Condensing Water Availability Models to Focus on Specific Water Management Systems," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=10' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=10</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Condensing Water Availability Models to Focus on Specific Water Management Systems"<br><br></p>\r\n<p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-39	1048585	10	3	2026-11-14 12:16:34	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Condensing Water Availability Models to Focus on Specific Water Management Systems," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=10' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=10</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Condensing Water Availability Models to Focus on Specific Water Management Systems"<br><br></p>\r\n<p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-40	1048585	10	9	2026-11-14 12:16:38	1073741829	"Aisla McCrae" <amccrae@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	\N	\N	[JPKJPK] Able to Review	Editors:<br />\n<br />\nI am able and willing to review the submission, &quot;Condensing Water Availability Models to Focus on Specific Water Management Systems,&quot; for Journal of Public Knowledge. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-12-12, if not before.<br />\n<br />\nAisla McCrae<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-41	1048585	10	10	2026-11-14 12:16:46	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	\N	\N	[JPKJPK] Able to Review	Editors:<br />\n<br />\nI am able and willing to review the submission, &quot;Condensing Water Availability Models to Focus on Specific Water Management Systems,&quot; for Journal of Public Knowledge. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-12-12, if not before.<br />\n<br />\nAdela Gallego<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-42	1048585	11	27	2026-11-14 12:17:02	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Karim Al-Khafaji" <kalkhafaji@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Karim Al-Khafaji:<br />\n<br />\nThank you for submitting the manuscript, &quot;Learning Sustainable Design through Service&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/11' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/11</a><br />\nUsername: kalkhafaji<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-43	1048585	11	27	2026-11-14 12:17:03	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Margaret Morse" <mmorse@mailinator.com>	\N	\N	[JPKJPK] Submission Acknowledgement	Hello,<br />\n<br />\nKarim Al-Khafaji has submitted the manuscript, &quot;Learning Sustainable Design through Service&quot; to Journal of Public Knowledge. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-44	1048585	12	28	2026-11-14 12:17:13	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Leo Christopher" <lchristopher@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Leo Christopher:<br />\n<br />\nThank you for submitting the manuscript, &quot;Sodium butyrate improves growth performance of weaned piglets during the first period after weaning&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/12' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/12</a><br />\nUsername: lchristopher<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-45	1048585	12	3	2026-11-14 12:17:23	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Julie Janssen:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Sodium butyrate improves growth performance of weaned piglets during the first period after weaning," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Sodium butyrate improves growth performance of weaned piglets during the first period after weaning"<br><br></p>\r\n<p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-46	1048585	12	3	2026-11-14 12:17:27	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Paul Hudson:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Sodium butyrate improves growth performance of weaned piglets during the first period after weaning," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Sodium butyrate improves growth performance of weaned piglets during the first period after weaning"<br><br></p>\r\n<p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-47	1048585	13	29	2026-11-14 12:17:37	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Lise Kumiega" <lkumiega@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Lise Kumiega:<br />\n<br />\nThank you for submitting the manuscript, &quot;Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/13' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/13</a><br />\nUsername: lkumiega<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-48	1048585	13	3	2026-11-14 12:17:48	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Julie Janssen:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions"<br><br></p>\r\n<p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-49	1048585	13	3	2026-11-14 12:17:52	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Aisla McCrae:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions"<br><br></p>\r\n<p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-50	1048585	13	3	2026-11-14 12:17:56	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions"<br><br></p>\r\n<p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-51	1048585	13	7	2026-11-14 12:18:00	1073741829	"Julie Janssen" <jjanssen@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>	\N	\N	[JPKJPK] Able to Review	Editors:<br />\n<br />\nI am able and willing to review the submission, &quot;Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions,&quot; for Journal of Public Knowledge. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-12-12, if not before.<br />\n<br />\nJulie Janssen<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-52	1048585	13	9	2026-11-14 12:18:08	1073741829	"Aisla McCrae" <amccrae@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>	\N	\N	[JPKJPK] Able to Review	Editors:<br />\n<br />\nI am able and willing to review the submission, &quot;Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions,&quot; for Journal of Public Knowledge. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-12-12, if not before.<br />\n<br />\nAisla McCrae<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-53	1048585	13	10	2026-11-14 12:18:17	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>	\N	\N	[JPKJPK] Able to Review	Editors:<br />\n<br />\nI am able and willing to review the submission, &quot;Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions,&quot; for Journal of Public Knowledge. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-12-12, if not before.<br />\n<br />\nAdela Gallego<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-54	1048585	13	3	2026-11-14 12:18:30	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Lise Kumiega" <lkumiega@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	Lise Kumiega:<br />\r\n<br />\r\nWe have reached a decision regarding your submission to Journal of Public Knowledge, &quot;Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions&quot;.<br />\r\n<br />\r\nOur decision is: Revisions Required<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-55	1048585	14	30	2026-11-14 12:18:40	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Patricia Daniel" <pdaniel@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Patricia Daniel:<br />\n<br />\nThank you for submitting the manuscript, &quot;Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/14' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/14</a><br />\nUsername: pdaniel<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-56	1048585	15	31	2026-11-14 12:18:49	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Rana Baiyewu" <rbaiyewu@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Rana Baiyewu:<br />\n<br />\nThank you for submitting the manuscript, &quot;Yam diseases and its management in Nigeria&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/15' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/15</a><br />\nUsername: rbaiyewu<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-57	1048585	15	3	2026-11-14 12:19:00	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Paul Hudson:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Yam diseases and its management in Nigeria," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=15' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=15</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Yam diseases and its management in Nigeria"<br><br></p>\r\n<p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-58	1048585	15	3	2026-11-14 12:19:04	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Aisla McCrae:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Yam diseases and its management in Nigeria," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=15' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=15</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Yam diseases and its management in Nigeria"<br><br></p>\r\n<p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-59	1048585	15	3	2026-11-14 12:19:05	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Rana Baiyewu" <rbaiyewu@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Rana Baiyewu:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "Yam diseases and its management in Nigeria".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-60	1048585	15	3	2026-11-14 12:19:11	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Rana Baiyewu" <rbaiyewu@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Rana Baiyewu:<br><br>The editing of your submission, "Yam diseases and its management in Nigeria," is complete. We are now sending it to production.<br><br>Submission URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/15">http://localhost/index.php/publicknowledge/authorDashboard/submission/15</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-61	1048585	16	32	2026-11-14 12:19:25	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Rosanna Rossi" <rrossi@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Rosanna Rossi:<br />\n<br />\nThank you for submitting the manuscript, &quot;Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/16' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/16</a><br />\nUsername: rrossi<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-62	1048585	17	33	2026-11-14 12:19:35	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Vajiheh Karbasizaed" <vkarbasizaed@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Vajiheh Karbasizaed:<br />\n<br />\nThank you for submitting the manuscript, &quot;Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/17' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/17</a><br />\nUsername: vkarbasizaed<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-63	1048585	17	3	2026-11-14 12:19:46	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Julie Janssen:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran"<br><br></p>\r\n<p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-64	1048585	17	3	2026-11-14 12:19:50	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Paul Hudson:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran"<br><br></p>\r\n<p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-65	1048585	17	3	2026-11-14 12:19:52	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Vajiheh Karbasizaed" <vkarbasizaed@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Vajiheh Karbasizaed:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-66	1048585	17	3	2026-11-14 12:19:57	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Vajiheh Karbasizaed" <vkarbasizaed@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Vajiheh Karbasizaed:<br><br>The editing of your submission, "Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran," is complete. We are now sending it to production.<br><br>Submission URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/17">http://localhost/index.php/publicknowledge/authorDashboard/submission/17</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-67	1048585	18	34	2026-11-14 12:21:09	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Valerie Williamson" <vwilliamson@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Valerie Williamson:<br />\n<br />\nThank you for submitting the manuscript, &quot;Self-Organization in Multi-Level Institutions in Networked Environments&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/18' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/18</a><br />\nUsername: vwilliamson<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-68	1048585	18	3	2026-11-14 12:21:15	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Valerie Williamson" <vwilliamson@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	Valerie Williamson:<br />\r\n<br />\r\nWe have reached a decision regarding your submission to Journal of Public Knowledge, &quot;Self-Organization in Multi-Level Institutions in Networked Environments&quot;.<br />\r\n<br />\r\nOur decision is to: Decline Submission<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-69	1048585	19	35	2026-11-14 12:21:24	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Zita Woods" <zwoods@mailinator.com>	\N	minoue@mailinator.com	[JPKJPK] Submission Acknowledgement	Zita Woods:<br />\n<br />\nThank you for submitting the manuscript, &quot;Finocchiaro: Arguments About Arguments&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/19' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/19</a><br />\nUsername: zwoods<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-70	1048585	19	3	2026-11-14 12:21:35	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Paul Hudson:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Finocchiaro: Arguments About Arguments," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=19' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=19</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Finocchiaro: Arguments About Arguments"<br><br></p>\r\n<p>None.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-71	1048585	19	3	2026-11-14 12:21:39	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Aisla McCrae:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Finocchiaro: Arguments About Arguments," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-12 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-12.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=19' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=19</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Finocchiaro: Arguments About Arguments"<br><br></p>\r\n<p>None.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
-72	1048585	19	3	2026-11-14 12:21:40	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Zita Woods" <zwoods@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Zita Woods:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "Finocchiaro: Arguments About Arguments".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+1	1048585	1	17	2026-11-15 12:45:06	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Alan Mwandenga" <amwandenga@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Alan Mwandenga:<br />\n<br />\nThank you for submitting the manuscript, &quot;Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/1' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/1</a><br />\nUsername: amwandenga<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+2	1048585	1	3	2026-11-15 12:45:13	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Julie Janssen:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence"<br><br></p>\r\n<p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+3	1048585	1	3	2026-11-15 12:45:16	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Aisla McCrae:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence"<br><br></p>\r\n<p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+4	1048585	1	3	2026-11-15 12:45:19	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence"<br><br></p>\r\n<p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+5	1048585	1	3	2026-11-15 12:45:21	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Alan Mwandenga" <amwandenga@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Alan Mwandenga:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+6	1048585	1	3	2026-11-15 12:45:25	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Alan Mwandenga" <amwandenga@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Alan Mwandenga:<br><br>The editing of your submission, "Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence," is complete. We are now sending it to production.<br><br>Submission URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">http://localhost/index.php/publicknowledge/authorDashboard/submission/1</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+7	1048585	2	18	2026-11-15 12:46:59	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Carlo Corino" <ccorino@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Carlo Corino:<br />\n<br />\nThank you for submitting the manuscript, &quot;The influence of lactation on the quantity and quality of cashmere production&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/2' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/2</a><br />\nUsername: ccorino<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+8	1048585	2	6	2026-11-15 12:47:11	805306372	"Minoti Inoue" <minoue@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	\N	\N	[JPKJPK] Editor Recommendation	<p>Daniel Barnes, David Buskins, Stephanie Berardo:<br><br>The recommendation regarding the submission to Journal of Public Knowledge, "The influence of lactation on the quantity and quality of cashmere production" is: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+9	1048585	3	19	2026-11-15 12:47:23	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Catherine Kwantes" <ckwantes@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Catherine Kwantes:<br />\n<br />\nThank you for submitting the manuscript, &quot;The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/3' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/3</a><br />\nUsername: ckwantes<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+10	1048585	3	3	2026-11-15 12:47:30	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Aisla McCrae:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=3' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=3</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence"<br><br></p>\r\n<p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+11	1048585	3	3	2026-11-15 12:47:33	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=3' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=3</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence"<br><br></p>\r\n<p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+12	1048585	3	3	2026-11-15 12:47:34	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Catherine Kwantes" <ckwantes@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Catherine Kwantes:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+13	1048585	4	20	2026-11-15 12:47:47	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Craig Montgomerie" <cmontgomerie@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Craig Montgomerie:<br />\n<br />\nThank you for submitting the manuscript, &quot;Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/4' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/4</a><br />\nUsername: cmontgomerie<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+14	1048585	4	20	2026-11-15 12:47:47	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Mark Irvine" <mirvine@mailinator.com>	\N	\N	[JPKJPK] Submission Acknowledgement	Hello,<br />\n<br />\nCraig Montgomerie has submitted the manuscript, &quot;Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice&quot; to Journal of Public Knowledge. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+15	1048585	5	21	2026-11-15 12:47:55	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Diaga Diouf:<br />\n<br />\nThank you for submitting the manuscript, &quot;Genetic transformation of forest trees&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/5' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/5</a><br />\nUsername: ddiouf<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+16	1048585	5	3	2026-11-15 12:48:02	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Paul Hudson:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Genetic transformation of forest trees," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Genetic transformation of forest trees"<br><br></p>\r\n<p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+17	1048585	5	3	2026-11-15 12:48:05	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Genetic transformation of forest trees," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Genetic transformation of forest trees"<br><br></p>\r\n<p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+18	1048585	5	3	2026-11-15 12:48:06	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Diaga Diouf:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "Genetic transformation of forest trees".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+19	1048585	5	3	2026-11-15 12:48:10	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Diaga Diouf:<br><br>The editing of your submission, "Genetic transformation of forest trees," is complete. We are now sending it to production.<br><br>Submission URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">http://localhost/index.php/publicknowledge/authorDashboard/submission/5</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+20	1048585	6	22	2026-11-15 12:48:23	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Dana Phillips" <dphillips@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Dana Phillips:<br />\n<br />\nThank you for submitting the manuscript, &quot;Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/6' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/6</a><br />\nUsername: dphillips<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+21	1048585	6	3	2026-11-15 12:48:30	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Julie Janssen:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=6' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=6</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement"<br><br></p>\r\n<p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+22	1048585	6	3	2026-11-15 12:48:33	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=6' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=6</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement"<br><br></p>\r\n<p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+23	1048585	6	3	2026-11-15 12:48:34	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dana Phillips" <dphillips@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Dana Phillips:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+24	1048585	6	3	2026-11-15 12:48:38	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dana Phillips" <dphillips@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Dana Phillips:<br><br>The editing of your submission, "Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement," is complete. We are now sending it to production.<br><br>Submission URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/6">http://localhost/index.php/publicknowledge/authorDashboard/submission/6</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+25	1048585	7	23	2026-11-15 12:48:48	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Domatilia Sokoloff" <dsokoloff@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Domatilia Sokoloff:<br />\n<br />\nThank you for submitting the manuscript, &quot;Developing efficacy beliefs in the classroom&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/7' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/7</a><br />\nUsername: dsokoloff<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+26	1048585	7	3	2026-11-15 12:48:56	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Paul Hudson:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Developing efficacy beliefs in the classroom," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Developing efficacy beliefs in the classroom"<br><br></p>\r\n<p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+27	1048585	7	3	2026-11-15 12:48:59	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Aisla McCrae:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Developing efficacy beliefs in the classroom," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Developing efficacy beliefs in the classroom"<br><br></p>\r\n<p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+28	1048585	7	3	2026-11-15 12:49:02	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Developing efficacy beliefs in the classroom," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Developing efficacy beliefs in the classroom"<br><br></p>\r\n<p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+29	1048585	7	8	2026-11-15 12:49:05	1073741829	"Paul Hudson" <phudson@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	\N	\N	[JPKJPK] Able to Review	Editors:<br />\n<br />\nI am able and willing to review the submission, &quot;Developing efficacy beliefs in the classroom,&quot; for Journal of Public Knowledge. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-12-13, if not before.<br />\n<br />\nPaul Hudson<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+30	1048585	8	24	2026-11-15 12:49:18	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Elinor Ostrom" <eostrom@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Elinor Ostrom:<br />\n<br />\nThank you for submitting the manuscript, &quot;Traditions and Trends in the Study of the Commons&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/8' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/8</a><br />\nUsername: eostrom<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+31	1048585	8	24	2026-11-15 12:49:18	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Frank van Laerhoven" <fvanlaerhoven@mailinator.com>	\N	\N	[JPKJPK] Submission Acknowledgement	Hello,<br />\n<br />\nElinor Ostrom has submitted the manuscript, &quot;Traditions and Trends in the Study of the Commons&quot; to Journal of Public Knowledge. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+32	1048585	9	25	2026-11-15 12:49:26	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Fabio Paglieri" <fpaglieri@mailinator.com>	\N	minoue@mailinator.com	[JPKJPK] Submission Acknowledgement	Fabio Paglieri:<br />\n<br />\nThank you for submitting the manuscript, &quot;Hansen &amp; Pinto: Reason Reclaimed&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/9' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/9</a><br />\nUsername: fpaglieri<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+33	1048585	9	3	2026-11-15 12:49:33	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Julie Janssen:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Hansen &amp; Pinto: Reason Reclaimed," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=9' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=9</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Hansen &amp; Pinto: Reason Reclaimed"<br><br></p>\r\n<p>None.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+34	1048585	9	3	2026-11-15 12:49:36	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Hansen &amp; Pinto: Reason Reclaimed," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=9' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=9</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Hansen &amp; Pinto: Reason Reclaimed"<br><br></p>\r\n<p>None.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+35	1048585	9	3	2026-11-15 12:49:37	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Fabio Paglieri" <fpaglieri@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Fabio Paglieri:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "Hansen &amp; Pinto: Reason Reclaimed".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+36	1048585	9	3	2026-11-15 12:49:41	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Fabio Paglieri" <fpaglieri@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Fabio Paglieri:<br><br>The editing of your submission, "Hansen &amp; Pinto: Reason Reclaimed," is complete. We are now sending it to production.<br><br>Submission URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/9">http://localhost/index.php/publicknowledge/authorDashboard/submission/9</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+37	1048585	10	26	2026-11-15 12:49:54	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"John Novak" <jnovak@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	John Novak:<br />\n<br />\nThank you for submitting the manuscript, &quot;Condensing Water Availability Models to Focus on Specific Water Management Systems&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/10' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/10</a><br />\nUsername: jnovak<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+38	1048585	10	3	2026-11-15 12:50:01	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Aisla McCrae:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Condensing Water Availability Models to Focus on Specific Water Management Systems," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=10' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=10</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Condensing Water Availability Models to Focus on Specific Water Management Systems"<br><br></p>\r\n<p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+39	1048585	10	3	2026-11-15 12:50:04	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Condensing Water Availability Models to Focus on Specific Water Management Systems," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=10' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=10</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Condensing Water Availability Models to Focus on Specific Water Management Systems"<br><br></p>\r\n<p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+40	1048585	10	9	2026-11-15 12:50:07	1073741829	"Aisla McCrae" <amccrae@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	\N	\N	[JPKJPK] Able to Review	Editors:<br />\n<br />\nI am able and willing to review the submission, &quot;Condensing Water Availability Models to Focus on Specific Water Management Systems,&quot; for Journal of Public Knowledge. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-12-13, if not before.<br />\n<br />\nAisla McCrae<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+41	1048585	10	10	2026-11-15 12:50:14	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	\N	\N	[JPKJPK] Able to Review	Editors:<br />\n<br />\nI am able and willing to review the submission, &quot;Condensing Water Availability Models to Focus on Specific Water Management Systems,&quot; for Journal of Public Knowledge. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-12-13, if not before.<br />\n<br />\nAdela Gallego<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+42	1048585	11	27	2026-11-15 12:50:27	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Karim Al-Khafaji" <kalkhafaji@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Karim Al-Khafaji:<br />\n<br />\nThank you for submitting the manuscript, &quot;Learning Sustainable Design through Service&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/11' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/11</a><br />\nUsername: kalkhafaji<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+43	1048585	11	27	2026-11-15 12:50:27	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Margaret Morse" <mmorse@mailinator.com>	\N	\N	[JPKJPK] Submission Acknowledgement	Hello,<br />\n<br />\nKarim Al-Khafaji has submitted the manuscript, &quot;Learning Sustainable Design through Service&quot; to Journal of Public Knowledge. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+44	1048585	12	28	2026-11-15 12:50:35	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Leo Christopher" <lchristopher@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Leo Christopher:<br />\n<br />\nThank you for submitting the manuscript, &quot;Sodium butyrate improves growth performance of weaned piglets during the first period after weaning&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/12' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/12</a><br />\nUsername: lchristopher<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+45	1048585	12	3	2026-11-15 12:50:42	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Julie Janssen:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Sodium butyrate improves growth performance of weaned piglets during the first period after weaning," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Sodium butyrate improves growth performance of weaned piglets during the first period after weaning"<br><br></p>\r\n<p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+46	1048585	12	3	2026-11-15 12:50:46	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Paul Hudson:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Sodium butyrate improves growth performance of weaned piglets during the first period after weaning," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Sodium butyrate improves growth performance of weaned piglets during the first period after weaning"<br><br></p>\r\n<p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+47	1048585	13	29	2026-11-15 12:50:54	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Lise Kumiega" <lkumiega@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Lise Kumiega:<br />\n<br />\nThank you for submitting the manuscript, &quot;Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/13' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/13</a><br />\nUsername: lkumiega<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+48	1048585	13	3	2026-11-15 12:51:02	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Julie Janssen:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions"<br><br></p>\r\n<p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+49	1048585	13	3	2026-11-15 12:51:05	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Aisla McCrae:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions"<br><br></p>\r\n<p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+50	1048585	13	3	2026-11-15 12:51:08	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Adela Gallego:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions"<br><br></p>\r\n<p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+51	1048585	13	7	2026-11-15 12:51:11	1073741829	"Julie Janssen" <jjanssen@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>	\N	\N	[JPKJPK] Able to Review	Editors:<br />\n<br />\nI am able and willing to review the submission, &quot;Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions,&quot; for Journal of Public Knowledge. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-12-13, if not before.<br />\n<br />\nJulie Janssen<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+52	1048585	13	9	2026-11-15 12:51:17	1073741829	"Aisla McCrae" <amccrae@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>	\N	\N	[JPKJPK] Able to Review	Editors:<br />\n<br />\nI am able and willing to review the submission, &quot;Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions,&quot; for Journal of Public Knowledge. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-12-13, if not before.<br />\n<br />\nAisla McCrae<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+53	1048585	13	10	2026-11-15 12:51:24	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>	\N	\N	[JPKJPK] Able to Review	Editors:<br />\n<br />\nI am able and willing to review the submission, &quot;Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions,&quot; for Journal of Public Knowledge. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-12-13, if not before.<br />\n<br />\nAdela Gallego<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+54	1048585	13	3	2026-11-15 12:51:33	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Lise Kumiega" <lkumiega@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	Lise Kumiega:<br />\r\n<br />\r\nWe have reached a decision regarding your submission to Journal of Public Knowledge, &quot;Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions&quot;.<br />\r\n<br />\r\nOur decision is: Revisions Required<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+55	1048585	14	30	2026-11-15 12:51:41	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Patricia Daniel" <pdaniel@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Patricia Daniel:<br />\n<br />\nThank you for submitting the manuscript, &quot;Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/14' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/14</a><br />\nUsername: pdaniel<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+56	1048585	15	31	2026-11-15 12:51:48	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Rana Baiyewu" <rbaiyewu@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Rana Baiyewu:<br />\n<br />\nThank you for submitting the manuscript, &quot;Yam diseases and its management in Nigeria&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/15' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/15</a><br />\nUsername: rbaiyewu<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+57	1048585	15	3	2026-11-15 12:51:56	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Paul Hudson:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Yam diseases and its management in Nigeria," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=15' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=15</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Yam diseases and its management in Nigeria"<br><br></p>\r\n<p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+58	1048585	15	3	2026-11-15 12:51:59	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Aisla McCrae:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Yam diseases and its management in Nigeria," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=15' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=15</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Yam diseases and its management in Nigeria"<br><br></p>\r\n<p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+59	1048585	15	3	2026-11-15 12:52:00	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Rana Baiyewu" <rbaiyewu@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Rana Baiyewu:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "Yam diseases and its management in Nigeria".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+60	1048585	15	3	2026-11-15 12:52:04	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Rana Baiyewu" <rbaiyewu@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Rana Baiyewu:<br><br>The editing of your submission, "Yam diseases and its management in Nigeria," is complete. We are now sending it to production.<br><br>Submission URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/15">http://localhost/index.php/publicknowledge/authorDashboard/submission/15</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+61	1048585	16	32	2026-11-15 12:52:15	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Rosanna Rossi" <rrossi@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Rosanna Rossi:<br />\n<br />\nThank you for submitting the manuscript, &quot;Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/16' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/16</a><br />\nUsername: rrossi<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+62	1048585	17	33	2026-11-15 12:52:23	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Vajiheh Karbasizaed" <vkarbasizaed@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Vajiheh Karbasizaed:<br />\n<br />\nThank you for submitting the manuscript, &quot;Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/17' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/17</a><br />\nUsername: vkarbasizaed<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+63	1048585	17	3	2026-11-15 12:52:31	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Julie Janssen:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran"<br><br></p>\r\n<p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+64	1048585	17	3	2026-11-15 12:52:34	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Paul Hudson:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran"<br><br></p>\r\n<p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+65	1048585	17	3	2026-11-15 12:52:35	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Vajiheh Karbasizaed" <vkarbasizaed@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Vajiheh Karbasizaed:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+66	1048585	17	3	2026-11-15 12:52:38	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Vajiheh Karbasizaed" <vkarbasizaed@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Vajiheh Karbasizaed:<br><br>The editing of your submission, "Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran," is complete. We are now sending it to production.<br><br>Submission URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/17">http://localhost/index.php/publicknowledge/authorDashboard/submission/17</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+67	1048585	18	34	2026-11-15 12:53:27	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Valerie Williamson" <vwilliamson@mailinator.com>	\N	dbuskins@mailinator.com, sberardo@mailinator.com	[JPKJPK] Submission Acknowledgement	Valerie Williamson:<br />\n<br />\nThank you for submitting the manuscript, &quot;Self-Organization in Multi-Level Institutions in Networked Environments&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/18' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/18</a><br />\nUsername: vwilliamson<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+68	1048585	18	3	2026-11-15 12:53:31	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Valerie Williamson" <vwilliamson@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	Valerie Williamson:<br />\r\n<br />\r\nWe have reached a decision regarding your submission to Journal of Public Knowledge, &quot;Self-Organization in Multi-Level Institutions in Networked Environments&quot;.<br />\r\n<br />\r\nOur decision is to: Decline Submission<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+69	1048585	19	35	2026-11-15 12:53:39	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Zita Woods" <zwoods@mailinator.com>	\N	minoue@mailinator.com	[JPKJPK] Submission Acknowledgement	Zita Woods:<br />\n<br />\nThank you for submitting the manuscript, &quot;Finocchiaro: Arguments About Arguments&quot; to Journal of Public Knowledge. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />\n<br />\nSubmission URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/19' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/19</a><br />\nUsername: zwoods<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />\n<br />\nRamiro Vaca<br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+70	1048585	19	3	2026-11-15 12:53:47	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Paul Hudson:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Finocchiaro: Arguments About Arguments," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=19' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=19</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Finocchiaro: Arguments About Arguments"<br><br></p>\r\n<p>None.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+71	1048585	19	3	2026-11-15 12:53:50	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPKJPK] Article Review Request	<p>Aisla McCrae:<br><br>I believe that you would serve as an excellent reviewer of the manuscript, "Finocchiaro: Arguments About Arguments," which has been submitted to Journal of Public Knowledge. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br><br>Please log into the journal web site by 2026-12-13 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a class="contextUrl-style-class" href="http://localhost/index.php/publicknowledge">http://localhost/index.php/publicknowledge</a><br><br>The review itself is due 2026-12-13.<br><br>If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a class="passwordResetUrl-style-class" href="http://localhost/index.php/publicknowledge/login/lostPassword">http://localhost/index.php/publicknowledge/login/lostPassword</a><br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=19' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=19</a><br><br>Thank you for considering this request.<br><br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com<br><br>"Finocchiaro: Arguments About Arguments"<br><br></p>\r\n<p>None.</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+72	1048585	19	3	2026-11-15 12:53:51	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Zita Woods" <zwoods@mailinator.com>	\N	\N	[JPKJPK] Editor Decision	<p>Zita Woods:<br><br>We have reached a decision regarding your submission to Journal of Public Knowledge, "Finocchiaro: Arguments About Arguments".<br><br>Our decision is to: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
 \.
 
 
@@ -5084,8 +5084,8 @@ COPY public.email_templates_default (email_id, email_key, can_disable, can_edit,
 54	ANNOUNCEMENT	0	1	16	1048576	\N
 55	ORCID_COLLECT_AUTHOR_ID	0	1	\N	\N	\N
 56	ORCID_REQUEST_AUTHOR_AUTHORIZATION	0	1	\N	\N	\N
-57	MANUAL_PAYMENT_NOTIFICATION	0	1	\N	\N	\N
-58	PAYPAL_INVESTIGATE_PAYMENT	0	1	\N	\N	\N
+57	PAYPAL_INVESTIGATE_PAYMENT	0	1	\N	\N	\N
+58	MANUAL_PAYMENT_NOTIFICATION	0	1	\N	\N	\N
 \.
 
 
@@ -5150,8 +5150,8 @@ STATISTICS_REPORT_NOTIFICATION	en_US	Editorial activity for {$month}, {$year}	\n
 ANNOUNCEMENT	en_US	{$title}	<b>{$title}</b><br />\n<br />\n{$summary}<br />\n<br />\nVisit our website to read the <a href="{$url}">full announcement</a>.	This email is sent when a new announcement is created.
 ORCID_COLLECT_AUTHOR_ID	en_US	Submission ORCID	Dear {$authorName},<br/>\n<br/>\nYou have been listed as an author on a manuscript submission to {$contextName}.<br/>\nTo confirm your authorship, please add your ORCID id to this submission by visiting the link provided below.<br/>\n<br/>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" width='16' height='16' alt="ORCID iD icon" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Register or connect your ORCID iD</a><br/>\n<br/>\n<br>\n<a href="{$orcidAboutUrl}">More information about ORCID at {$contextName}</a><br/>\n<br/>\nIf you have any questions, please contact me.<br/>\n<br/>\n{$principalContactSignature}<br/>\n	This email template is used to collect the ORCID id's from authors.
 ORCID_REQUEST_AUTHOR_AUTHORIZATION	en_US	Requesting ORCID record access	Dear {$authorName},<br>\n<br>\nYou have been listed as an author on the manuscript submission "{$submissionTitle}" to {$contextName}.\n<br>\n<br>\nPlease allow us to add your ORCID id to this submission and also to add the submission to your ORCID profile on publication.<br>\nVisit the link to the official ORCID website, login with your profile and authorize the access by following the instructions.<br>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" width='16' height='16' alt="ORCID iD icon" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Register or Connect your ORCID iD</a><br/>\n<br>\n<br>\n<a href="{$orcidAboutUrl}">More about ORCID at {$contextName}</a><br/>\n<br>\nIf you have any questions, please contact me.<br>\n<br>\n{$principalContactSignature}<br>\n	This email template is used to request ORCID record access from authors.
-MANUAL_PAYMENT_NOTIFICATION	en_US	Manual Payment Notification	A manual payment needs to be processed for the journal {$contextName} and the user {$userFullName} (username &quot;{$userName}&quot;).<br />\n<br />\nThe item being paid for is &quot;{$itemName}&quot;.<br />\nThe cost is {$itemCost} ({$itemCurrencyCode}).<br />\n<br />\nThis email was generated by Open Journal Systems' Manual Payment plugin.	This email template is used to notify a journal manager contact that a manual payment was requested.
 PAYPAL_INVESTIGATE_PAYMENT	en_US	Unusual PayPal Activity	Open Journal Systems has encountered unusual activity relating to PayPal payment support for the journal {$contextName}. This activity may need further investigation or manual intervention.<br />\n                       <br />\nThis email was generated by Open Journal Systems' PayPal plugin.<br />\n<br />\nFull post information for the request:<br />\n{$postInfo}<br />\n<br />\nAdditional information (if supplied):<br />\n{$additionalInfo}<br />\n<br />\nServer vars:<br />\n{$serverVars}<br />\n	This email template is used to notify a journal's primary contact that suspicious activity or activity requiring manual intervention was encountered by the PayPal plugin.
+MANUAL_PAYMENT_NOTIFICATION	en_US	Manual Payment Notification	A manual payment needs to be processed for the journal {$contextName} and the user {$userFullName} (username &quot;{$userName}&quot;).<br />\n<br />\nThe item being paid for is &quot;{$itemName}&quot;.<br />\nThe cost is {$itemCost} ({$itemCurrencyCode}).<br />\n<br />\nThis email was generated by Open Journal Systems' Manual Payment plugin.	This email template is used to notify a journal manager contact that a manual payment was requested.
 NOTIFICATION	fr_CA	Nouvel avis de {$siteTitle}	Vous avez un nouvel avis de {$siteTitle} :<br />\n<br />\n{$notificationContents}<br />\n<br />\nLien : {$url}<br />\n<br />\n{$principalContactSignature}	Ce courriel est envoyé aux utilisateurs-trices inscrits-es qui ont choisi de recevoir par courriel ce type d'avis.
 NOTIFICATION_CENTER_DEFAULT	fr_CA	Un message à propos de la revue {$contextName}	Prière de saisir votre message.	Message blanc par défaut utilisé pour concevoir d'autres messages.
 PASSWORD_RESET_CONFIRM	fr_CA	Confirmation de la réinitialisation du mot de passe	Nous avons reçu une demande concernant la réinitialisation de votre mot de passe pour le site Web {$siteTitle}.<br />\n<br />\nSi vous n'avez pas fait cette demande, veuillez ne pas tenir compte du présent message, votre mot de passe restera le même. Si vous souhaitez réinitialiser votre mot de passe, cliquer sur l'URL ci-dessous.<br />\n<br />\nRéinitialisation de mon mot de passe : {$url}<br />\n<br />\n{$principalContactSignature}	Ce courriel est envoyé à l'utilisateur-trice inscrit-e qui nous signale avoir oublié son mot de passe ou qui est incapable d'ouvrir une session. Il fournit le lien URL à cliquer pour pouvoir réinitialiser son mot de passe.
@@ -5159,7 +5159,6 @@ USER_REGISTER	fr_CA	Inscription à la revue	{$userFullName},<br />\n<br />\nVous
 USER_VALIDATE	fr_CA	Valider votre compte	{$userFullName},<br />\n<br />\nVous avez créé un compte pour la revue {$contextName}. Pour pouvoir commencer à l'utiliser il nous faut d'abord valider votre adresse de courriel. Pour ce faire, vous n'avez qu'à suivre le lien ci-dessous :<br />\n<br />\n{$activateUrl}<br />\n<br />\nMerci,<br />\n{$principalContactSignature}	Ce courriel est envoyé à un,une utilisateur-trice nouvellement inscrit-e pour valider son compte de courriel.
 REVIEWER_REGISTER	fr_CA	Inscription en tant qu'évaluateur-trice pour la revue {$contextName}	Compte tenu de votre expertise, nous avons pris l'initiative d'inscrire votre nom dans la base de données des évaluateurs-trices de la revue {$contextName}. Cela ne vous engage d'aucune façon, mais nous permet simplement de solliciter vos services pour l'évaluation d'une soumission. Si vous êtes invité-e à effectuer une évaluation, vous recevrez le titre et le résumé de l'article en question, et serez toujours libre d'accepter ou de refuser une telle invitation. À tout moment, il vous est également possible de demander à ce que votre nom soit retiré de la liste des évaluateurs-trices.<br />\n<br />\nNous vous acheminons un nom d'utilisateur-trice et un mot de passe, car tous deux sont requis pour tout échange avec la revue via son site Web. Vous pouvez, par exemple, si vous le souhaitez, effectuer la mise à jour de votre profil, y compris vos domaines d'intérêt en matière d'évaluation.<br />\n<br />\nNom d'utilisateur-trice : {$username}<br />\nMot de passe : {$password}<br />\n<br />\nMerci,<br />\n{$principalContactSignature}	Ce courriel est envoyé à un,une évaluateur-trice nouvellement inscrit-e, afin de lui souhaiter la bienvenue dans le système et l'informer de son nom d'utilisateur-trice et de son mot de passe.
 PUBLISH_NOTIFY	fr_CA	Parution du dernier numéro	Lecteurs-trices,<br />\n<br />\nLe plus récent numéro de la revue {$contextName} vient d'être publié à l'adresse suivante : {$contextUrl}. Nous vous invitons à consulter le sommaire, puis à visiter notre site Web pour y lire les articles qui vous intéressent.<br />\n<br />\nNous vous remercions de l'intérêt que vous portez à notre revue,<br />\n{$editorialContactSignature}	Ce courriel est envoyé à tous et toutes les lecteurs-trices inscrits-es, via le lien « Aviser les utilisateurs-trices » sur la page d'accueil du,de la rédacteur-trice. Il avise les lecteurs-trices qu'un nouveau numéro est publié et les invite à visiter la revue en cliquant sur l'URL fourni.
-COPYEDIT_REQUEST	fr_CA	Demande de révision d'une soumission	{$participantName},<br />\n<br />\nJ'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissionTitle} » pour la revue {$contextName} à l'aide des étapes suivantes.<br />\n1. Cliquer sur l'URL de la soumission ci-dessous.<br />\n2. Ouvrir le(s) fichier(s) disponible(s) sous Fichiers des ébauches finales et effectuer votre révision, tout en ajoutant des discussions sur la révision, le cas échéant.<br />\n3. Enregistrer le(s) fichier(s) révisé(s) et le(s) téléverser dans la section Version(s) révisée(s).<br />\n4. Informer le,la rédacteur-trice que tous les fichiers ont été révisés et que l'étape de production peut débuter.<br />\n<br />\nURL de la revue {$contextName} : {$contextUrl}<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$participantUsername}	Ce courriel du, de la rédacteur-trice de rubrique à un-e réviseur-e lui demande de procéder à la révision. Il fournit les renseignements sur la soumission et comment accéder à celle-ci.
 LOCKSS_EXISTING_ARCHIVE	fr_CA	Demande d'archivage pour la revue {$contextName}	Cher,Chère [Bibliothécaire universitaire],<br />\n<br />\n{$contextName} &lt;{$contextUrl}&gt; est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la position occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe - Plusieurs exemplaires assurent la sécurité) avec votre bibliothèque ainsi que celles d'autres universités.<br />\n<br />\n[Brève description de la revue]<br />\n<br />\nL'adresse URL pour le LOCKSS Publisher Manifest pour notre revue est : {$contextUrl}/gateway/lockss<br />\n<br />\nNous croyons savoir que vous participez déjà à LOCKSS. Si nous pouvons vous fournir des métadonnées supplémentaires afin d'inscrire notre revue avec votre version de LOCKSS, il nous fera plaisir de vous les fournir.<br />\n<br />\nMerci,<br />\n{$principalContactSignature}	Ce courriel demande à un-e conservateur,trice d'archives LOCKSS d'envisager d'inclure cette revue dans leur archive. Il fournit l'adresse URL du LOCKSS Publisher Manifest de la revue.
 LOCKSS_NEW_ARCHIVE	fr_CA	Demande d'archivage pour la revue {$contextName}	Cher,Chère [Bibliothécaire universitaire],<br />\n<br />\n{$contextName} &lt;{$contextUrl}&gt;, est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la fonction occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe) avec votre bibliothèque et celles d'autres universités.<br />\n<br />\n[Brève description de la revue]<br />\n<br />\nLe programme LOCKSS &lt;http://lockss.org/&gt;, une initiative de bibliothécaires et d'éditeurs internationaux, est une belle démonstration d'un dépôt d'archives assurant la préservation des documents. Voir les détails ci-dessous. Le logiciel est gratuit et fonctionne sur tout ordinateur personnel. Il est facile de le mettre en ligne et ne requiert que très peu de maintenance.<br />\n<br />\nPour nous aider dans le processus d'archivage de notre revue, nous vous invitons à devenir membre de la communauté LOCKSS, pour aider à recueillir et préserver des titres produits par votre faculté et par d'autres chercheurs à travers le monde. Pour ce faire, veuillez demander à quelqu'un de votre personnel de visiter le site Internet de LOCKSS pour voir les informations sur le fonctionnement du système. Nous attendons de vos nouvelles sur la faisabilité, pour vous, de fournir un support d'archivage pour cette revue.<br />\n<br />\nMerci,<br />\n{$principalContactSignature}	Ce courriel encourage le ou la destinaire à participer à l'initiative LOCKSS et à inclure cette revue dans leur archives. Il fournit de l'information au sujet de LOCKSS et des façons de s'impliquer dans le projet.
 SUBMISSION_ACK	fr_CA	Accusé de réception de la soumission	{$authorName},<br />\n<br />\nNous vous remercions d'avoir soumis le manuscrit intitulé « {$submissionTitle} » à la revue {$contextName}. Grâce à notre système de gestion en ligne, vous pourrez suivre votre soumission tout au long du processus d'édition en accédant au site Web de la revue :<br />\n<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$authorUsername}<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions d'avoir pensé à notre revue pour la publication de vos travaux.<br />\n<br />\n{$editorialContactSignature}	Ce courriel, lorsqu'activé, est envoyé automatiquement à un-e auteur-e quand il ou elle a complété le processus de soumission d'un manuscrit à la revue. Il fournit les informations sur comment suivre la soumission à travers le processus éditorial, et remercie l'auteur-e pour sa soumission.
@@ -5167,12 +5166,12 @@ SUBMISSION_ACK_NOT_USER	fr_CA	Accusé de réception de la soumission	Bonjour,<br
 EDITOR_ASSIGN	fr_CA	Assignation d'un-e rédacteur-trice	{$editorialContactName},<br />\n<br />\nLa soumission intitulée « {$submissionTitle} » pour la revue {$contextName} vous a été attribuée. Vous êtes responsable, en tant que rédacteur-trice de rubrique, de la faire cheminer à travers le processus éditorial.<br />\n<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$editorUsername}<br />\n<br />\nMerci.	Ce courriel avise un,une rédacteur-trice de rubrique que le,la rédacteur-trice lui a assigné la tâche de suivre une soumission durant le processus éditorial. Il fournit des renseignements sur la soumission, et comment accéder au site Web de la revue.
 REVIEW_CANCEL	fr_CA	Annulation de la demande d'évaluation	{$reviewerName},<br />\n<br />\nNous avons décidé d'annuler notre demande concernant l'évaluation du manuscrit intitulé « {$submissionTitle} » pour la revue {$contextName}. Nous sommes désolés des inconvénients que cela pourrait vous causer et espérons que nous pourrons de nouveau faire appel à vous pour contribuer au processus de révision par les pairs de cette revue dans le futur.<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec nous.	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice qui a une évaluation en cours, pour l'aviser que celle-ci a été annulée.
 REVIEW_REINSTATE	fr_CA	Réintégration de la demande d'évaluation	{$reviewerName},<br />\n<br />\nNous souhaitons rétablir notre demande d'évaluation de la soumission, « {$ submissionTitle} » pour  la revue {$ contextName}. Nous espérons que vous pourrez contribuer au processus d'évaluation de cette revue.<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec moi.	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice qui a une évaluation en cours, pour l'aviser que la demande préalablement annulée a été rétablie.
-REVIEW_REQUEST_ATTACHED	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nNous croyons que vous feriez un-e excellent-e évaluateur-trice pour le manuscrit intitulé « {$submissionTitle} ». Nous espérons que vous envisagerez d'entreprendre cette tâche essentielle à la publication de la revue. Les directives d'évaluation de la revue se trouvent ci-dessous et la soumission est jointe au présent courriel. Votre évaluation de la soumission, ainsi que vos recommandations, devraient nous parvenir par courriel d'ici le {$reviewDueDate}.<br />\n<br />\nVeuillez nous faire savoir par courriel d'ici le {$responseDueDate} si vous acceptez ou non d'effectuer cette évaluation.<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n<br />\nDirectives pour l'évaluation<br />\n<br />\n{$reviewGuidelines}<br />\n	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice pour lui demander s'il ou elle accepte ou refuse la tâche d'évaluation d'une soumission. Il inclut la soumission en pièce jointe. Ce message est utilisé quand le processus de « Demande d'évaluation par pièce-jointe de courriel » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation . (Autrement, voir « Demande d'évaluation ».)
 REVIEW_REQUEST	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nNous croyons que vous feriez un-e excellent-e évaluateur-trice pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous. Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />\n<br />\nVeuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous laisser savoir si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : {$contextUrl}<br />\n<br />\nLa date d'échéance de l'évaluation a été fixée au {$reviewDueDate}.<br />\n<br />\nSi vous n'avez pas de nom d'utilisateur-trice et de mot de passe pour le site Web de la revue, cliquez sur le lien ci-dessous pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} »<br />\n<br />\n{$submissionAbstract}	Ce courriel du,de la rédacteur-trice à un,une évaluateur-trice demande que l'évaluateur-trice accepte ou refuse la tâche d'évaluation d'une soumission. Il fournit de l'information sur la soumission, tel son titre et un résumé, la date d'échéance pour l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation. (Autrement voir « Demande d'évaluation d'un article (en pièce jointe) ».)
 REVIEW_REQUEST_SUBSEQUENT	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nCeci concerne le manuscrit « {$submissionTitle} », qui est présentement évalué par {$contextName}.<br />\n<br />\nSuivant l'évaluation de la dernière version du manuscrit, l'auteur a soumis une version révisée de son document. Nous apprécierions que vous évaluiez cette nouvelle version.<br />\n<br />\nVeuillez vous authentifier sur la page de la revue avant le {$responseDueDate} pour y indiquer si vous participerez à cette évaluation ou non, ou encore pour accéder à la soumission et y enregistrer votre évaluation et vos recommandations. Le site Web est {$contextUrl}<br />\n<br />\nL'évaluation est due pour le {$reviewDueDate}.<br />\n<br />\nSi vous n'avez pas vos nom d'utilisateur-trice et mot de passe pour le site de la revue, vous pouvez utiliser le lien suivant pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} » <br />\n<br />\n{$submissionAbstract}	Ce courriel du,de la rédacteur-trice de rubrique à un,une évaluateur-trice demande que l'évaluateur-trice accepte ou décline la tâche d'évaluation d'une soumission pour un cycle subséquent d'évaluation. Il contient des informations sur la soumission tel que son titre et un résumé, la date d'échéance pour faire l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation (Autrement voir « Demande d'évaluation d'un article (cycle subséquent) ».)
 REVIEW_REQUEST_ONECLICK	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nNous croyons que vous feriez un-e excellent-e évaluateur-trice pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous. Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />\n<br />\nVeuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous laisser savoir si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation.<br />\n<br />\nDate limite pour l'évaluation {$reviewDueDate}.<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}.<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} »<br />\n<br />\n{$submissionAbstract}	Ce courriel du,de la rédacteur-trice de rubrique à un,une évaluateur-trice demande que l'évaluateur-trice accepte ou décline la tâche d'évaluation d'une soumission. Il contient des informations sur la soumission tel que son titre et un résumé, la date d'échéance pour faire l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation et que l'accès de l'évaluateur-trice en un clic a été activé.
 REVIEW_REQUEST_ONECLICK_SUBSEQUENT	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nCeci concerne le manuscrit « {$submissionTitle} », qui est présentement évalué par la revue {$contextName}.<br />\n<br />\nSuivant l'évaluation de la dernière version du manuscrit, l'auteur a soumis une version révisée de son document. Nous apprécierions que vous évaluiez cette nouvelle version.<br />\n<br />\nVeuillez vous authentifier sur la page de la revue avant le {$responseDueDate} pour y indiquer si vous participerez à cette évaluation ou non, ou encore pour accéder à la soumission et y enregistrer votre évaluation et vos recommandations.<br />\n<br />\nL'évaluation est due pour le {$reviewDueDate}.<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} » <br />\n<br />\n{$submissionAbstract}	Ce courriel du,de la rédacteur-trice de rubrique à un,une évaluateur-trice demande que l'évaluateur-trice accepte ou décline la tâche d'évaluation d'une soumission pour un cycle subséquent d'évaluation. Il contient des informations sur la soumission tel que son titre et un résumé, la date d'échéance pour faire l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation et que l'accès de l'évaluateur-trice en un clic est activé.
-MANUAL_PAYMENT_NOTIFICATION	fr_CA	Avis de paiement manuel	Un paiement manuel doit être traité pour la revue {$contextName} et l'utilisateur {$userFullName} (nom d'utilisateur &quot;{$userName}&quot;).<br />\n<br />\nL'élément facturé est &quot;{$itemName}&quot;.<br />\nLe coût est de {$itemCost} ({$itemCurrencyCode}).<br />\n<br />\nCe courriel a été généré par le plugiciel de paiement manuel du Open Journal Systems.	Ce modèle de courriel est utilisé pour aviser un directeur de revue que le paiement manuel a été demandé.
+REVIEW_REQUEST_ATTACHED	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nNous croyons que vous feriez un-e excellent-e évaluateur-trice pour le manuscrit intitulé « {$submissionTitle} ». Nous espérons que vous envisagerez d'entreprendre cette tâche essentielle à la publication de la revue. Les directives d'évaluation de la revue se trouvent ci-dessous et la soumission est jointe au présent courriel. Votre évaluation de la soumission, ainsi que vos recommandations, devraient nous parvenir par courriel d'ici le {$reviewDueDate}.<br />\n<br />\nVeuillez nous faire savoir par courriel d'ici le {$responseDueDate} si vous acceptez ou non d'effectuer cette évaluation.<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n<br />\nDirectives pour l'évaluation<br />\n<br />\n{$reviewGuidelines}<br />\n	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice pour lui demander s'il ou elle accepte ou refuse la tâche d'évaluation d'une soumission. Il inclut la soumission en pièce jointe. Ce message est utilisé quand le processus de « Demande d'évaluation par pièce-jointe de courriel » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation . (Autrement, voir « Demande d'évaluation ».)
+REVIEW_REMIND_AUTO	fr_CA	Rappel automatique d'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Puisque nous n'avons pas reçu, comme nous l'espérions, votre évaluation avant le {$reviewDueDate}, ce courriel a été généré et envoyé automatiquement après l'échéance du délai. Nous serions toutefois heureux de recevoir votre évaluation dès que possible.<br />\n<br />\nSi vous n'avez pas vos nom d'utilisateur-trice et mot de passe pour le site de la revue, vous pouvez utiliser le lien suivant pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nVeuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />\n<br />\n{$editorialContactSignature}	Ce courriel est envoyé automatiquement lorsque la date d'échéance de remise d'une évaluation est révolue (voir Options d'évaluation sous Paramètres > Flux des travaux > Évaluation) et que l'accès de l'évaluateur-trice en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).
 REVIEW_REQUEST_ATTACHED_SUBSEQUENT	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nCeci concerne le manuscrit « {$submissionTitle} », qui est présentement évalué par la revue {$contextName}.<br />\n<br />\nSuivant l'évaluation de la dernière version du manuscrit, l'auteur-e a soumis une version révisée de son document. Nous apprécierions que vous évaluiez cette nouvelle version.<br />\n<br />\nLes directives d'évaluation de la revue se trouvent ci-dessous et la soumission est jointe au présent courriel. Votre évaluation de la soumission, ainsi que vos recommandations, devraient nous parvenir par courriel d'ici le {$reviewDueDate}.<br />\n<br />\nVeuillez nous faire savoir par courriel d'ici le {$responseDueDate} si vous acceptez ou non d'effectuer cette évaluation.<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n<br />\nDirectives pour l'évaluation<br />\n<br />\n{$reviewGuidelines}<br />\n	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice pour lui demander s'il ou elle accepte ou refuse la tâche d'évaluation d'une soumission pour un cycle subséquent d'évaluation. Il inclut la soumission en pièce jointe. Ce message est utilisé quand le processus de « Demande d'évaluation par pièce-jointe de courriel » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation . (Autrement voir « Demande d'évaluation (cycle subséquent)».)
 REVIEW_REQUEST_REMIND_AUTO	fr_CA	Rappel de demande d'évaluation d'un article	{$reviewerName},<br />\nCeci est un petit rappel concernant notre demande d'évaluation de « {$submissionTitle} » pour la revue {$contextName}. Puisque nous n'avons pas reçu, comme nous l'espérions, une réponse avant le {$responseDueDate}, ce courriel a été généré et envoyé automatiquement après l'échéance du délai.\n<br />\nNous pensons que vous seriez un-e excellent-e évaluateur-trice pour le manuscrit. Vous trouverez un résumé de la soumission ci-dessous. Nous espérons que vous envisagerez d'entreprendre cette tâche essentielle à la publication de la revue.<br />\n<br />\nVeuillez vous authentifier sur la page de la revue pour y indiquer si vous participerez à cette évaluation ou non, ou encore pour accéder à la soumission et y enregistrer votre évaluation et vos recommandations. Le site Web est {$contextUrl}<br />\n<br />\nL'évaluation est dû pour le {$reviewDueDate}.<br />\n<br />\nSi vous n'avez pas vos nom d'utilisateur-trice et mot de passe pour le site de la revue, vous pouvez utiliser le lien suivant pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} »<br />\n<br />\n{$submissionAbstract}	Ce courriel est envoyé automatiquement lorsque la date d'échéance de confirmation d'un,une évaluateur-trice est révolue (voir Options d'évaluation sous Paramètres &gt; Flux des travaux &gt; Évaluation) et que l'accès de l'évaluateur-trice en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).
 REVIEW_REQUEST_REMIND_AUTO_ONECLICK	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Puisque nous n'avons pas reçu, comme nous l'espérions, une réponse avant le {$responseDueDate}, ce courriel a été généré et envoyé automatiquement après l'échéance du délai.\n<br />\nNous pensons que vous seriez un-e excellent-e évaluateur-trice pour le manuscrit. Vous trouverez un résumé de la soumission ci-dessous. Nous espérons que vous envisagerez d'entreprendre cette tâche essentielle à la publication de la revue.<br />\n<br />\nVeuillez vous authentifier sur la page de la revue pour y indiquer si vous participerez à cette évaluation ou non, ou encore pour accéder à la soumission et y enregistrer votre évaluation et vos recommandations.<br />\n<br />\nL'évaluation est dû pour le {$reviewDueDate}.<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} »<br />\n<br />\n{$submissionAbstract}	Ce courriel est automatiquement envoyé lorsque la date d'échéance de confirmation d'un,une évaluateur-trice est écoulée (voir Options de révision sous Paramètres &gt; Flux des travaux &gt; Révision) et l'accès de l'évaluateur-trice en un clic est activé. Les tâches planifiées doivent être configurées et activées (voir le fichier de configuration du site).
@@ -5180,7 +5179,6 @@ REVIEW_CONFIRM	fr_CA	Acceptation d'évaluation	Rédacteurs-trices,<br />\n<br />
 REVIEW_DECLINE	fr_CA	Refus d'évaluation	Rédacteurs-trices,<br />\n<br />\nPour le moment, il m'est impossible d'évaluer la soumission intitulée « {$submissionTitle} » pour la revue {$contextName}. Je vous remercie d'avoir pensé à moi. N'hésitez pas à communiquer avec moi pour un autre projet.<br />\n<br />\n{$reviewerName}	Ce courriel est envoyé par l'évaluateur-trice au,à la rédacteur-trice de rubrique en réponse à la demande d'évaluation, pour l'aviser qu'il ou elle ne peut effectuer l'évaluation.
 REVIEW_ACK	fr_CA	Accusé de réception de l'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nNous vous remercions d'avoir évalué la soumission intitulée « {$submissionTitle} » pour la revue {$contextName}. Nous vous sommes reconnaissants de votre contribution à la qualité des travaux que nous publions.	Ce courriel est envoyé par le,la rédacteur-trice de rubrique, pour accuser réception d'une évaluation terminée et remercier l'évaluateur-trice de sa contribution.
 REVIEW_REMIND	fr_CA	Rappel d'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Nous espérions recevoir votre évaluation avant le {$reviewDueDate}. Nous serions heureux de la recevoir dès que possible.<br />\n<br />\nSi vous n'avez pas vos nom d'utilisateur-trice et mot de passe pour le site de la revue, vous pouvez utiliser le lien suivant pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nVeuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />\n<br />\n{$editorialContactSignature}	Ce courriel est envoyé par le,la rédacteur-trice de rubrique pour rappeler à un,une évaluateur-trice que son évaluation est due.
-REVIEW_REMIND_AUTO	fr_CA	Rappel automatique d'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Puisque nous n'avons pas reçu, comme nous l'espérions, votre évaluation avant le {$reviewDueDate}, ce courriel a été généré et envoyé automatiquement après l'échéance du délai. Nous serions toutefois heureux de recevoir votre évaluation dès que possible.<br />\n<br />\nSi vous n'avez pas vos nom d'utilisateur-trice et mot de passe pour le site de la revue, vous pouvez utiliser le lien suivant pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nVeuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />\n<br />\n{$editorialContactSignature}	Ce courriel est envoyé automatiquement lorsque la date d'échéance de remise d'une évaluation est révolue (voir Options d'évaluation sous Paramètres > Flux des travaux > Évaluation) et que l'accès de l'évaluateur-trice en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).
 REVIEW_REMIND_ONECLICK	fr_CA	Rappel d'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Nous espérions recevoir votre évaluation avant le {$reviewDueDate}. Nous serions heureux de la recevoir dès que possible.<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nVeuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />\n<br />\n{$editorialContactSignature}	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice pour lui rappeler que son évaluation est due.
 REVIEW_REMIND_AUTO_ONECLICK	fr_CA	Rappel automatique d'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Puisque nous n'avons pas reçu, comme nous l'espérions, votre évaluation avant le {$reviewDueDate}, ce courriel a été généré et envoyé automatiquement après l'échéance du délai. Nous serions toutefois heureux de recevoir votre évaluation dès que possible.<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nVeuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />\n<br />\n{$editorialContactSignature}	Ce courriel est envoyé automatiquement lorsque la date d'échéance de remise d'une évaluation est révolue (voir Options d'évaluation sous Paramètres > Flux des travaux > Évaluation) et que l'accès de l'évaluateur-trice en un clic est activé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).
 EDITOR_DECISION_ACCEPT	fr_CA	Décision du rédacteur	{$authorName},<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à la revue {$contextName}.<br />\n<br />\nNotre décision est d'accepter votre soumission.	Ce courriel du,de la rédacteur-trice ou du,de la rédacteur-trice de rubrique à un-e auteur-e le,la notifie de la décision finale concernant sa soumission, soit d'accepter sa soumission.
@@ -5191,6 +5189,8 @@ EDITOR_DECISION_RESUBMIT	fr_CA	Décision du rédacteur	{$authorName},<br />\n<br
 EDITOR_DECISION_DECLINE	fr_CA	Décision du rédacteur	{$authorName}:<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à la revue {$contextName}.<br />\n<br />\nNotre décision est de refuser votre soumission.	Ce courriel du,de la rédacteur-trice ou du,de la rédacteur-trice de rubrique à un-e auteur-e le,la notifie de la décision concernant sa soumission, soit de refuser la soumission.
 EDITOR_DECISION_INITIAL_DECLINE	fr_CA	Décision du rédacteur	\n\t\t\t{$authorName},<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à  la revue {$contextName}.<br />\n<br />\nNotre décision est de refuser votre soumission.	Cet courriel est envoyé à l'auteur-e si la soumission est refusée avant même l'étape d'évaluation
 EDITOR_RECOMMENDATION	fr_CA	Recommandation du rédacteur	{$editors},<br />\n<br />\nLa recommandation concernant la soumission « {$submissionTitle} » à la revue {$contextName} est de : {$recommendation}	Ce courriel envoyé par le,la rédacteur-trice ou le,la rédacteur-trice de rubrique en charge de la recommandation au,à la rédacteur-trice ou au,à la rédacteur-trice de rubrique en charge de la prise de décisions l'informe d'une recommandation finale concernant la soumission.
+COPYEDIT_REQUEST	fr_CA	Demande de révision d'une soumission	{$participantName},<br />\n<br />\nJ'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissionTitle} » pour la revue {$contextName} à l'aide des étapes suivantes.<br />\n1. Cliquer sur l'URL de la soumission ci-dessous.<br />\n2. Ouvrir le(s) fichier(s) disponible(s) sous Fichiers des ébauches finales et effectuer votre révision, tout en ajoutant des discussions sur la révision, le cas échéant.<br />\n3. Enregistrer le(s) fichier(s) révisé(s) et le(s) téléverser dans la section Version(s) révisée(s).<br />\n4. Informer le,la rédacteur-trice que tous les fichiers ont été révisés et que l'étape de production peut débuter.<br />\n<br />\nURL de la revue {$contextName} : {$contextUrl}<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$participantUsername}	Ce courriel du, de la rédacteur-trice de rubrique à un-e réviseur-e lui demande de procéder à la révision. Il fournit les renseignements sur la soumission et comment accéder à celle-ci.
+PAYPAL_INVESTIGATE_PAYMENT	fr_CA	Activité inhabituelle de PayPal	L'Open Journal Systems a remarqué une activité inhabituelle concernant la prise en charge du paiement PayPal pour la revue {$contextName}. Cette activité pourrait nécessiter une attention particulière ou une intervention manuelle.<br />\n                       <br />\nCe courriel a été généré par le plugiciel PayPal du Open Journal Systems.<br />\n<br />\nInformation complète de la demande :<br />\n{$postInfo}<br />\n<br />\nInformation supplémentaire (si fournie) :<br />\n{$additionalInfo}<br />\n<br />\nVariables serveur :<br />\n{$serverVars}<br />\n	Ce modèle de courriel est utilisé pour aviser un contact principal d'une revue qu'une activité inhabituelle ou requérant une intervention manuelle a été remarquée par le plugiciel PayPal.
 LAYOUT_REQUEST	fr_CA	Demande de mise en page des épreuves	{$participantName},<br />\n<br />\nJ'aimerais que vous prépariez les épreuves du manuscrit intitulé « {$submissionTitle} » pour la revue {$contextName} à l'aide des étapes suivantes.<br />\n1. Cliquer sur l'URL de la soumission ci-dessous.<br />\n2. Se connecter au site Web de la revue et utiliser les fichiers disponibles sous Fichiers prêts pour la production pour créer les épreuves en fonction des normes de la revue.<br />\n3. Téléverser les épreuves dans la section Épreuves.<br />\n4. Informer le,la rédacteur-trice, via une discussion sur la production, que les épreuves ont été téléversées et qu'elles sont prêtes.<br />\n<br />\nURL de la revue {$contextName} : {$contextUrl}<br />\nURL du manuscrit : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$participantUsername}<br />\n<br />\nSi vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec moi. Je vous remercie de votre collaboration.	Ce courriel du,de la rédacteur-trice de rubrique au, à la responsable de la mise en page l'avise qu'il ou elle a été assigné-e à la réalisation de la mise en page de la soumission. Il fournit les renseignements sur la soumission et comment accéder à celle-ci.
 LAYOUT_COMPLETE	fr_CA	Mise en page des épreuves terminée	{$editorialContactName},<br />\n<br />\nLes épreuves du manuscrit intitulé « {$submissionTitle} » pour la revue {$contextName} sont maintenant prêtes pour la relecture.<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec moi.<br />\n<br />\n{$participantName}	Ce courriel du,de la responsable de la mise en page au,à la rédacteur-trice de rubrique l'avise que l'étape de mise en page est complétée.
 EMAIL_LINK	fr_CA	Article potentiellement intéressant	Je pense que l'article suivant pourrait vous intéresser : « {$submissionTitle} » par {$authorName}, publié dans le volume {$volume}, numéro {$number} de ({$year}) de la revue {$contextName}, à l'adresse suivante : {$articleUrl}.	Ce modèle de courriel fournit à un,une lecteur-trice inscrit-e l'occasion d'envoyer de l'information à quelqu'un qui peut être intéressé par un article en particulier. Il est disponible via Outils de lecture et doit être activé par le,la directeur-trice de la revue à la page Gestion des outils de lecture.
@@ -5200,6 +5200,7 @@ SUBSCRIPTION_BEFORE_EXPIRY	fr_CA	Avis d'expiration de l'abonnement	{$subscriberN
 SUBSCRIPTION_AFTER_EXPIRY	fr_CA	Abonnement expiré	{$subscriberName},<br />\n<br />\nVotre abonnement à la revue {$contextName} est expiré.<br />\n<br />\n{$subscriptionType}<br />\nDate d'expiration : {$expiryDate}<br />\n<br />\nPour renouveler votre abonnement, veuillez vous rendre sur le site Web de la revue. Vous pouvez y ouvrir une session en utilisant votre nom d'utilisateur-trice, soit « {$username} ».<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec nous.<br />\n<br />\n{$subscriptionContactSignature}	Ce courriel avise un-e abonné-e que son abonnement est expiré. Il fournit l'adresse URL de la revue, ainsi que les instructions pour y accéder.
 SUBSCRIPTION_AFTER_EXPIRY_LAST	fr_CA	Abonnement expiré - Dernier rappel	{$subscriberName},<br />\n<br />\nVotre abonnement à la revue {$contextName} est expiré. Veuillez prendre note que ceci est le dernier rappel qui vous sera envoyé.<br />\n<br />\n{$subscriptionType}<br />\nDate d'expiration : {$expiryDate}<br />\n<br />\nPour renouveller votre abonnement, aveuillez vous rendre sur le site Web de la revue. Vous pouvez y ouvrir une session avec votre nom d'utilisateur-trice, soit « {$username} ».<br />\n<br />\nSi vous avez des questions, ne hésitez pas à communiquer avec nous.<br />\n<br />\n{$subscriptionContactSignature}	Ce courriel avise un-e abonné-e que son abonnement est expiré. Il donne l'adresse URL de la revue ainsi que les instructions pour y accéder.
 SUBSCRIPTION_PURCHASE_INDL	fr_CA	Souscription à un abonnement individuel	Une souscription en ligne à un abonnement individuel pour la revue {$contextName} avec les renseignements suivants :<br />\n<br />\nType d'abonnement :<br />\n{$subscriptionType}<br />\n<br />\nUtilisateur-trice :<br />\n{$userDetails}<br />\n<br />\nInformation d'adhésion (si fournie) :<br />\n{$membership}<br />\n<br />\nPour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivante.<br />\n<br />\nURL d'abonnement : {$subscriptionUrl}<br/>\n	Ce courriel informe le,la responsable des abonnements qu'un abonnement individuel a été souscrit en ligne. Il fournit des renseignements sommaires sur l'abonnement et le lien pour accéder à l'abonnement souscrit.
+MANUAL_PAYMENT_NOTIFICATION	fr_CA	Avis de paiement manuel	Un paiement manuel doit être traité pour la revue {$contextName} et l'utilisateur {$userFullName} (nom d'utilisateur &quot;{$userName}&quot;).<br />\n<br />\nL'élément facturé est &quot;{$itemName}&quot;.<br />\nLe coût est de {$itemCost} ({$itemCurrencyCode}).<br />\n<br />\nCe courriel a été généré par le plugiciel de paiement manuel du Open Journal Systems.	Ce modèle de courriel est utilisé pour aviser un directeur de revue que le paiement manuel a été demandé.
 SUBSCRIPTION_PURCHASE_INSTL	fr_CA	Souscription à un abonnement institutionnel	Souscription en ligne à un abonnement institutionnel pour la revue {$contextName} avec les renseignements suivants. Pour activer cet abonnement, veuillez utiliser l'URL d'abonnement fourni et fixer le statut de l'abonnement à « actif ».<br />\n<br />\nType d'abonnement :<br />\n{$subscriptionType}<br />\n<br />\nÉtablissement :<br />\n{$institutionName}<br />\n{$institutionMailingAddress}<br />\n<br />\nDomaine (si fourni) :<br />\n{$domain}<br />\n<br />\nPlage d'adresses IP (si fournie) :<br />\n{$ipRanges}<br />\n<br />\nPersonne-ressource :<br />\n{$userDetails}<br />\n<br />\nRenseignements d'adhésion (si fournis) :<br />\n{$membership}<br />\n<br />\nPour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant :<br />\n<br />\nURL de l'abonnement : {$subscriptionUrl}<br />\n	Ce courriel informe le,la responsable des abonnements qu'un abonnement institutionnel a été souscrit en ligne. Il fournit des renseignements sommaires sur l'abonnement et le lien pour accéder à l'abonnement souscrit.
 SUBSCRIPTION_RENEW_INDL	fr_CA	Renouvellement d'abonnement individuel	Un abonnement individuel a été renouvelé en ligne pour la revue {$contextName} avec les renseignements suivants.<br />\n<br />\nType d'abonnement :<br />\n{$subscriptionType}<br />\n<br />\nUtilisateur-trice :<br />\n{$userDetails}<br />\n<br />\nRenseignements d'adhésion (si fournis) :<br />\n{$membership}<br />\n<br />\nPour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant.<br />\n<br />\nURL de l'abonnement : {$subscriptionUrl}<br />\n	Ce courriel informe le,la responsable des abonnements qu'un abonnement individuel a été renouvelé en ligne. Il fournit des renseignements sommaires sur l'abonnement et le lien pour accéder à l'abonnement renouvelé.
 SUBSCRIPTION_RENEW_INSTL	fr_CA	Renouvellement d'abonnement institutionnel	Un abonnement institutionnel a été renouvelé en ligne pour la revue {$contextName} avec les renseignements suivants.<br />\n<br />\nType d'abonnement :<br />\n{$subscriptionType}<br />\n<br />\nÉtablissement :<br />\n{$institutionName}<br />\n{$institutionMailingAddress}<br />\n<br />\nDomaine (si fourni) :<br />\n{$domain}<br />\n<br />\nPlage d'adresses IP (si fournie) :<br />\n{$ipRanges}<br />\n<br />\nPersonne-ressource :<br />\n{$userDetails}<br />\n<br />\nRenseignements d'adhésion (si fournis) :<br />\n{$membership}<br />\n<br />\nPour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant.<br />\n<br />\nURL de l'abonnement : {$subscriptionUrl}<br />\n	Ce courriel informe le,la responsable des abonnements qu'un abonnement institutionnel a été renouvelé en ligne. Il fournit des renseignements sommaires sur l'abonnement et le lien pour accéder à l'abonnement renouvelé.
@@ -5209,7 +5210,6 @@ STATISTICS_REPORT_NOTIFICATION	fr_CA	Activité éditoriale pour {$month} {$year}
 ANNOUNCEMENT	fr_CA	{$title}	<b>{$title}</b><br />\n<br />\n{$summary}<br />\n<br />\nVisiter notre site Web pour consulter <a href="{$url}">l'annonce complète</a>.	Ce courriel est envoyé lorsqu'une nouvelle annonce est créée.
 ORCID_COLLECT_AUTHOR_ID	fr_CA	Soumission ORCID	{$authorName},<br/>\n<br/>\nVous avez été inscrit ou inscrite en tant qu'auteur ou auteure pour un manuscrit soumis à {$contextName}.<br/>\nPour confirmer votre statut d'auteur ou d'auteure, veuillez ajouter votre identifiant ORCID à cette soumission en cliquant sur le lien ci-dessous.<br/>\n<br/>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" width='16' height='16' alt="icône identifiant ORCID" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Se connecter avec votre identifiant ORCID ou s'inscrire</a><br/>\n<br/>\n<br/>\n<a href="{$orcidAboutUrl}">Plus de renseignements sur votre identifiant ORCID dans {$contextName}</a><br/>\n<br/>\nSi vous avez des questions, veuillez communiquer avec nous.<br/>\n<br/>\n{$principalContactSignature}<br/>\n	Ce modèle de courriel est utilisé pour récupérer les identifiants ORCID des auteurs-es.
 ORCID_REQUEST_AUTHOR_AUTHORIZATION	fr_CA	Demande d'accès au dossier ORCID	{$authorName},<br/>\n<br/>\nVous avez été inscrit ou inscrite en tant qu'auteur ou auteure pour le manuscrit « {$submissionTitle} » soumis à {$contextName}.\n<br/>\n<br/>\nVeuillez nous autoriser à ajouter votre identifiant ORCID à cette soumission et à ajouter également la soumission à votre dossier ORCID suite à sa publication.\n<br/>\nSuivre le lien vers le site officiel ORCID, vous connecter avec votre profil et autoriser l'accès en suivant les instructions.<br/>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" width='16' height='16' alt="icône identifiant ORCID" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Se connecter avec votre identifiant ORCID ou s'inscrire</a><br/>\n<br/>\n<br/>\n<a href="{$orcidAboutUrl}">Plus de renseignements sur votre identifiant ORCID dans {$contextName}</a><br/>\n<br/>\nSi vous avez des questions, veuillez communiquer avec nous.<br/>\n<br/>\n{$principalContactSignature}<br/>\n	Ce modèle de courriel est utilisé pour demander aux auteurs-es l'accès à leur dossier ORCID.
-PAYPAL_INVESTIGATE_PAYMENT	fr_CA	Activité inhabituelle de PayPal	L'Open Journal Systems a remarqué une activité inhabituelle concernant la prise en charge du paiement PayPal pour la revue {$contextName}. Cette activité pourrait nécessiter une attention particulière ou une intervention manuelle.<br />\n                       <br />\nCe courriel a été généré par le plugiciel PayPal du Open Journal Systems.<br />\n<br />\nInformation complète de la demande :<br />\n{$postInfo}<br />\n<br />\nInformation supplémentaire (si fournie) :<br />\n{$additionalInfo}<br />\n<br />\nVariables serveur :<br />\n{$serverVars}<br />\n	Ce modèle de courriel est utilisé pour aviser un contact principal d'une revue qu'une activité inhabituelle ou requérant une intervention manuelle a été remarquée par le plugiciel PayPal.
 \.
 
 
@@ -5226,289 +5226,273 @@ COPY public.email_templates_settings (email_id, locale, setting_name, setting_va
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	17	2026-11-14 12:10:08	268435458	submission.event.general.metadataUpdated	0
-2	515	1	17	2026-11-14 12:10:09	1342177281	submission.event.fileUploaded	0
-3	1048585	1	17	2026-11-14 12:10:09	1342177288	submission.event.fileRevised	0
-4	515	1	17	2026-11-14 12:10:09	1342177296	submission.event.fileEdited	0
-5	1048585	1	17	2026-11-14 12:10:09	1342177296	submission.event.fileEdited	0
-6	1048585	1	17	2026-11-14 12:10:11	268435458	submission.event.general.metadataUpdated	0
-7	1048585	1	17	2026-11-14 12:10:12	268435457	submission.event.submissionSubmitted	0
-8	1048585	1	3	2026-11-14 12:10:16	805306371	log.editor.decision	0
-9	1048585	1	3	2026-11-14 12:10:20	1073741825	log.review.reviewerAssigned	0
-10	1048585	1	3	2026-11-14 12:10:24	1073741825	log.review.reviewerAssigned	0
-11	1048585	1	3	2026-11-14 12:10:28	1073741825	log.review.reviewerAssigned	0
-12	1048585	1	3	2026-11-14 12:10:29	805306371	log.editor.decision	0
-13	1048585	1	3	2026-11-14 12:10:34	268435459	submission.event.participantAdded	0
-14	1048585	1	3	2026-11-14 12:10:35	805306371	log.editor.decision	0
-15	1048585	1	3	2026-11-14 12:10:39	268435459	submission.event.participantAdded	0
-16	1048585	1	3	2026-11-14 12:10:42	268435459	submission.event.participantAdded	0
-17	1048585	1	3	2026-11-14 12:10:48	268435458	submission.event.general.metadataUpdated	0
-18	1048585	1	3	2026-11-14 12:10:50	268435458	submission.event.general.metadataUpdated	0
-19	1048585	1	3	2026-11-14 12:10:51	268435458	submission.event.general.metadataUpdated	0
-20	1048585	1	3	2026-11-14 12:10:53	268435458	submission.event.general.metadataUpdated	0
-21	1048585	1	3	2026-11-14 12:10:57	268435458	submission.event.general.metadataUpdated	0
-22	515	2	3	2026-11-14 12:11:02	1342177281	submission.event.fileUploaded	0
-23	1048585	1	3	2026-11-14 12:11:02	1342177288	submission.event.fileRevised	0
-24	515	2	3	2026-11-14 12:11:02	1342177296	submission.event.fileEdited	0
-25	1048585	1	3	2026-11-14 12:11:02	1342177296	submission.event.fileEdited	0
-26	1048585	1	3	2026-11-14 12:11:11	268435459	submission.event.participantAdded	0
-27	1048585	1	17	2026-11-14 12:11:16	268435458	submission.event.general.metadataUpdated	0
-28	1048585	1	3	2026-11-14 12:11:20	268435458	submission.event.general.metadataUpdated	0
-29	1048585	1	3	2026-11-14 12:11:21	268435462	publication.event.published	0
-30	1048585	1	3	2026-11-14 12:11:28	268435463	publication.event.unpublished	0
-31	1048585	1	3	2026-11-14 12:11:31	268435462	publication.event.published	0
-32	1048585	1	3	2026-11-14 12:11:35	268435458	submission.event.general.metadataUpdated	0
-33	515	3	3	2026-11-14 12:11:35	1342177281	submission.event.fileUploaded	0
-34	1048585	1	3	2026-11-14 12:11:35	1342177288	submission.event.fileRevised	0
-35	1048585	1	3	2026-11-14 12:11:35	268435464	publication.event.versionCreated	0
-36	1048585	1	3	2026-11-14 12:11:45	268435458	submission.event.general.metadataUpdated	0
-37	1048585	1	3	2026-11-14 12:11:49	268435458	submission.event.general.metadataUpdated	0
-38	1048585	1	3	2026-11-14 12:11:58	268435458	submission.event.general.metadataUpdated	0
-39	1048585	1	3	2026-11-14 12:11:59	268435462	publication.event.versionPublished	0
-40	1048585	1	3	2026-11-14 12:12:07	268435463	publication.event.versionUnpublished	0
-41	1048585	1	3	2026-11-14 12:12:12	268435459	submission.event.participantAdded	0
-42	1048585	1	3	2026-11-14 12:12:19	268435459	submission.event.participantAdded	0
-43	1048585	2	18	2026-11-14 12:12:28	268435458	submission.event.general.metadataUpdated	0
-44	515	4	18	2026-11-14 12:12:28	1342177281	submission.event.fileUploaded	0
-45	1048585	2	18	2026-11-14 12:12:28	1342177288	submission.event.fileRevised	0
-46	515	4	18	2026-11-14 12:12:29	1342177296	submission.event.fileEdited	0
-47	1048585	2	18	2026-11-14 12:12:29	1342177296	submission.event.fileEdited	0
-48	1048585	2	18	2026-11-14 12:12:31	268435458	submission.event.general.metadataUpdated	0
-49	1048585	2	18	2026-11-14 12:12:31	268435457	submission.event.submissionSubmitted	0
-50	1048585	2	3	2026-11-14 12:12:36	805306371	log.editor.decision	0
-51	515	5	3	2026-11-14 12:12:36	1342177281	submission.event.fileUploaded	0
-52	1048585	2	3	2026-11-14 12:12:36	1342177288	submission.event.fileRevised	0
-53	1048585	2	3	2026-11-14 12:12:39	268435459	submission.event.participantAdded	0
-54	1048585	2	3	2026-11-14 12:12:42	268435458	submission.event.general.metadataUpdated	0
-55	1048585	2	6	2026-11-14 12:12:48	805306372	log.editor.recommendation	0
-56	1048585	3	19	2026-11-14 12:13:00	268435458	submission.event.general.metadataUpdated	0
-57	515	6	19	2026-11-14 12:13:01	1342177281	submission.event.fileUploaded	0
-58	1048585	3	19	2026-11-14 12:13:01	1342177288	submission.event.fileRevised	0
-59	515	6	19	2026-11-14 12:13:01	1342177296	submission.event.fileEdited	0
-60	1048585	3	19	2026-11-14 12:13:01	1342177296	submission.event.fileEdited	0
-61	1048585	3	19	2026-11-14 12:13:03	268435458	submission.event.general.metadataUpdated	0
-62	1048585	3	19	2026-11-14 12:13:04	268435457	submission.event.submissionSubmitted	0
-63	1048585	3	3	2026-11-14 12:13:08	805306371	log.editor.decision	0
-64	515	7	3	2026-11-14 12:13:08	1342177281	submission.event.fileUploaded	0
-65	1048585	3	3	2026-11-14 12:13:08	1342177288	submission.event.fileRevised	0
-66	1048585	3	3	2026-11-14 12:13:13	1073741825	log.review.reviewerAssigned	0
-67	1048585	3	3	2026-11-14 12:13:16	1073741825	log.review.reviewerAssigned	0
-68	1048585	3	3	2026-11-14 12:13:18	805306371	log.editor.decision	0
-69	1048585	3	3	2026-11-14 12:13:22	268435459	submission.event.participantAdded	0
-70	1048585	4	20	2026-11-14 12:13:29	268435458	submission.event.general.metadataUpdated	0
-71	515	8	20	2026-11-14 12:13:30	1342177281	submission.event.fileUploaded	0
-72	1048585	4	20	2026-11-14 12:13:30	1342177288	submission.event.fileRevised	0
-73	515	8	20	2026-11-14 12:13:30	1342177296	submission.event.fileEdited	0
-74	1048585	4	20	2026-11-14 12:13:30	1342177296	submission.event.fileEdited	0
-75	1048585	4	20	2026-11-14 12:13:33	268435458	submission.event.general.metadataUpdated	0
-76	1048585	4	20	2026-11-14 12:13:34	268435458	submission.event.general.metadataUpdated	0
-77	1048585	4	20	2026-11-14 12:13:35	268435457	submission.event.submissionSubmitted	0
-78	1048585	5	21	2026-11-14 12:13:41	268435458	submission.event.general.metadataUpdated	0
-79	515	9	21	2026-11-14 12:13:42	1342177281	submission.event.fileUploaded	0
-80	1048585	5	21	2026-11-14 12:13:42	1342177288	submission.event.fileRevised	0
-81	515	9	21	2026-11-14 12:13:42	1342177296	submission.event.fileEdited	0
-82	1048585	5	21	2026-11-14 12:13:42	1342177296	submission.event.fileEdited	0
-83	1048585	5	21	2026-11-14 12:13:44	268435458	submission.event.general.metadataUpdated	0
-84	1048585	5	21	2026-11-14 12:13:45	268435457	submission.event.submissionSubmitted	0
-85	1048585	5	3	2026-11-14 12:13:49	805306371	log.editor.decision	0
-86	1048585	5	3	2026-11-14 12:13:53	1073741825	log.review.reviewerAssigned	0
-87	1048585	5	3	2026-11-14 12:13:57	1073741825	log.review.reviewerAssigned	0
-88	1048585	5	3	2026-11-14 12:13:59	805306371	log.editor.decision	0
-89	1048585	5	3	2026-11-14 12:14:02	268435459	submission.event.participantAdded	0
-90	1048585	5	3	2026-11-14 12:14:04	805306371	log.editor.decision	0
-91	1048585	5	3	2026-11-14 12:14:08	268435459	submission.event.participantAdded	0
-92	1048585	5	3	2026-11-14 12:14:11	268435459	submission.event.participantAdded	0
-93	1048585	6	22	2026-11-14 12:14:18	268435458	submission.event.general.metadataUpdated	0
-94	515	10	22	2026-11-14 12:14:19	1342177281	submission.event.fileUploaded	0
-95	1048585	6	22	2026-11-14 12:14:19	1342177288	submission.event.fileRevised	0
-96	515	10	22	2026-11-14 12:14:19	1342177296	submission.event.fileEdited	0
-97	1048585	6	22	2026-11-14 12:14:19	1342177296	submission.event.fileEdited	0
-98	1048585	6	22	2026-11-14 12:14:21	268435458	submission.event.general.metadataUpdated	0
-99	1048585	6	22	2026-11-14 12:14:22	268435457	submission.event.submissionSubmitted	0
-100	1048585	6	3	2026-11-14 12:14:26	805306371	log.editor.decision	0
-101	515	11	3	2026-11-14 12:14:26	1342177281	submission.event.fileUploaded	0
-102	1048585	6	3	2026-11-14 12:14:26	1342177288	submission.event.fileRevised	0
-103	1048585	6	3	2026-11-14 12:14:31	1073741825	log.review.reviewerAssigned	0
-104	1048585	6	3	2026-11-14 12:14:35	1073741825	log.review.reviewerAssigned	0
-105	1048585	6	3	2026-11-14 12:14:36	805306371	log.editor.decision	0
-106	1048585	6	3	2026-11-14 12:14:40	268435459	submission.event.participantAdded	0
-107	1048585	6	3	2026-11-14 12:14:42	805306371	log.editor.decision	0
-108	1048585	6	3	2026-11-14 12:14:46	268435459	submission.event.participantAdded	0
-109	1048585	7	23	2026-11-14 12:14:52	268435458	submission.event.general.metadataUpdated	0
-110	515	12	23	2026-11-14 12:14:53	1342177281	submission.event.fileUploaded	0
-111	1048585	7	23	2026-11-14 12:14:53	1342177288	submission.event.fileRevised	0
-112	515	12	23	2026-11-14 12:14:53	1342177296	submission.event.fileEdited	0
-113	1048585	7	23	2026-11-14 12:14:53	1342177296	submission.event.fileEdited	0
-114	1048585	7	23	2026-11-14 12:14:55	268435458	submission.event.general.metadataUpdated	0
-115	1048585	7	23	2026-11-14 12:14:56	268435457	submission.event.submissionSubmitted	0
-116	1048585	7	3	2026-11-14 12:15:01	805306371	log.editor.decision	0
-117	515	13	3	2026-11-14 12:15:01	1342177281	submission.event.fileUploaded	0
-118	1048585	7	3	2026-11-14 12:15:01	1342177288	submission.event.fileRevised	0
-119	1048585	7	3	2026-11-14 12:15:05	1073741825	log.review.reviewerAssigned	0
-120	1048585	7	3	2026-11-14 12:15:09	1073741825	log.review.reviewerAssigned	0
-121	1048585	7	3	2026-11-14 12:15:13	1073741825	log.review.reviewerAssigned	0
-122	1048585	7	8	2026-11-14 12:15:18	1073741830	log.review.reviewAccepted	0
-123	1048585	7	8	2026-11-14 12:15:21	1073741848	log.review.reviewReady	0
-124	1048585	8	24	2026-11-14 12:15:28	268435458	submission.event.general.metadataUpdated	0
-125	515	14	24	2026-11-14 12:15:28	1342177281	submission.event.fileUploaded	0
-126	1048585	8	24	2026-11-14 12:15:28	1342177288	submission.event.fileRevised	0
-127	515	14	24	2026-11-14 12:15:29	1342177296	submission.event.fileEdited	0
-128	1048585	8	24	2026-11-14 12:15:29	1342177296	submission.event.fileEdited	0
-129	1048585	8	24	2026-11-14 12:15:32	268435458	submission.event.general.metadataUpdated	0
-130	1048585	8	24	2026-11-14 12:15:33	268435458	submission.event.general.metadataUpdated	0
-131	1048585	8	24	2026-11-14 12:15:34	268435457	submission.event.submissionSubmitted	0
-132	1048585	9	25	2026-11-14 12:15:40	268435458	submission.event.general.metadataUpdated	0
-133	515	15	25	2026-11-14 12:15:41	1342177281	submission.event.fileUploaded	0
-134	1048585	9	25	2026-11-14 12:15:41	1342177288	submission.event.fileRevised	0
-135	515	15	25	2026-11-14 12:15:41	1342177296	submission.event.fileEdited	0
-136	1048585	9	25	2026-11-14 12:15:41	1342177296	submission.event.fileEdited	0
-137	1048585	9	25	2026-11-14 12:15:42	268435458	submission.event.general.metadataUpdated	0
-138	1048585	9	25	2026-11-14 12:15:43	268435457	submission.event.submissionSubmitted	0
-139	1048585	9	3	2026-11-14 12:15:48	805306371	log.editor.decision	0
-140	515	16	3	2026-11-14 12:15:48	1342177281	submission.event.fileUploaded	0
-141	1048585	9	3	2026-11-14 12:15:48	1342177288	submission.event.fileRevised	0
-142	1048585	9	3	2026-11-14 12:15:53	1073741825	log.review.reviewerAssigned	0
-143	1048585	9	3	2026-11-14 12:15:56	1073741825	log.review.reviewerAssigned	0
-144	1048585	9	3	2026-11-14 12:15:58	805306371	log.editor.decision	0
-145	1048585	9	3	2026-11-14 12:16:02	268435459	submission.event.participantAdded	0
-146	1048585	9	3	2026-11-14 12:16:03	805306371	log.editor.decision	0
-147	1048585	9	3	2026-11-14 12:16:07	268435459	submission.event.participantAdded	0
-148	1048585	9	3	2026-11-14 12:16:10	268435459	submission.event.participantAdded	0
-149	1048585	10	26	2026-11-14 12:16:17	268435458	submission.event.general.metadataUpdated	0
-150	515	17	26	2026-11-14 12:16:18	1342177281	submission.event.fileUploaded	0
-151	1048585	10	26	2026-11-14 12:16:18	1342177288	submission.event.fileRevised	0
-152	515	17	26	2026-11-14 12:16:18	1342177296	submission.event.fileEdited	0
-153	1048585	10	26	2026-11-14 12:16:18	1342177296	submission.event.fileEdited	0
-154	1048585	10	26	2026-11-14 12:16:20	268435458	submission.event.general.metadataUpdated	0
-155	1048585	10	26	2026-11-14 12:16:20	268435457	submission.event.submissionSubmitted	0
-156	1048585	10	3	2026-11-14 12:16:25	805306371	log.editor.decision	0
-157	515	18	3	2026-11-14 12:16:25	1342177281	submission.event.fileUploaded	0
-158	1048585	10	3	2026-11-14 12:16:25	1342177288	submission.event.fileRevised	0
-159	1048585	10	3	2026-11-14 12:16:30	1073741825	log.review.reviewerAssigned	0
-160	1048585	10	3	2026-11-14 12:16:34	1073741825	log.review.reviewerAssigned	0
-161	1048585	10	9	2026-11-14 12:16:38	1073741830	log.review.reviewAccepted	0
-162	1048585	10	9	2026-11-14 12:16:42	1073741848	log.review.reviewReady	0
-163	1048585	10	10	2026-11-14 12:16:46	1073741830	log.review.reviewAccepted	0
-164	1048585	10	10	2026-11-14 12:16:50	1073741848	log.review.reviewReady	0
-165	1048585	11	27	2026-11-14 12:16:56	268435458	submission.event.general.metadataUpdated	0
-166	515	19	27	2026-11-14 12:16:57	1342177281	submission.event.fileUploaded	0
-167	1048585	11	27	2026-11-14 12:16:57	1342177288	submission.event.fileRevised	0
-168	515	19	27	2026-11-14 12:16:57	1342177296	submission.event.fileEdited	0
-169	1048585	11	27	2026-11-14 12:16:57	1342177296	submission.event.fileEdited	0
-170	1048585	11	27	2026-11-14 12:17:01	268435458	submission.event.general.metadataUpdated	0
-171	1048585	11	27	2026-11-14 12:17:02	268435458	submission.event.general.metadataUpdated	0
-172	1048585	11	27	2026-11-14 12:17:03	268435457	submission.event.submissionSubmitted	0
-173	1048585	12	28	2026-11-14 12:17:09	268435458	submission.event.general.metadataUpdated	0
-174	515	20	28	2026-11-14 12:17:10	1342177281	submission.event.fileUploaded	0
-175	1048585	12	28	2026-11-14 12:17:10	1342177288	submission.event.fileRevised	0
-176	515	20	28	2026-11-14 12:17:10	1342177296	submission.event.fileEdited	0
-177	1048585	12	28	2026-11-14 12:17:10	1342177296	submission.event.fileEdited	0
-178	1048585	12	28	2026-11-14 12:17:12	268435458	submission.event.general.metadataUpdated	0
-179	1048585	12	28	2026-11-14 12:17:13	268435457	submission.event.submissionSubmitted	0
-180	1048585	12	3	2026-11-14 12:17:18	805306371	log.editor.decision	0
-181	1048585	12	3	2026-11-14 12:17:23	1073741825	log.review.reviewerAssigned	0
-182	1048585	12	3	2026-11-14 12:17:27	1073741825	log.review.reviewerAssigned	0
-183	1048585	13	29	2026-11-14 12:17:33	268435458	submission.event.general.metadataUpdated	0
-184	515	21	29	2026-11-14 12:17:34	1342177281	submission.event.fileUploaded	0
-185	1048585	13	29	2026-11-14 12:17:34	1342177288	submission.event.fileRevised	0
-186	515	21	29	2026-11-14 12:17:34	1342177296	submission.event.fileEdited	0
-187	1048585	13	29	2026-11-14 12:17:34	1342177296	submission.event.fileEdited	0
-188	1048585	13	29	2026-11-14 12:17:36	268435458	submission.event.general.metadataUpdated	0
-189	1048585	13	29	2026-11-14 12:17:37	268435457	submission.event.submissionSubmitted	0
-190	1048585	13	3	2026-11-14 12:17:43	805306371	log.editor.decision	0
-191	515	22	3	2026-11-14 12:17:43	1342177281	submission.event.fileUploaded	0
-192	1048585	13	3	2026-11-14 12:17:43	1342177288	submission.event.fileRevised	0
-193	1048585	13	3	2026-11-14 12:17:48	1073741825	log.review.reviewerAssigned	0
-194	1048585	13	3	2026-11-14 12:17:52	1073741825	log.review.reviewerAssigned	0
-195	1048585	13	3	2026-11-14 12:17:55	1073741825	log.review.reviewerAssigned	0
-196	1048585	13	7	2026-11-14 12:18:00	1073741830	log.review.reviewAccepted	0
-197	1048585	13	7	2026-11-14 12:18:03	1073741848	log.review.reviewReady	0
-198	1048585	13	9	2026-11-14 12:18:08	1073741830	log.review.reviewAccepted	0
-199	1048585	13	9	2026-11-14 12:18:12	1073741848	log.review.reviewReady	0
-200	1048585	13	10	2026-11-14 12:18:17	1073741830	log.review.reviewAccepted	0
-201	1048585	13	10	2026-11-14 12:18:21	1073741848	log.review.reviewReady	0
-202	1048585	13	3	2026-11-14 12:18:29	805306371	log.editor.decision	0
-203	1048585	14	30	2026-11-14 12:18:36	268435458	submission.event.general.metadataUpdated	0
-204	515	23	30	2026-11-14 12:18:37	1342177281	submission.event.fileUploaded	0
-205	1048585	14	30	2026-11-14 12:18:37	1342177288	submission.event.fileRevised	0
-206	515	23	30	2026-11-14 12:18:37	1342177296	submission.event.fileEdited	0
-207	1048585	14	30	2026-11-14 12:18:37	1342177296	submission.event.fileEdited	0
-208	1048585	14	30	2026-11-14 12:18:39	268435458	submission.event.general.metadataUpdated	0
-209	1048585	14	30	2026-11-14 12:18:40	268435457	submission.event.submissionSubmitted	0
-210	1048585	15	31	2026-11-14 12:18:46	268435458	submission.event.general.metadataUpdated	0
-211	515	24	31	2026-11-14 12:18:47	1342177281	submission.event.fileUploaded	0
-212	1048585	15	31	2026-11-14 12:18:47	1342177288	submission.event.fileRevised	0
-213	515	24	31	2026-11-14 12:18:47	1342177296	submission.event.fileEdited	0
-214	1048585	15	31	2026-11-14 12:18:47	1342177296	submission.event.fileEdited	0
-215	1048585	15	31	2026-11-14 12:18:48	268435458	submission.event.general.metadataUpdated	0
-216	1048585	15	31	2026-11-14 12:18:49	268435457	submission.event.submissionSubmitted	0
-217	1048585	15	3	2026-11-14 12:18:55	805306371	log.editor.decision	0
-218	515	25	3	2026-11-14 12:18:55	1342177281	submission.event.fileUploaded	0
-219	1048585	15	3	2026-11-14 12:18:55	1342177288	submission.event.fileRevised	0
-220	1048585	15	3	2026-11-14 12:19:00	1073741825	log.review.reviewerAssigned	0
-221	1048585	15	3	2026-11-14 12:19:04	1073741825	log.review.reviewerAssigned	0
-222	1048585	15	3	2026-11-14 12:19:05	805306371	log.editor.decision	0
-223	1048585	15	3	2026-11-14 12:19:09	268435459	submission.event.participantAdded	0
-224	1048585	15	3	2026-11-14 12:19:10	805306371	log.editor.decision	0
-225	1048585	15	3	2026-11-14 12:19:15	268435459	submission.event.participantAdded	0
-226	1048585	16	32	2026-11-14 12:19:21	268435458	submission.event.general.metadataUpdated	0
-227	515	26	32	2026-11-14 12:19:22	1342177281	submission.event.fileUploaded	0
-228	1048585	16	32	2026-11-14 12:19:22	1342177288	submission.event.fileRevised	0
-229	515	26	32	2026-11-14 12:19:22	1342177296	submission.event.fileEdited	0
-230	1048585	16	32	2026-11-14 12:19:22	1342177296	submission.event.fileEdited	0
-231	1048585	16	32	2026-11-14 12:19:24	268435458	submission.event.general.metadataUpdated	0
-232	1048585	16	32	2026-11-14 12:19:25	268435457	submission.event.submissionSubmitted	0
-233	1048585	17	33	2026-11-14 12:19:31	268435458	submission.event.general.metadataUpdated	0
-234	515	27	33	2026-11-14 12:19:32	1342177281	submission.event.fileUploaded	0
-235	1048585	17	33	2026-11-14 12:19:32	1342177288	submission.event.fileRevised	0
-236	515	27	33	2026-11-14 12:19:32	1342177296	submission.event.fileEdited	0
-237	1048585	17	33	2026-11-14 12:19:32	1342177296	submission.event.fileEdited	0
-238	1048585	17	33	2026-11-14 12:19:34	268435458	submission.event.general.metadataUpdated	0
-239	1048585	17	33	2026-11-14 12:19:35	268435457	submission.event.submissionSubmitted	0
-240	1048585	17	3	2026-11-14 12:19:42	805306371	log.editor.decision	0
-241	515	28	3	2026-11-14 12:19:42	1342177281	submission.event.fileUploaded	0
-242	1048585	17	3	2026-11-14 12:19:42	1342177288	submission.event.fileRevised	0
-243	1048585	17	3	2026-11-14 12:19:46	1073741825	log.review.reviewerAssigned	0
-244	1048585	17	3	2026-11-14 12:19:50	1073741825	log.review.reviewerAssigned	0
-245	1048585	17	3	2026-11-14 12:19:52	805306371	log.editor.decision	0
-246	1048585	17	3	2026-11-14 12:19:56	268435459	submission.event.participantAdded	0
-247	1048585	17	3	2026-11-14 12:19:57	805306371	log.editor.decision	0
-248	1048585	17	3	2026-11-14 12:20:01	268435459	submission.event.participantAdded	0
-249	1048585	17	3	2026-11-14 12:20:04	268435459	submission.event.participantAdded	0
-250	515	29	3	2026-11-14 12:20:10	1342177281	submission.event.fileUploaded	0
-251	1048585	17	3	2026-11-14 12:20:10	1342177288	submission.event.fileRevised	0
-252	515	29	3	2026-11-14 12:20:10	1342177296	submission.event.fileEdited	0
-253	1048585	17	3	2026-11-14 12:20:10	1342177296	submission.event.fileEdited	0
-254	1048585	17	3	2026-11-14 12:20:17	268435458	submission.event.general.metadataUpdated	0
-255	1048585	17	3	2026-11-14 12:20:18	268435462	publication.event.scheduled	0
-256	1048585	17	3	2026-11-14 12:20:22	268435462	publication.event.published	0
-257	1048585	17	3	2026-11-14 12:20:29	268435463	publication.event.unpublished	0
-258	1048585	17	3	2026-11-14 12:20:29	268435462	publication.event.scheduled	0
-259	1048585	17	3	2026-11-14 12:20:36	268435462	publication.event.published	0
-260	1048585	17	3	2026-11-14 12:20:43	268435463	publication.event.unpublished	0
-261	1048585	17	3	2026-11-14 12:20:43	268435458	submission.event.general.metadataUpdated	0
-262	1048585	17	3	2026-11-14 12:20:54	268435458	submission.event.general.metadataUpdated	0
-263	1048585	17	3	2026-11-14 12:20:55	268435462	publication.event.published	0
-264	1048585	18	34	2026-11-14 12:21:05	268435458	submission.event.general.metadataUpdated	0
-265	515	30	34	2026-11-14 12:21:06	1342177281	submission.event.fileUploaded	0
-266	1048585	18	34	2026-11-14 12:21:06	1342177288	submission.event.fileRevised	0
-267	515	30	34	2026-11-14 12:21:06	1342177296	submission.event.fileEdited	0
-268	1048585	18	34	2026-11-14 12:21:06	1342177296	submission.event.fileEdited	0
-269	1048585	18	34	2026-11-14 12:21:08	268435458	submission.event.general.metadataUpdated	0
-270	1048585	18	34	2026-11-14 12:21:09	268435457	submission.event.submissionSubmitted	0
-271	1048585	18	3	2026-11-14 12:21:15	805306371	log.editor.decision	0
-272	1048585	19	35	2026-11-14 12:21:21	268435458	submission.event.general.metadataUpdated	0
-273	515	31	35	2026-11-14 12:21:22	1342177281	submission.event.fileUploaded	0
-274	1048585	19	35	2026-11-14 12:21:22	1342177288	submission.event.fileRevised	0
-275	515	31	35	2026-11-14 12:21:22	1342177296	submission.event.fileEdited	0
-276	1048585	19	35	2026-11-14 12:21:22	1342177296	submission.event.fileEdited	0
-277	1048585	19	35	2026-11-14 12:21:23	268435458	submission.event.general.metadataUpdated	0
-278	1048585	19	35	2026-11-14 12:21:24	268435457	submission.event.submissionSubmitted	0
-279	1048585	19	3	2026-11-14 12:21:30	805306371	log.editor.decision	0
-280	1048585	19	3	2026-11-14 12:21:35	1073741825	log.review.reviewerAssigned	0
-281	1048585	19	3	2026-11-14 12:21:39	1073741825	log.review.reviewerAssigned	0
-282	1048585	19	3	2026-11-14 12:21:40	805306371	log.editor.decision	0
-283	1048585	19	3	2026-11-14 12:21:44	268435459	submission.event.participantAdded	0
+1	1048585	1	17	2026-11-15 12:45:03	268435458	submission.event.general.metadataUpdated	0
+2	515	1	17	2026-11-15 12:45:04	1342177281	submission.event.fileUploaded	0
+3	1048585	1	17	2026-11-15 12:45:04	1342177288	submission.event.fileRevised	0
+4	515	1	17	2026-11-15 12:45:04	1342177296	submission.event.fileEdited	0
+5	1048585	1	17	2026-11-15 12:45:04	1342177296	submission.event.fileEdited	0
+6	1048585	1	17	2026-11-15 12:45:05	268435458	submission.event.general.metadataUpdated	0
+7	1048585	1	17	2026-11-15 12:45:06	268435457	submission.event.submissionSubmitted	0
+8	1048585	1	3	2026-11-15 12:45:09	805306371	log.editor.decision	0
+9	515	2	3	2026-11-15 12:45:09	1342177281	submission.event.fileUploaded	0
+10	1048585	1	3	2026-11-15 12:45:09	1342177288	submission.event.fileRevised	0
+11	1048585	1	3	2026-11-15 12:45:13	1073741825	log.review.reviewerAssigned	0
+12	1048585	1	3	2026-11-15 12:45:16	1073741825	log.review.reviewerAssigned	0
+13	1048585	1	3	2026-11-15 12:45:19	1073741825	log.review.reviewerAssigned	0
+14	1048585	1	3	2026-11-15 12:45:20	805306371	log.editor.decision	0
+15	1048585	1	3	2026-11-15 12:45:23	268435459	submission.event.participantAdded	0
+16	1048585	1	3	2026-11-15 12:45:25	805306371	log.editor.decision	0
+17	1048585	1	3	2026-11-15 12:45:28	268435459	submission.event.participantAdded	0
+18	1048585	1	3	2026-11-15 12:45:34	268435458	submission.event.general.metadataUpdated	0
+19	1048585	1	3	2026-11-15 12:45:36	268435458	submission.event.general.metadataUpdated	0
+20	1048585	1	3	2026-11-15 12:45:36	268435458	submission.event.general.metadataUpdated	0
+21	1048585	1	3	2026-11-15 12:45:38	268435458	submission.event.general.metadataUpdated	0
+22	1048585	1	3	2026-11-15 12:45:41	268435458	submission.event.general.metadataUpdated	0
+23	515	3	3	2026-11-15 12:45:45	1342177281	submission.event.fileUploaded	0
+24	1048585	1	3	2026-11-15 12:45:45	1342177288	submission.event.fileRevised	0
+25	515	3	3	2026-11-15 12:45:45	1342177296	submission.event.fileEdited	0
+26	1048585	1	3	2026-11-15 12:45:45	1342177296	submission.event.fileEdited	0
+27	1048585	1	3	2026-11-15 12:45:52	268435459	submission.event.participantAdded	0
+28	1048585	1	17	2026-11-15 12:45:57	268435458	submission.event.general.metadataUpdated	0
+29	1048585	1	3	2026-11-15 12:46:00	268435458	submission.event.general.metadataUpdated	0
+30	1048585	1	3	2026-11-15 12:46:01	268435462	publication.event.published	0
+31	1048585	1	3	2026-11-15 12:46:06	268435463	publication.event.unpublished	0
+32	1048585	1	3	2026-11-15 12:46:08	268435462	publication.event.published	0
+33	1048585	1	3	2026-11-15 12:46:11	268435458	submission.event.general.metadataUpdated	0
+34	515	4	3	2026-11-15 12:46:11	1342177281	submission.event.fileUploaded	0
+35	1048585	1	3	2026-11-15 12:46:11	1342177288	submission.event.fileRevised	0
+36	1048585	1	3	2026-11-15 12:46:11	268435464	publication.event.versionCreated	0
+37	1048585	1	3	2026-11-15 12:46:21	268435458	submission.event.general.metadataUpdated	0
+38	1048585	1	3	2026-11-15 12:46:25	268435458	submission.event.general.metadataUpdated	0
+39	1048585	1	3	2026-11-15 12:46:33	268435458	submission.event.general.metadataUpdated	0
+40	1048585	1	3	2026-11-15 12:46:34	268435462	publication.event.versionPublished	0
+41	1048585	1	3	2026-11-15 12:46:40	268435463	publication.event.versionUnpublished	0
+42	1048585	1	3	2026-11-15 12:46:44	268435459	submission.event.participantAdded	0
+43	1048585	1	3	2026-11-15 12:46:49	268435459	submission.event.participantAdded	0
+44	1048585	2	18	2026-11-15 12:46:56	268435458	submission.event.general.metadataUpdated	0
+45	515	5	18	2026-11-15 12:46:57	1342177281	submission.event.fileUploaded	0
+46	1048585	2	18	2026-11-15 12:46:57	1342177288	submission.event.fileRevised	0
+47	515	5	18	2026-11-15 12:46:57	1342177296	submission.event.fileEdited	0
+48	1048585	2	18	2026-11-15 12:46:57	1342177296	submission.event.fileEdited	0
+49	1048585	2	18	2026-11-15 12:46:58	268435458	submission.event.general.metadataUpdated	0
+50	1048585	2	18	2026-11-15 12:46:59	268435457	submission.event.submissionSubmitted	0
+51	1048585	2	3	2026-11-15 12:47:02	805306371	log.editor.decision	0
+52	1048585	2	3	2026-11-15 12:47:04	268435459	submission.event.participantAdded	0
+53	1048585	2	3	2026-11-15 12:47:07	268435458	submission.event.general.metadataUpdated	0
+54	1048585	2	6	2026-11-15 12:47:11	805306372	log.editor.recommendation	0
+55	1048585	3	19	2026-11-15 12:47:20	268435458	submission.event.general.metadataUpdated	0
+56	515	6	19	2026-11-15 12:47:20	1342177281	submission.event.fileUploaded	0
+57	1048585	3	19	2026-11-15 12:47:20	1342177288	submission.event.fileRevised	0
+58	515	6	19	2026-11-15 12:47:20	1342177296	submission.event.fileEdited	0
+59	1048585	3	19	2026-11-15 12:47:21	1342177296	submission.event.fileEdited	0
+60	1048585	3	19	2026-11-15 12:47:22	268435458	submission.event.general.metadataUpdated	0
+61	1048585	3	19	2026-11-15 12:47:23	268435457	submission.event.submissionSubmitted	0
+62	1048585	3	3	2026-11-15 12:47:26	805306371	log.editor.decision	0
+63	1048585	3	3	2026-11-15 12:47:30	1073741825	log.review.reviewerAssigned	0
+64	1048585	3	3	2026-11-15 12:47:33	1073741825	log.review.reviewerAssigned	0
+65	1048585	3	3	2026-11-15 12:47:34	805306371	log.editor.decision	0
+66	1048585	3	3	2026-11-15 12:47:37	268435459	submission.event.participantAdded	0
+67	1048585	4	20	2026-11-15 12:47:42	268435458	submission.event.general.metadataUpdated	0
+68	515	7	20	2026-11-15 12:47:43	1342177281	submission.event.fileUploaded	0
+69	1048585	4	20	2026-11-15 12:47:43	1342177288	submission.event.fileRevised	0
+70	515	7	20	2026-11-15 12:47:43	1342177296	submission.event.fileEdited	0
+71	1048585	4	20	2026-11-15 12:47:43	1342177296	submission.event.fileEdited	0
+72	1048585	4	20	2026-11-15 12:47:46	268435458	submission.event.general.metadataUpdated	0
+73	1048585	4	20	2026-11-15 12:47:47	268435458	submission.event.general.metadataUpdated	0
+74	1048585	4	20	2026-11-15 12:47:47	268435457	submission.event.submissionSubmitted	0
+75	1048585	5	21	2026-11-15 12:47:52	268435458	submission.event.general.metadataUpdated	0
+76	515	8	21	2026-11-15 12:47:53	1342177281	submission.event.fileUploaded	0
+77	1048585	5	21	2026-11-15 12:47:53	1342177288	submission.event.fileRevised	0
+78	515	8	21	2026-11-15 12:47:53	1342177296	submission.event.fileEdited	0
+79	1048585	5	21	2026-11-15 12:47:53	1342177296	submission.event.fileEdited	0
+80	1048585	5	21	2026-11-15 12:47:54	268435458	submission.event.general.metadataUpdated	0
+81	1048585	5	21	2026-11-15 12:47:55	268435457	submission.event.submissionSubmitted	0
+82	1048585	5	3	2026-11-15 12:47:58	805306371	log.editor.decision	0
+83	1048585	5	3	2026-11-15 12:48:02	1073741825	log.review.reviewerAssigned	0
+84	1048585	5	3	2026-11-15 12:48:05	1073741825	log.review.reviewerAssigned	0
+85	1048585	5	3	2026-11-15 12:48:06	805306371	log.editor.decision	0
+86	1048585	5	3	2026-11-15 12:48:09	268435459	submission.event.participantAdded	0
+87	1048585	5	3	2026-11-15 12:48:10	805306371	log.editor.decision	0
+88	1048585	5	3	2026-11-15 12:48:12	268435459	submission.event.participantAdded	0
+89	1048585	5	3	2026-11-15 12:48:14	268435459	submission.event.participantAdded	0
+90	1048585	6	22	2026-11-15 12:48:20	268435458	submission.event.general.metadataUpdated	0
+91	515	9	22	2026-11-15 12:48:20	1342177281	submission.event.fileUploaded	0
+92	1048585	6	22	2026-11-15 12:48:20	1342177288	submission.event.fileRevised	0
+93	515	9	22	2026-11-15 12:48:20	1342177296	submission.event.fileEdited	0
+94	1048585	6	22	2026-11-15 12:48:21	1342177296	submission.event.fileEdited	0
+95	1048585	6	22	2026-11-15 12:48:22	268435458	submission.event.general.metadataUpdated	0
+96	1048585	6	22	2026-11-15 12:48:23	268435457	submission.event.submissionSubmitted	0
+97	1048585	6	3	2026-11-15 12:48:26	805306371	log.editor.decision	0
+98	1048585	6	3	2026-11-15 12:48:30	1073741825	log.review.reviewerAssigned	0
+99	1048585	6	3	2026-11-15 12:48:33	1073741825	log.review.reviewerAssigned	0
+100	1048585	6	3	2026-11-15 12:48:34	805306371	log.editor.decision	0
+101	1048585	6	3	2026-11-15 12:48:37	268435459	submission.event.participantAdded	0
+102	1048585	6	3	2026-11-15 12:48:38	805306371	log.editor.decision	0
+103	1048585	6	3	2026-11-15 12:48:40	268435459	submission.event.participantAdded	0
+104	1048585	7	23	2026-11-15 12:48:46	268435458	submission.event.general.metadataUpdated	0
+105	515	10	23	2026-11-15 12:48:46	1342177281	submission.event.fileUploaded	0
+106	1048585	7	23	2026-11-15 12:48:46	1342177288	submission.event.fileRevised	0
+107	515	10	23	2026-11-15 12:48:47	1342177296	submission.event.fileEdited	0
+108	1048585	7	23	2026-11-15 12:48:47	1342177296	submission.event.fileEdited	0
+109	1048585	7	23	2026-11-15 12:48:48	268435458	submission.event.general.metadataUpdated	0
+110	1048585	7	23	2026-11-15 12:48:48	268435457	submission.event.submissionSubmitted	0
+111	1048585	7	3	2026-11-15 12:48:52	805306371	log.editor.decision	0
+112	1048585	7	3	2026-11-15 12:48:55	1073741825	log.review.reviewerAssigned	0
+113	1048585	7	3	2026-11-15 12:48:59	1073741825	log.review.reviewerAssigned	0
+114	1048585	7	3	2026-11-15 12:49:02	1073741825	log.review.reviewerAssigned	0
+115	1048585	7	8	2026-11-15 12:49:05	1073741830	log.review.reviewAccepted	0
+116	1048585	7	8	2026-11-15 12:49:08	1073741848	log.review.reviewReady	0
+117	1048585	8	24	2026-11-15 12:49:14	268435458	submission.event.general.metadataUpdated	0
+118	515	11	24	2026-11-15 12:49:14	1342177281	submission.event.fileUploaded	0
+119	1048585	8	24	2026-11-15 12:49:14	1342177288	submission.event.fileRevised	0
+120	515	11	24	2026-11-15 12:49:14	1342177296	submission.event.fileEdited	0
+121	1048585	8	24	2026-11-15 12:49:14	1342177296	submission.event.fileEdited	0
+122	1048585	8	24	2026-11-15 12:49:17	268435458	submission.event.general.metadataUpdated	0
+123	1048585	8	24	2026-11-15 12:49:18	268435458	submission.event.general.metadataUpdated	0
+124	1048585	8	24	2026-11-15 12:49:18	268435457	submission.event.submissionSubmitted	0
+125	1048585	9	25	2026-11-15 12:49:23	268435458	submission.event.general.metadataUpdated	0
+126	515	12	25	2026-11-15 12:49:24	1342177281	submission.event.fileUploaded	0
+127	1048585	9	25	2026-11-15 12:49:24	1342177288	submission.event.fileRevised	0
+128	515	12	25	2026-11-15 12:49:24	1342177296	submission.event.fileEdited	0
+129	1048585	9	25	2026-11-15 12:49:24	1342177296	submission.event.fileEdited	0
+130	1048585	9	25	2026-11-15 12:49:25	268435458	submission.event.general.metadataUpdated	0
+131	1048585	9	25	2026-11-15 12:49:26	268435457	submission.event.submissionSubmitted	0
+132	1048585	9	3	2026-11-15 12:49:29	805306371	log.editor.decision	0
+133	1048585	9	3	2026-11-15 12:49:33	1073741825	log.review.reviewerAssigned	0
+134	1048585	9	3	2026-11-15 12:49:36	1073741825	log.review.reviewerAssigned	0
+135	1048585	9	3	2026-11-15 12:49:37	805306371	log.editor.decision	0
+136	1048585	9	3	2026-11-15 12:49:40	268435459	submission.event.participantAdded	0
+137	1048585	9	3	2026-11-15 12:49:41	805306371	log.editor.decision	0
+138	1048585	9	3	2026-11-15 12:49:44	268435459	submission.event.participantAdded	0
+139	1048585	10	26	2026-11-15 12:49:51	268435458	submission.event.general.metadataUpdated	0
+140	515	13	26	2026-11-15 12:49:52	1342177281	submission.event.fileUploaded	0
+141	1048585	10	26	2026-11-15 12:49:52	1342177288	submission.event.fileRevised	0
+142	515	13	26	2026-11-15 12:49:52	1342177296	submission.event.fileEdited	0
+143	1048585	10	26	2026-11-15 12:49:52	1342177296	submission.event.fileEdited	0
+144	1048585	10	26	2026-11-15 12:49:53	268435458	submission.event.general.metadataUpdated	0
+145	1048585	10	26	2026-11-15 12:49:54	268435457	submission.event.submissionSubmitted	0
+146	1048585	10	3	2026-11-15 12:49:57	805306371	log.editor.decision	0
+147	515	14	3	2026-11-15 12:49:57	1342177281	submission.event.fileUploaded	0
+148	1048585	10	3	2026-11-15 12:49:57	1342177288	submission.event.fileRevised	0
+149	1048585	10	3	2026-11-15 12:50:01	1073741825	log.review.reviewerAssigned	0
+150	1048585	10	3	2026-11-15 12:50:04	1073741825	log.review.reviewerAssigned	0
+151	1048585	10	9	2026-11-15 12:50:07	1073741830	log.review.reviewAccepted	0
+152	1048585	10	9	2026-11-15 12:50:10	1073741848	log.review.reviewReady	0
+153	1048585	10	10	2026-11-15 12:50:14	1073741830	log.review.reviewAccepted	0
+154	1048585	10	10	2026-11-15 12:50:17	1073741848	log.review.reviewReady	0
+155	1048585	11	27	2026-11-15 12:50:22	268435458	submission.event.general.metadataUpdated	0
+156	515	15	27	2026-11-15 12:50:23	1342177281	submission.event.fileUploaded	0
+157	1048585	11	27	2026-11-15 12:50:23	1342177288	submission.event.fileRevised	0
+158	515	15	27	2026-11-15 12:50:23	1342177296	submission.event.fileEdited	0
+159	1048585	11	27	2026-11-15 12:50:23	1342177296	submission.event.fileEdited	0
+160	1048585	11	27	2026-11-15 12:50:26	268435458	submission.event.general.metadataUpdated	0
+161	1048585	11	27	2026-11-15 12:50:26	268435458	submission.event.general.metadataUpdated	0
+162	1048585	11	27	2026-11-15 12:50:27	268435457	submission.event.submissionSubmitted	0
+163	1048585	12	28	2026-11-15 12:50:32	268435458	submission.event.general.metadataUpdated	0
+164	515	16	28	2026-11-15 12:50:32	1342177281	submission.event.fileUploaded	0
+165	1048585	12	28	2026-11-15 12:50:32	1342177288	submission.event.fileRevised	0
+166	515	16	28	2026-11-15 12:50:33	1342177296	submission.event.fileEdited	0
+167	1048585	12	28	2026-11-15 12:50:33	1342177296	submission.event.fileEdited	0
+168	1048585	12	28	2026-11-15 12:50:34	268435458	submission.event.general.metadataUpdated	0
+169	1048585	12	28	2026-11-15 12:50:35	268435457	submission.event.submissionSubmitted	0
+170	1048585	12	3	2026-11-15 12:50:38	805306371	log.editor.decision	0
+171	1048585	12	3	2026-11-15 12:50:42	1073741825	log.review.reviewerAssigned	0
+172	1048585	12	3	2026-11-15 12:50:46	1073741825	log.review.reviewerAssigned	0
+173	1048585	13	29	2026-11-15 12:50:51	268435458	submission.event.general.metadataUpdated	0
+174	515	17	29	2026-11-15 12:50:52	1342177281	submission.event.fileUploaded	0
+175	1048585	13	29	2026-11-15 12:50:52	1342177288	submission.event.fileRevised	0
+176	515	17	29	2026-11-15 12:50:52	1342177296	submission.event.fileEdited	0
+177	1048585	13	29	2026-11-15 12:50:52	1342177296	submission.event.fileEdited	0
+178	1048585	13	29	2026-11-15 12:50:53	268435458	submission.event.general.metadataUpdated	0
+179	1048585	13	29	2026-11-15 12:50:54	268435457	submission.event.submissionSubmitted	0
+180	1048585	13	3	2026-11-15 12:50:58	805306371	log.editor.decision	0
+181	1048585	13	3	2026-11-15 12:51:02	1073741825	log.review.reviewerAssigned	0
+182	1048585	13	3	2026-11-15 12:51:05	1073741825	log.review.reviewerAssigned	0
+183	1048585	13	3	2026-11-15 12:51:08	1073741825	log.review.reviewerAssigned	0
+184	1048585	13	7	2026-11-15 12:51:11	1073741830	log.review.reviewAccepted	0
+185	1048585	13	7	2026-11-15 12:51:14	1073741848	log.review.reviewReady	0
+186	1048585	13	9	2026-11-15 12:51:17	1073741830	log.review.reviewAccepted	0
+187	1048585	13	9	2026-11-15 12:51:21	1073741848	log.review.reviewReady	0
+188	1048585	13	10	2026-11-15 12:51:24	1073741830	log.review.reviewAccepted	0
+189	1048585	13	10	2026-11-15 12:51:27	1073741848	log.review.reviewReady	0
+190	1048585	13	3	2026-11-15 12:51:33	805306371	log.editor.decision	0
+191	1048585	14	30	2026-11-15 12:51:38	268435458	submission.event.general.metadataUpdated	0
+192	515	18	30	2026-11-15 12:51:38	1342177281	submission.event.fileUploaded	0
+193	1048585	14	30	2026-11-15 12:51:38	1342177288	submission.event.fileRevised	0
+194	515	18	30	2026-11-15 12:51:39	1342177296	submission.event.fileEdited	0
+195	1048585	14	30	2026-11-15 12:51:39	1342177296	submission.event.fileEdited	0
+196	1048585	14	30	2026-11-15 12:51:40	268435458	submission.event.general.metadataUpdated	0
+197	1048585	14	30	2026-11-15 12:51:41	268435457	submission.event.submissionSubmitted	0
+198	1048585	15	31	2026-11-15 12:51:46	268435458	submission.event.general.metadataUpdated	0
+199	515	19	31	2026-11-15 12:51:46	1342177281	submission.event.fileUploaded	0
+200	1048585	15	31	2026-11-15 12:51:46	1342177288	submission.event.fileRevised	0
+201	515	19	31	2026-11-15 12:51:46	1342177296	submission.event.fileEdited	0
+202	1048585	15	31	2026-11-15 12:51:46	1342177296	submission.event.fileEdited	0
+203	1048585	15	31	2026-11-15 12:51:47	268435458	submission.event.general.metadataUpdated	0
+204	1048585	15	31	2026-11-15 12:51:48	268435457	submission.event.submissionSubmitted	0
+205	1048585	15	3	2026-11-15 12:51:52	805306371	log.editor.decision	0
+206	1048585	15	3	2026-11-15 12:51:56	1073741825	log.review.reviewerAssigned	0
+207	1048585	15	3	2026-11-15 12:51:59	1073741825	log.review.reviewerAssigned	0
+208	1048585	15	3	2026-11-15 12:52:00	805306371	log.editor.decision	0
+209	1048585	15	3	2026-11-15 12:52:02	268435459	submission.event.participantAdded	0
+210	1048585	15	3	2026-11-15 12:52:04	805306371	log.editor.decision	0
+211	1048585	15	3	2026-11-15 12:52:06	268435459	submission.event.participantAdded	0
+212	1048585	16	32	2026-11-15 12:52:12	268435458	submission.event.general.metadataUpdated	0
+213	515	20	32	2026-11-15 12:52:12	1342177281	submission.event.fileUploaded	0
+214	1048585	16	32	2026-11-15 12:52:12	1342177288	submission.event.fileRevised	0
+215	515	20	32	2026-11-15 12:52:12	1342177296	submission.event.fileEdited	0
+216	1048585	16	32	2026-11-15 12:52:12	1342177296	submission.event.fileEdited	0
+217	1048585	16	32	2026-11-15 12:52:14	268435458	submission.event.general.metadataUpdated	0
+218	1048585	16	32	2026-11-15 12:52:15	268435457	submission.event.submissionSubmitted	0
+219	1048585	17	33	2026-11-15 12:52:19	268435458	submission.event.general.metadataUpdated	0
+220	515	21	33	2026-11-15 12:52:20	1342177281	submission.event.fileUploaded	0
+221	1048585	17	33	2026-11-15 12:52:20	1342177288	submission.event.fileRevised	0
+222	515	21	33	2026-11-15 12:52:20	1342177296	submission.event.fileEdited	0
+223	1048585	17	33	2026-11-15 12:52:20	1342177296	submission.event.fileEdited	0
+224	1048585	17	33	2026-11-15 12:52:22	268435458	submission.event.general.metadataUpdated	0
+225	1048585	17	33	2026-11-15 12:52:23	268435457	submission.event.submissionSubmitted	0
+226	1048585	17	3	2026-11-15 12:52:27	805306371	log.editor.decision	0
+227	1048585	17	3	2026-11-15 12:52:30	1073741825	log.review.reviewerAssigned	0
+228	1048585	17	3	2026-11-15 12:52:34	1073741825	log.review.reviewerAssigned	0
+229	1048585	17	3	2026-11-15 12:52:35	805306371	log.editor.decision	0
+230	1048585	17	3	2026-11-15 12:52:37	268435459	submission.event.participantAdded	0
+231	1048585	17	3	2026-11-15 12:52:38	805306371	log.editor.decision	0
+232	1048585	17	3	2026-11-15 12:52:41	268435459	submission.event.participantAdded	0
+233	1048585	17	3	2026-11-15 12:52:43	268435459	submission.event.participantAdded	0
+234	515	22	3	2026-11-15 12:52:47	1342177281	submission.event.fileUploaded	0
+235	1048585	17	3	2026-11-15 12:52:47	1342177288	submission.event.fileRevised	0
+236	515	22	3	2026-11-15 12:52:47	1342177296	submission.event.fileEdited	0
+237	1048585	17	3	2026-11-15 12:52:47	1342177296	submission.event.fileEdited	0
+238	1048585	17	3	2026-11-15 12:52:52	268435458	submission.event.general.metadataUpdated	0
+239	1048585	17	3	2026-11-15 12:52:52	268435462	publication.event.scheduled	0
+240	1048585	17	3	2026-11-15 12:52:56	268435462	publication.event.published	0
+241	1048585	17	3	2026-11-15 12:53:00	268435463	publication.event.unpublished	0
+242	1048585	17	3	2026-11-15 12:53:00	268435462	publication.event.scheduled	0
+243	1048585	17	3	2026-11-15 12:53:05	268435462	publication.event.published	0
+244	1048585	17	3	2026-11-15 12:53:10	268435463	publication.event.unpublished	0
+245	1048585	17	3	2026-11-15 12:53:10	268435458	submission.event.general.metadataUpdated	0
+246	1048585	17	3	2026-11-15 12:53:16	268435458	submission.event.general.metadataUpdated	0
+247	1048585	17	3	2026-11-15 12:53:17	268435462	publication.event.published	0
+248	1048585	18	34	2026-11-15 12:53:24	268435458	submission.event.general.metadataUpdated	0
+249	515	23	34	2026-11-15 12:53:25	1342177281	submission.event.fileUploaded	0
+250	1048585	18	34	2026-11-15 12:53:25	1342177288	submission.event.fileRevised	0
+251	515	23	34	2026-11-15 12:53:25	1342177296	submission.event.fileEdited	0
+252	1048585	18	34	2026-11-15 12:53:25	1342177296	submission.event.fileEdited	0
+253	1048585	18	34	2026-11-15 12:53:26	268435458	submission.event.general.metadataUpdated	0
+254	1048585	18	34	2026-11-15 12:53:27	268435457	submission.event.submissionSubmitted	0
+255	1048585	18	3	2026-11-15 12:53:31	805306371	log.editor.decision	0
+256	1048585	19	35	2026-11-15 12:53:36	268435458	submission.event.general.metadataUpdated	0
+257	515	24	35	2026-11-15 12:53:37	1342177281	submission.event.fileUploaded	0
+258	1048585	19	35	2026-11-15 12:53:37	1342177288	submission.event.fileRevised	0
+259	515	24	35	2026-11-15 12:53:37	1342177296	submission.event.fileEdited	0
+260	1048585	19	35	2026-11-15 12:53:37	1342177296	submission.event.fileEdited	0
+261	1048585	19	35	2026-11-15 12:53:38	268435458	submission.event.general.metadataUpdated	0
+262	1048585	19	35	2026-11-15 12:53:39	268435457	submission.event.submissionSubmitted	0
+263	1048585	19	3	2026-11-15 12:53:43	805306371	log.editor.decision	0
+264	1048585	19	3	2026-11-15 12:53:47	1073741825	log.review.reviewerAssigned	0
+265	1048585	19	3	2026-11-15 12:53:50	1073741825	log.review.reviewerAssigned	0
+266	1048585	19	3	2026-11-15 12:53:51	805306371	log.editor.decision	0
+267	1048585	19	3	2026-11-15 12:53:54	268435459	submission.event.participantAdded	0
 \.
 
 
@@ -5548,1032 +5532,935 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 8	editorName	Daniel Barnes	string
 8	submissionId	1	int
 8	decision	Send to Review	string
-9	reviewAssignmentId	1	string
-9	reviewerName	Julie Janssen	string
+9	fileStage	4	int
+9	sourceSubmissionFileId	1	int
+9	submissionFileId	2	int
+9	fileId	1	int
 9	submissionId	1	int
-9	stageId	3	int
-9	round	1	int
-10	reviewAssignmentId	2	string
-10	reviewerName	Aisla McCrae	string
+9	originalFileName	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
+9	username	dbarnes	string
+10	fileStage	4	int
+10	submissionFileId	2	int
+10	fileId	1	int
 10	submissionId	1	int
-10	stageId	3	int
-10	round	1	int
-11	reviewAssignmentId	3	string
-11	reviewerName	Adela Gallego	string
+10	username	dbarnes	string
+10	name	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
+11	reviewAssignmentId	1	string
+11	reviewerName	Julie Janssen	string
 11	submissionId	1	int
 11	stageId	3	int
 11	round	1	int
-12	editorName	Daniel Barnes	string
+12	reviewAssignmentId	2	string
+12	reviewerName	Aisla McCrae	string
 12	submissionId	1	int
-12	decision	Accept Submission	string
-13	name	Sarah Vogt	string
-13	username	svogt	string
-13	userGroupName	Copyeditor	string
+12	stageId	3	int
+12	round	1	int
+13	reviewAssignmentId	3	string
+13	reviewerName	Adela Gallego	string
+13	submissionId	1	int
+13	stageId	3	int
+13	round	1	int
 14	editorName	Daniel Barnes	string
 14	submissionId	1	int
-14	decision	Send To Production	string
-15	name	Stephen Hellier	string
-15	username	shellier	string
-15	userGroupName	Layout Editor	string
-16	name	Sabine Kumar	string
-16	username	skumar	string
-16	userGroupName	Proofreader	string
-22	fileStage	10	int
-22	sourceSubmissionFileId	\N	string
-22	submissionFileId	2	int
-22	fileId	2	int
-22	submissionId	1	int
-22	originalFileName	article.pdf	string
-22	username	dbarnes	string
+14	decision	Accept Submission	string
+15	name	Sarah Vogt	string
+15	username	svogt	string
+15	userGroupName	Copyeditor	string
+16	editorName	Daniel Barnes	string
+16	submissionId	1	int
+16	decision	Send To Production	string
+17	name	Stephen Hellier	string
+17	username	shellier	string
+17	userGroupName	Layout Editor	string
 23	fileStage	10	int
-23	submissionFileId	2	int
+23	sourceSubmissionFileId	\N	string
+23	submissionFileId	3	int
 23	fileId	2	int
 23	submissionId	1	int
+23	originalFileName	article.pdf	string
 23	username	dbarnes	string
-23	name	article.pdf	string
 24	fileStage	10	int
-24	sourceSubmissionFileId	\N	string
-24	submissionFileId	2	int
+24	submissionFileId	3	int
 24	fileId	2	int
 24	submissionId	1	int
-24	originalFileName	article.pdf	string
 24	username	dbarnes	string
+24	name	article.pdf	string
 25	fileStage	10	int
 25	sourceSubmissionFileId	\N	string
-25	submissionFileId	2	int
+25	submissionFileId	3	int
 25	fileId	2	int
 25	submissionId	1	int
-25	username	dbarnes	string
 25	originalFileName	article.pdf	string
-25	name	article.pdf	string
-26	name	Alan Mwandenga	string
-26	username	amwandenga	string
-26	userGroupName	Author	string
-33	fileStage	10	int
-33	sourceSubmissionFileId	\N	string
-33	submissionFileId	3	int
-33	fileId	2	int
-33	submissionId	1	int
-33	originalFileName	article.pdf	string
-33	username	dbarnes	string
+25	username	dbarnes	string
+26	fileStage	10	int
+26	sourceSubmissionFileId	\N	string
+26	submissionFileId	3	int
+26	fileId	2	int
+26	submissionId	1	int
+26	username	dbarnes	string
+26	originalFileName	article.pdf	string
+26	name	article.pdf	string
+27	name	Alan Mwandenga	string
+27	username	amwandenga	string
+27	userGroupName	Author	string
 34	fileStage	10	int
-34	submissionFileId	3	int
+34	sourceSubmissionFileId	\N	string
+34	submissionFileId	4	int
 34	fileId	2	int
 34	submissionId	1	int
+34	originalFileName	article.pdf	string
 34	username	dbarnes	string
-34	name	article.pdf	string
-41	name	Stephanie Berardo	string
-41	username	sberardo	string
-41	userGroupName	Section editor	string
+35	fileStage	10	int
+35	submissionFileId	4	int
+35	fileId	2	int
+35	submissionId	1	int
+35	username	dbarnes	string
+35	name	article.pdf	string
 42	name	Stephanie Berardo	string
 42	username	sberardo	string
 42	userGroupName	Section editor	string
-44	fileStage	2	int
-44	sourceSubmissionFileId	\N	string
-44	submissionFileId	4	int
-44	fileId	3	int
-44	submissionId	2	int
-44	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-44	username	ccorino	string
+43	name	Stephanie Berardo	string
+43	username	sberardo	string
+43	userGroupName	Section editor	string
 45	fileStage	2	int
-45	submissionFileId	4	int
+45	sourceSubmissionFileId	\N	string
+45	submissionFileId	5	int
 45	fileId	3	int
 45	submissionId	2	int
+45	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
 45	username	ccorino	string
-45	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
 46	fileStage	2	int
-46	sourceSubmissionFileId	\N	string
-46	submissionFileId	4	int
+46	submissionFileId	5	int
 46	fileId	3	int
 46	submissionId	2	int
-46	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
 46	username	ccorino	string
+46	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
 47	fileStage	2	int
 47	sourceSubmissionFileId	\N	string
-47	submissionFileId	4	int
+47	submissionFileId	5	int
 47	fileId	3	int
 47	submissionId	2	int
-47	username	ccorino	string
 47	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-47	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-50	editorName	Daniel Barnes	string
-50	submissionId	2	int
-50	decision	Send to Review	string
-51	fileStage	4	int
-51	sourceSubmissionFileId	4	int
-51	submissionFileId	5	int
-51	fileId	3	int
+47	username	ccorino	string
+48	fileStage	2	int
+48	sourceSubmissionFileId	\N	string
+48	submissionFileId	5	int
+48	fileId	3	int
+48	submissionId	2	int
+48	username	ccorino	string
+48	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
+48	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
+51	editorName	Daniel Barnes	string
 51	submissionId	2	int
-51	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-51	username	dbarnes	string
-52	fileStage	4	int
-52	submissionFileId	5	int
-52	fileId	3	int
-52	submissionId	2	int
-52	username	dbarnes	string
-52	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-53	name	Minoti Inoue	string
-53	username	minoue	string
-53	userGroupName	Section editor	string
-55	editorName	Minoti Inoue	string
-55	submissionId	2	int
-55	decision	Accept Submission	string
+51	decision	Send to Review	string
+52	name	Minoti Inoue	string
+52	username	minoue	string
+52	userGroupName	Section editor	string
+54	editorName	Minoti Inoue	string
+54	submissionId	2	int
+54	decision	Accept Submission	string
+56	fileStage	2	int
+56	sourceSubmissionFileId	\N	string
+56	submissionFileId	6	int
+56	fileId	4	int
+56	submissionId	3	int
+56	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
+56	username	ckwantes	string
 57	fileStage	2	int
-57	sourceSubmissionFileId	\N	string
 57	submissionFileId	6	int
 57	fileId	4	int
 57	submissionId	3	int
-57	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
 57	username	ckwantes	string
+57	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
 58	fileStage	2	int
+58	sourceSubmissionFileId	\N	string
 58	submissionFileId	6	int
 58	fileId	4	int
 58	submissionId	3	int
+58	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
 58	username	ckwantes	string
-58	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
 59	fileStage	2	int
 59	sourceSubmissionFileId	\N	string
 59	submissionFileId	6	int
 59	fileId	4	int
 59	submissionId	3	int
-59	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
 59	username	ckwantes	string
-60	fileStage	2	int
-60	sourceSubmissionFileId	\N	string
-60	submissionFileId	6	int
-60	fileId	4	int
-60	submissionId	3	int
-60	username	ckwantes	string
-60	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-60	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-63	editorName	Daniel Barnes	string
+59	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
+59	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
+62	editorName	Daniel Barnes	string
+62	submissionId	3	int
+62	decision	Send to Review	string
+63	reviewAssignmentId	4	string
+63	reviewerName	Aisla McCrae	string
 63	submissionId	3	int
-63	decision	Send to Review	string
-64	fileStage	4	int
-64	sourceSubmissionFileId	6	int
-64	submissionFileId	7	int
-64	fileId	4	int
+63	stageId	3	int
+63	round	1	int
+64	reviewAssignmentId	5	string
+64	reviewerName	Adela Gallego	string
 64	submissionId	3	int
-64	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-64	username	dbarnes	string
-65	fileStage	4	int
-65	submissionFileId	7	int
-65	fileId	4	int
+64	stageId	3	int
+64	round	1	int
+65	editorName	Daniel Barnes	string
 65	submissionId	3	int
-65	username	dbarnes	string
-65	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-66	reviewAssignmentId	4	string
-66	reviewerName	Aisla McCrae	string
-66	submissionId	3	int
-66	stageId	3	int
-66	round	1	int
-67	reviewAssignmentId	5	string
-67	reviewerName	Adela Gallego	string
-67	submissionId	3	int
-67	stageId	3	int
-67	round	1	int
-68	editorName	Daniel Barnes	string
-68	submissionId	3	int
-68	decision	Accept Submission	string
-69	name	Maria Fritz	string
-69	username	mfritz	string
-69	userGroupName	Copyeditor	string
+65	decision	Accept Submission	string
+66	name	Maria Fritz	string
+66	username	mfritz	string
+66	userGroupName	Copyeditor	string
+68	fileStage	2	int
+68	sourceSubmissionFileId	\N	string
+68	submissionFileId	7	int
+68	fileId	5	int
+68	submissionId	4	int
+68	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+68	username	cmontgomerie	string
+69	fileStage	2	int
+69	submissionFileId	7	int
+69	fileId	5	int
+69	submissionId	4	int
+69	username	cmontgomerie	string
+69	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+70	fileStage	2	int
+70	sourceSubmissionFileId	\N	string
+70	submissionFileId	7	int
+70	fileId	5	int
+70	submissionId	4	int
+70	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+70	username	cmontgomerie	string
 71	fileStage	2	int
 71	sourceSubmissionFileId	\N	string
-71	submissionFileId	8	int
+71	submissionFileId	7	int
 71	fileId	5	int
 71	submissionId	4	int
-71	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
 71	username	cmontgomerie	string
-72	fileStage	2	int
-72	submissionFileId	8	int
-72	fileId	5	int
-72	submissionId	4	int
-72	username	cmontgomerie	string
-72	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
-73	fileStage	2	int
-73	sourceSubmissionFileId	\N	string
-73	submissionFileId	8	int
-73	fileId	5	int
-73	submissionId	4	int
-73	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
-73	username	cmontgomerie	string
-74	fileStage	2	int
-74	sourceSubmissionFileId	\N	string
-74	submissionFileId	8	int
-74	fileId	5	int
-74	submissionId	4	int
-74	username	cmontgomerie	string
-74	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
-74	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+71	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+71	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+76	fileStage	2	int
+76	sourceSubmissionFileId	\N	string
+76	submissionFileId	8	int
+76	fileId	6	int
+76	submissionId	5	int
+76	originalFileName	Genetic transformation of forest trees.pdf	string
+76	username	ddiouf	string
+77	fileStage	2	int
+77	submissionFileId	8	int
+77	fileId	6	int
+77	submissionId	5	int
+77	username	ddiouf	string
+77	name	Genetic transformation of forest trees.pdf	string
+78	fileStage	2	int
+78	sourceSubmissionFileId	\N	string
+78	submissionFileId	8	int
+78	fileId	6	int
+78	submissionId	5	int
+78	originalFileName	Genetic transformation of forest trees.pdf	string
+78	username	ddiouf	string
 79	fileStage	2	int
 79	sourceSubmissionFileId	\N	string
-79	submissionFileId	9	int
+79	submissionFileId	8	int
 79	fileId	6	int
 79	submissionId	5	int
-79	originalFileName	Genetic transformation of forest trees.pdf	string
 79	username	ddiouf	string
-80	fileStage	2	int
-80	submissionFileId	9	int
-80	fileId	6	int
-80	submissionId	5	int
-80	username	ddiouf	string
-80	name	Genetic transformation of forest trees.pdf	string
-81	fileStage	2	int
-81	sourceSubmissionFileId	\N	string
-81	submissionFileId	9	int
-81	fileId	6	int
-81	submissionId	5	int
-81	originalFileName	Genetic transformation of forest trees.pdf	string
-81	username	ddiouf	string
-82	fileStage	2	int
-82	sourceSubmissionFileId	\N	string
-82	submissionFileId	9	int
-82	fileId	6	int
+79	originalFileName	Genetic transformation of forest trees.pdf	string
+79	name	Genetic transformation of forest trees.pdf	string
+82	editorName	Daniel Barnes	string
 82	submissionId	5	int
-82	username	ddiouf	string
-82	originalFileName	Genetic transformation of forest trees.pdf	string
-82	name	Genetic transformation of forest trees.pdf	string
+82	decision	Send to Review	string
+83	reviewAssignmentId	6	string
+83	reviewerName	Paul Hudson	string
+83	submissionId	5	int
+83	stageId	3	int
+83	round	1	int
+84	reviewAssignmentId	7	string
+84	reviewerName	Adela Gallego	string
+84	submissionId	5	int
+84	stageId	3	int
+84	round	1	int
 85	editorName	Daniel Barnes	string
 85	submissionId	5	int
-85	decision	Send to Review	string
-86	reviewAssignmentId	6	string
-86	reviewerName	Paul Hudson	string
-86	submissionId	5	int
-86	stageId	3	int
-86	round	1	int
-87	reviewAssignmentId	7	string
-87	reviewerName	Adela Gallego	string
+85	decision	Accept Submission	string
+86	name	Maria Fritz	string
+86	username	mfritz	string
+86	userGroupName	Copyeditor	string
+87	editorName	Daniel Barnes	string
 87	submissionId	5	int
-87	stageId	3	int
-87	round	1	int
-88	editorName	Daniel Barnes	string
-88	submissionId	5	int
-88	decision	Accept Submission	string
-89	name	Maria Fritz	string
-89	username	mfritz	string
-89	userGroupName	Copyeditor	string
-90	editorName	Daniel Barnes	string
-90	submissionId	5	int
-90	decision	Send To Production	string
-91	name	Graham Cox	string
-91	username	gcox	string
-91	userGroupName	Layout Editor	string
-92	name	Catherine Turner	string
-92	username	cturner	string
-92	userGroupName	Proofreader	string
+87	decision	Send To Production	string
+88	name	Graham Cox	string
+88	username	gcox	string
+88	userGroupName	Layout Editor	string
+89	name	Catherine Turner	string
+89	username	cturner	string
+89	userGroupName	Proofreader	string
+91	fileStage	2	int
+91	sourceSubmissionFileId	\N	string
+91	submissionFileId	9	int
+91	fileId	7	int
+91	submissionId	6	int
+91	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+91	username	dphillips	string
+92	fileStage	2	int
+92	submissionFileId	9	int
+92	fileId	7	int
+92	submissionId	6	int
+92	username	dphillips	string
+92	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+93	fileStage	2	int
+93	sourceSubmissionFileId	\N	string
+93	submissionFileId	9	int
+93	fileId	7	int
+93	submissionId	6	int
+93	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+93	username	dphillips	string
 94	fileStage	2	int
 94	sourceSubmissionFileId	\N	string
-94	submissionFileId	10	int
+94	submissionFileId	9	int
 94	fileId	7	int
 94	submissionId	6	int
-94	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
 94	username	dphillips	string
-95	fileStage	2	int
-95	submissionFileId	10	int
-95	fileId	7	int
-95	submissionId	6	int
-95	username	dphillips	string
-95	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-96	fileStage	2	int
-96	sourceSubmissionFileId	\N	string
-96	submissionFileId	10	int
-96	fileId	7	int
-96	submissionId	6	int
-96	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-96	username	dphillips	string
-97	fileStage	2	int
-97	sourceSubmissionFileId	\N	string
-97	submissionFileId	10	int
-97	fileId	7	int
+94	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+94	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+97	editorName	Daniel Barnes	string
 97	submissionId	6	int
-97	username	dphillips	string
-97	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-97	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+97	decision	Send to Review	string
+98	reviewAssignmentId	8	string
+98	reviewerName	Julie Janssen	string
+98	submissionId	6	int
+98	stageId	3	int
+98	round	1	int
+99	reviewAssignmentId	9	string
+99	reviewerName	Adela Gallego	string
+99	submissionId	6	int
+99	stageId	3	int
+99	round	1	int
 100	editorName	Daniel Barnes	string
 100	submissionId	6	int
-100	decision	Send to Review	string
-101	fileStage	4	int
-101	sourceSubmissionFileId	10	int
-101	submissionFileId	11	int
-101	fileId	7	int
-101	submissionId	6	int
-101	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-101	username	dbarnes	string
-102	fileStage	4	int
-102	submissionFileId	11	int
-102	fileId	7	int
+100	decision	Accept Submission	string
+101	name	Maria Fritz	string
+101	username	mfritz	string
+101	userGroupName	Copyeditor	string
+102	editorName	Daniel Barnes	string
 102	submissionId	6	int
-102	username	dbarnes	string
-102	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-103	reviewAssignmentId	8	string
-103	reviewerName	Julie Janssen	string
-103	submissionId	6	int
-103	stageId	3	int
-103	round	1	int
-104	reviewAssignmentId	9	string
-104	reviewerName	Adela Gallego	string
-104	submissionId	6	int
-104	stageId	3	int
-104	round	1	int
-105	editorName	Daniel Barnes	string
-105	submissionId	6	int
-105	decision	Accept Submission	string
-106	name	Maria Fritz	string
-106	username	mfritz	string
-106	userGroupName	Copyeditor	string
-107	editorName	Daniel Barnes	string
-107	submissionId	6	int
-107	decision	Send To Production	string
-108	name	Graham Cox	string
-108	username	gcox	string
-108	userGroupName	Layout Editor	string
-110	fileStage	2	int
-110	sourceSubmissionFileId	\N	string
-110	submissionFileId	12	int
-110	fileId	8	int
-110	submissionId	7	int
-110	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-110	username	dsokoloff	string
-111	fileStage	2	int
-111	submissionFileId	12	int
-111	fileId	8	int
+102	decision	Send To Production	string
+103	name	Graham Cox	string
+103	username	gcox	string
+103	userGroupName	Layout Editor	string
+105	fileStage	2	int
+105	sourceSubmissionFileId	\N	string
+105	submissionFileId	10	int
+105	fileId	8	int
+105	submissionId	7	int
+105	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
+105	username	dsokoloff	string
+106	fileStage	2	int
+106	submissionFileId	10	int
+106	fileId	8	int
+106	submissionId	7	int
+106	username	dsokoloff	string
+106	name	Developing efficacy beliefs in the classroom.pdf	string
+107	fileStage	2	int
+107	sourceSubmissionFileId	\N	string
+107	submissionFileId	10	int
+107	fileId	8	int
+107	submissionId	7	int
+107	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
+107	username	dsokoloff	string
+108	fileStage	2	int
+108	sourceSubmissionFileId	\N	string
+108	submissionFileId	10	int
+108	fileId	8	int
+108	submissionId	7	int
+108	username	dsokoloff	string
+108	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
+108	name	Developing efficacy beliefs in the classroom.pdf	string
+111	editorName	Daniel Barnes	string
 111	submissionId	7	int
-111	username	dsokoloff	string
-111	name	Developing efficacy beliefs in the classroom.pdf	string
-112	fileStage	2	int
-112	sourceSubmissionFileId	\N	string
-112	submissionFileId	12	int
-112	fileId	8	int
+111	decision	Send to Review	string
+112	reviewAssignmentId	10	string
+112	reviewerName	Paul Hudson	string
 112	submissionId	7	int
-112	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-112	username	dsokoloff	string
-113	fileStage	2	int
-113	sourceSubmissionFileId	\N	string
-113	submissionFileId	12	int
-113	fileId	8	int
+112	stageId	3	int
+112	round	1	int
+113	reviewAssignmentId	11	string
+113	reviewerName	Aisla McCrae	string
 113	submissionId	7	int
-113	username	dsokoloff	string
-113	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-113	name	Developing efficacy beliefs in the classroom.pdf	string
-116	editorName	Daniel Barnes	string
+113	stageId	3	int
+113	round	1	int
+114	reviewAssignmentId	12	string
+114	reviewerName	Adela Gallego	string
+114	submissionId	7	int
+114	stageId	3	int
+114	round	1	int
+115	reviewAssignmentId	10	int
+115	reviewerName	Paul Hudson	string
+115	submissionId	7	int
+115	round	1	int
+116	reviewAssignmentId	10	int
+116	reviewerName	Paul Hudson	string
 116	submissionId	7	int
-116	decision	Send to Review	string
-117	fileStage	4	int
-117	sourceSubmissionFileId	12	int
-117	submissionFileId	13	int
-117	fileId	8	int
-117	submissionId	7	int
-117	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-117	username	dbarnes	string
-118	fileStage	4	int
-118	submissionFileId	13	int
-118	fileId	8	int
-118	submissionId	7	int
-118	username	dbarnes	string
-118	name	Developing efficacy beliefs in the classroom.pdf	string
-119	reviewAssignmentId	10	string
-119	reviewerName	Paul Hudson	string
-119	submissionId	7	int
-119	stageId	3	int
-119	round	1	int
-120	reviewAssignmentId	11	string
-120	reviewerName	Aisla McCrae	string
-120	submissionId	7	int
-120	stageId	3	int
-120	round	1	int
-121	reviewAssignmentId	12	string
-121	reviewerName	Adela Gallego	string
-121	submissionId	7	int
-121	stageId	3	int
-121	round	1	int
-122	reviewAssignmentId	10	int
-122	reviewerName	Paul Hudson	string
-122	submissionId	7	int
-122	round	1	int
-123	reviewAssignmentId	10	int
-123	reviewerName	Paul Hudson	string
-123	submissionId	7	int
-123	round	1	int
-125	fileStage	2	int
-125	sourceSubmissionFileId	\N	string
-125	submissionFileId	14	int
-125	fileId	9	int
-125	submissionId	8	int
-125	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
-125	username	eostrom	string
+116	round	1	int
+118	fileStage	2	int
+118	sourceSubmissionFileId	\N	string
+118	submissionFileId	11	int
+118	fileId	9	int
+118	submissionId	8	int
+118	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
+118	username	eostrom	string
+119	fileStage	2	int
+119	submissionFileId	11	int
+119	fileId	9	int
+119	submissionId	8	int
+119	username	eostrom	string
+119	name	Traditions and Trends in the Study of the Commons.pdf	string
+120	fileStage	2	int
+120	sourceSubmissionFileId	\N	string
+120	submissionFileId	11	int
+120	fileId	9	int
+120	submissionId	8	int
+120	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
+120	username	eostrom	string
+121	fileStage	2	int
+121	sourceSubmissionFileId	\N	string
+121	submissionFileId	11	int
+121	fileId	9	int
+121	submissionId	8	int
+121	username	eostrom	string
+121	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
+121	name	Traditions and Trends in the Study of the Commons.pdf	string
 126	fileStage	2	int
-126	submissionFileId	14	int
-126	fileId	9	int
-126	submissionId	8	int
-126	username	eostrom	string
-126	name	Traditions and Trends in the Study of the Commons.pdf	string
+126	sourceSubmissionFileId	\N	string
+126	submissionFileId	12	int
+126	fileId	10	int
+126	submissionId	9	int
+126	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
+126	username	fpaglieri	string
 127	fileStage	2	int
-127	sourceSubmissionFileId	\N	string
-127	submissionFileId	14	int
-127	fileId	9	int
-127	submissionId	8	int
-127	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
-127	username	eostrom	string
+127	submissionFileId	12	int
+127	fileId	10	int
+127	submissionId	9	int
+127	username	fpaglieri	string
+127	name	Hansen & Pinto: Reason Reclaimed.pdf	string
 128	fileStage	2	int
 128	sourceSubmissionFileId	\N	string
-128	submissionFileId	14	int
-128	fileId	9	int
-128	submissionId	8	int
-128	username	eostrom	string
-128	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
-128	name	Traditions and Trends in the Study of the Commons.pdf	string
-133	fileStage	2	int
-133	sourceSubmissionFileId	\N	string
-133	submissionFileId	15	int
-133	fileId	10	int
+128	submissionFileId	12	int
+128	fileId	10	int
+128	submissionId	9	int
+128	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
+128	username	fpaglieri	string
+129	fileStage	2	int
+129	sourceSubmissionFileId	\N	string
+129	submissionFileId	12	int
+129	fileId	10	int
+129	submissionId	9	int
+129	username	fpaglieri	string
+129	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
+129	name	Hansen & Pinto: Reason Reclaimed.pdf	string
+132	editorName	Daniel Barnes	string
+132	submissionId	9	int
+132	decision	Send to Review	string
+133	reviewAssignmentId	13	string
+133	reviewerName	Julie Janssen	string
 133	submissionId	9	int
-133	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
-133	username	fpaglieri	string
-134	fileStage	2	int
-134	submissionFileId	15	int
-134	fileId	10	int
+133	stageId	3	int
+133	round	1	int
+134	reviewAssignmentId	14	string
+134	reviewerName	Adela Gallego	string
 134	submissionId	9	int
-134	username	fpaglieri	string
-134	name	Hansen & Pinto: Reason Reclaimed.pdf	string
-135	fileStage	2	int
-135	sourceSubmissionFileId	\N	string
-135	submissionFileId	15	int
-135	fileId	10	int
+134	stageId	3	int
+134	round	1	int
+135	editorName	Daniel Barnes	string
 135	submissionId	9	int
-135	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
-135	username	fpaglieri	string
-136	fileStage	2	int
-136	sourceSubmissionFileId	\N	string
-136	submissionFileId	15	int
-136	fileId	10	int
-136	submissionId	9	int
-136	username	fpaglieri	string
-136	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
-136	name	Hansen & Pinto: Reason Reclaimed.pdf	string
-139	editorName	Daniel Barnes	string
-139	submissionId	9	int
-139	decision	Send to Review	string
-140	fileStage	4	int
-140	sourceSubmissionFileId	15	int
-140	submissionFileId	16	int
-140	fileId	10	int
-140	submissionId	9	int
-140	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
-140	username	dbarnes	string
-141	fileStage	4	int
-141	submissionFileId	16	int
-141	fileId	10	int
-141	submissionId	9	int
-141	username	dbarnes	string
-141	name	Hansen & Pinto: Reason Reclaimed.pdf	string
-142	reviewAssignmentId	13	string
-142	reviewerName	Julie Janssen	string
-142	submissionId	9	int
-142	stageId	3	int
-142	round	1	int
-143	reviewAssignmentId	14	string
-143	reviewerName	Adela Gallego	string
-143	submissionId	9	int
-143	stageId	3	int
-143	round	1	int
-144	editorName	Daniel Barnes	string
-144	submissionId	9	int
-144	decision	Accept Submission	string
-145	name	Sarah Vogt	string
-145	username	svogt	string
-145	userGroupName	Copyeditor	string
+135	decision	Accept Submission	string
+136	name	Sarah Vogt	string
+136	username	svogt	string
+136	userGroupName	Copyeditor	string
+137	editorName	Daniel Barnes	string
+137	submissionId	9	int
+137	decision	Send To Production	string
+138	name	Stephen Hellier	string
+138	username	shellier	string
+138	userGroupName	Layout Editor	string
+140	fileStage	2	int
+140	sourceSubmissionFileId	\N	string
+140	submissionFileId	13	int
+140	fileId	11	int
+140	submissionId	10	int
+140	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+140	username	jnovak	string
+141	fileStage	2	int
+141	submissionFileId	13	int
+141	fileId	11	int
+141	submissionId	10	int
+141	username	jnovak	string
+141	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+142	fileStage	2	int
+142	sourceSubmissionFileId	\N	string
+142	submissionFileId	13	int
+142	fileId	11	int
+142	submissionId	10	int
+142	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+142	username	jnovak	string
+143	fileStage	2	int
+143	sourceSubmissionFileId	\N	string
+143	submissionFileId	13	int
+143	fileId	11	int
+143	submissionId	10	int
+143	username	jnovak	string
+143	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+143	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
 146	editorName	Daniel Barnes	string
-146	submissionId	9	int
-146	decision	Send To Production	string
-147	name	Stephen Hellier	string
-147	username	shellier	string
-147	userGroupName	Layout Editor	string
-148	name	Sabine Kumar	string
-148	username	skumar	string
-148	userGroupName	Proofreader	string
-150	fileStage	2	int
-150	sourceSubmissionFileId	\N	string
-150	submissionFileId	17	int
-150	fileId	11	int
+146	submissionId	10	int
+146	decision	Send to Review	string
+147	fileStage	4	int
+147	sourceSubmissionFileId	13	int
+147	submissionFileId	14	int
+147	fileId	11	int
+147	submissionId	10	int
+147	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+147	username	dbarnes	string
+148	fileStage	4	int
+148	submissionFileId	14	int
+148	fileId	11	int
+148	submissionId	10	int
+148	username	dbarnes	string
+148	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+149	reviewAssignmentId	15	string
+149	reviewerName	Aisla McCrae	string
+149	submissionId	10	int
+149	stageId	3	int
+149	round	1	int
+150	reviewAssignmentId	16	string
+150	reviewerName	Adela Gallego	string
 150	submissionId	10	int
-150	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-150	username	jnovak	string
-151	fileStage	2	int
-151	submissionFileId	17	int
-151	fileId	11	int
+150	stageId	3	int
+150	round	1	int
+151	reviewAssignmentId	15	int
+151	reviewerName	Aisla McCrae	string
 151	submissionId	10	int
-151	username	jnovak	string
-151	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-152	fileStage	2	int
-152	sourceSubmissionFileId	\N	string
-152	submissionFileId	17	int
-152	fileId	11	int
+151	round	1	int
+152	reviewAssignmentId	15	int
+152	reviewerName	Aisla McCrae	string
 152	submissionId	10	int
-152	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-152	username	jnovak	string
-153	fileStage	2	int
-153	sourceSubmissionFileId	\N	string
-153	submissionFileId	17	int
-153	fileId	11	int
+152	round	1	int
+153	reviewAssignmentId	16	int
+153	reviewerName	Adela Gallego	string
 153	submissionId	10	int
-153	username	jnovak	string
-153	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-153	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-156	editorName	Daniel Barnes	string
-156	submissionId	10	int
-156	decision	Send to Review	string
-157	fileStage	4	int
-157	sourceSubmissionFileId	17	int
-157	submissionFileId	18	int
-157	fileId	11	int
-157	submissionId	10	int
-157	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-157	username	dbarnes	string
-158	fileStage	4	int
-158	submissionFileId	18	int
-158	fileId	11	int
-158	submissionId	10	int
-158	username	dbarnes	string
-158	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-159	reviewAssignmentId	15	string
-159	reviewerName	Aisla McCrae	string
-159	submissionId	10	int
-159	stageId	3	int
-159	round	1	int
-160	reviewAssignmentId	16	string
-160	reviewerName	Adela Gallego	string
-160	submissionId	10	int
-160	stageId	3	int
-160	round	1	int
-161	reviewAssignmentId	15	int
-161	reviewerName	Aisla McCrae	string
-161	submissionId	10	int
-161	round	1	int
-162	reviewAssignmentId	15	int
-162	reviewerName	Aisla McCrae	string
-162	submissionId	10	int
-162	round	1	int
-163	reviewAssignmentId	16	int
-163	reviewerName	Adela Gallego	string
-163	submissionId	10	int
-163	round	1	int
-164	reviewAssignmentId	16	int
-164	reviewerName	Adela Gallego	string
-164	submissionId	10	int
-164	round	1	int
+153	round	1	int
+154	reviewAssignmentId	16	int
+154	reviewerName	Adela Gallego	string
+154	submissionId	10	int
+154	round	1	int
+156	fileStage	2	int
+156	sourceSubmissionFileId	\N	string
+156	submissionFileId	15	int
+156	fileId	12	int
+156	submissionId	11	int
+156	originalFileName	Learning Sustainable Design through Service.pdf	string
+156	username	kalkhafaji	string
+157	fileStage	2	int
+157	submissionFileId	15	int
+157	fileId	12	int
+157	submissionId	11	int
+157	username	kalkhafaji	string
+157	name	Learning Sustainable Design through Service.pdf	string
+158	fileStage	2	int
+158	sourceSubmissionFileId	\N	string
+158	submissionFileId	15	int
+158	fileId	12	int
+158	submissionId	11	int
+158	originalFileName	Learning Sustainable Design through Service.pdf	string
+158	username	kalkhafaji	string
+159	fileStage	2	int
+159	sourceSubmissionFileId	\N	string
+159	submissionFileId	15	int
+159	fileId	12	int
+159	submissionId	11	int
+159	username	kalkhafaji	string
+159	originalFileName	Learning Sustainable Design through Service.pdf	string
+159	name	Learning Sustainable Design through Service.pdf	string
+164	fileStage	2	int
+164	sourceSubmissionFileId	\N	string
+164	submissionFileId	16	int
+164	fileId	13	int
+164	submissionId	12	int
+164	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+164	username	lchristopher	string
+165	fileStage	2	int
+165	submissionFileId	16	int
+165	fileId	13	int
+165	submissionId	12	int
+165	username	lchristopher	string
+165	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
 166	fileStage	2	int
 166	sourceSubmissionFileId	\N	string
-166	submissionFileId	19	int
-166	fileId	12	int
-166	submissionId	11	int
-166	originalFileName	Learning Sustainable Design through Service.pdf	string
-166	username	kalkhafaji	string
+166	submissionFileId	16	int
+166	fileId	13	int
+166	submissionId	12	int
+260	sourceSubmissionFileId	\N	string
+166	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+166	username	lchristopher	string
 167	fileStage	2	int
-167	submissionFileId	19	int
-167	fileId	12	int
-167	submissionId	11	int
-167	username	kalkhafaji	string
-167	name	Learning Sustainable Design through Service.pdf	string
-168	fileStage	2	int
-168	sourceSubmissionFileId	\N	string
-168	submissionFileId	19	int
-168	fileId	12	int
-168	submissionId	11	int
-168	originalFileName	Learning Sustainable Design through Service.pdf	string
-168	username	kalkhafaji	string
-169	fileStage	2	int
-169	sourceSubmissionFileId	\N	string
-169	submissionFileId	19	int
-169	fileId	12	int
-169	submissionId	11	int
-169	username	kalkhafaji	string
-169	originalFileName	Learning Sustainable Design through Service.pdf	string
-169	name	Learning Sustainable Design through Service.pdf	string
+167	sourceSubmissionFileId	\N	string
+167	submissionFileId	16	int
+167	fileId	13	int
+167	submissionId	12	int
+167	username	lchristopher	string
+167	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+167	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+170	editorName	Daniel Barnes	string
+170	submissionId	12	int
+170	decision	Send to Review	string
+171	reviewAssignmentId	17	string
+171	reviewerName	Julie Janssen	string
+171	submissionId	12	int
+171	stageId	3	int
+171	round	1	int
+172	reviewAssignmentId	18	string
+172	reviewerName	Paul Hudson	string
+172	submissionId	12	int
+172	stageId	3	int
+172	round	1	int
 174	fileStage	2	int
 174	sourceSubmissionFileId	\N	string
-174	submissionFileId	20	int
-174	fileId	13	int
-174	submissionId	12	int
-174	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-174	username	lchristopher	string
+174	submissionFileId	17	int
+174	fileId	14	int
+174	submissionId	13	int
+174	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+174	username	lkumiega	string
 175	fileStage	2	int
-175	submissionFileId	20	int
-175	fileId	13	int
-175	submissionId	12	int
-175	username	lchristopher	string
-175	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+175	submissionFileId	17	int
+175	fileId	14	int
+175	submissionId	13	int
+175	username	lkumiega	string
+175	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
 176	fileStage	2	int
 176	sourceSubmissionFileId	\N	string
-176	submissionFileId	20	int
-176	fileId	13	int
-176	submissionId	12	int
-176	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-176	username	lchristopher	string
+176	submissionFileId	17	int
+176	fileId	14	int
+176	submissionId	13	int
+176	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+176	username	lkumiega	string
 177	fileStage	2	int
 177	sourceSubmissionFileId	\N	string
-177	submissionFileId	20	int
-177	fileId	13	int
-177	submissionId	12	int
-177	username	lchristopher	string
-177	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-177	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+177	submissionFileId	17	int
+177	fileId	14	int
+177	submissionId	13	int
+177	username	lkumiega	string
+177	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+177	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
 180	editorName	Daniel Barnes	string
-180	submissionId	12	int
+180	submissionId	13	int
 180	decision	Send to Review	string
-181	reviewAssignmentId	17	string
+181	reviewAssignmentId	19	string
 181	reviewerName	Julie Janssen	string
-181	submissionId	12	int
+181	submissionId	13	int
 181	stageId	3	int
 181	round	1	int
-182	reviewAssignmentId	18	string
-182	reviewerName	Paul Hudson	string
-182	submissionId	12	int
+182	reviewAssignmentId	20	string
+182	reviewerName	Aisla McCrae	string
+182	submissionId	13	int
 182	stageId	3	int
 182	round	1	int
-184	fileStage	2	int
-184	sourceSubmissionFileId	\N	string
-184	submissionFileId	21	int
-184	fileId	14	int
+183	reviewAssignmentId	21	string
+183	reviewerName	Adela Gallego	string
+183	submissionId	13	int
+183	stageId	3	int
+183	round	1	int
+184	reviewAssignmentId	19	int
+184	reviewerName	Julie Janssen	string
 184	submissionId	13	int
-184	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-184	username	lkumiega	string
-185	fileStage	2	int
-185	submissionFileId	21	int
-185	fileId	14	int
+184	round	1	int
+185	reviewAssignmentId	19	int
+185	reviewerName	Julie Janssen	string
 185	submissionId	13	int
-185	username	lkumiega	string
-185	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-186	fileStage	2	int
-186	sourceSubmissionFileId	\N	string
-186	submissionFileId	21	int
-186	fileId	14	int
+185	round	1	int
+186	reviewAssignmentId	20	int
+186	reviewerName	Aisla McCrae	string
 186	submissionId	13	int
-186	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-186	username	lkumiega	string
-187	fileStage	2	int
-187	sourceSubmissionFileId	\N	string
-187	submissionFileId	21	int
-187	fileId	14	int
+186	round	1	int
+187	reviewAssignmentId	20	int
+187	reviewerName	Aisla McCrae	string
 187	submissionId	13	int
-187	username	lkumiega	string
-187	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-187	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+187	round	1	int
+188	reviewAssignmentId	21	int
+188	reviewerName	Adela Gallego	string
+188	submissionId	13	int
+188	round	1	int
+189	reviewAssignmentId	21	int
+189	reviewerName	Adela Gallego	string
+189	submissionId	13	int
+189	round	1	int
 190	editorName	Daniel Barnes	string
 190	submissionId	13	int
-190	decision	Send to Review	string
-191	fileStage	4	int
-191	sourceSubmissionFileId	21	int
-191	submissionFileId	22	int
-191	fileId	14	int
-191	submissionId	13	int
-191	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-191	username	dbarnes	string
-192	fileStage	4	int
-192	submissionFileId	22	int
-192	fileId	14	int
-192	submissionId	13	int
-192	username	dbarnes	string
-192	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-193	reviewAssignmentId	19	string
-193	reviewerName	Julie Janssen	string
-193	submissionId	13	int
-193	stageId	3	int
-193	round	1	int
-194	reviewAssignmentId	20	string
-194	reviewerName	Aisla McCrae	string
-194	submissionId	13	int
-194	stageId	3	int
-194	round	1	int
-195	reviewAssignmentId	21	string
-195	reviewerName	Adela Gallego	string
-195	submissionId	13	int
-195	stageId	3	int
-195	round	1	int
-196	reviewAssignmentId	19	int
-196	reviewerName	Julie Janssen	string
-196	submissionId	13	int
-196	round	1	int
-197	reviewAssignmentId	19	int
-197	reviewerName	Julie Janssen	string
-197	submissionId	13	int
-197	round	1	int
-198	reviewAssignmentId	20	int
-198	reviewerName	Aisla McCrae	string
-198	submissionId	13	int
-198	round	1	int
-199	reviewAssignmentId	20	int
-199	reviewerName	Aisla McCrae	string
-199	submissionId	13	int
-199	round	1	int
-200	reviewAssignmentId	21	int
-200	reviewerName	Adela Gallego	string
-200	submissionId	13	int
-200	round	1	int
-201	reviewAssignmentId	21	int
-201	reviewerName	Adela Gallego	string
-201	submissionId	13	int
-201	round	1	int
-202	editorName	Daniel Barnes	string
-202	submissionId	13	int
-202	decision	Request Revisions	string
-204	fileStage	2	int
-204	sourceSubmissionFileId	\N	string
-204	submissionFileId	23	int
-204	fileId	15	int
-204	submissionId	14	int
-204	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-204	username	pdaniel	string
-205	fileStage	2	int
-205	submissionFileId	23	int
-205	fileId	15	int
-205	submissionId	14	int
-205	username	pdaniel	string
-205	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-206	fileStage	2	int
-206	sourceSubmissionFileId	\N	string
-206	submissionFileId	23	int
-206	fileId	15	int
-206	submissionId	14	int
-206	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-206	username	pdaniel	string
-207	fileStage	2	int
-207	sourceSubmissionFileId	\N	string
-207	submissionFileId	23	int
-207	fileId	15	int
-207	submissionId	14	int
-207	username	pdaniel	string
-207	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-207	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-211	fileStage	2	int
-211	sourceSubmissionFileId	\N	string
-211	submissionFileId	24	int
-211	fileId	16	int
-211	submissionId	15	int
-211	originalFileName	Yam diseases and its management in Nigeria.pdf	string
-211	username	rbaiyewu	string
-212	fileStage	2	int
-212	submissionFileId	24	int
-212	fileId	16	int
-212	submissionId	15	int
-212	username	rbaiyewu	string
-212	name	Yam diseases and its management in Nigeria.pdf	string
+190	decision	Request Revisions	string
+192	fileStage	2	int
+192	sourceSubmissionFileId	\N	string
+192	submissionFileId	18	int
+192	fileId	15	int
+192	submissionId	14	int
+192	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+192	username	pdaniel	string
+193	fileStage	2	int
+193	submissionFileId	18	int
+193	fileId	15	int
+193	submissionId	14	int
+193	username	pdaniel	string
+193	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+194	fileStage	2	int
+194	sourceSubmissionFileId	\N	string
+194	submissionFileId	18	int
+194	fileId	15	int
+194	submissionId	14	int
+194	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+194	username	pdaniel	string
+195	fileStage	2	int
+195	sourceSubmissionFileId	\N	string
+195	submissionFileId	18	int
+195	fileId	15	int
+195	submissionId	14	int
+195	username	pdaniel	string
+195	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+195	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+199	fileStage	2	int
+199	sourceSubmissionFileId	\N	string
+199	submissionFileId	19	int
+199	fileId	16	int
+199	submissionId	15	int
+199	originalFileName	Yam diseases and its management in Nigeria.pdf	string
+199	username	rbaiyewu	string
+200	fileStage	2	int
+200	submissionFileId	19	int
+200	fileId	16	int
+200	submissionId	15	int
+200	username	rbaiyewu	string
+200	name	Yam diseases and its management in Nigeria.pdf	string
+201	fileStage	2	int
+201	sourceSubmissionFileId	\N	string
+201	submissionFileId	19	int
+201	fileId	16	int
+201	submissionId	15	int
+201	originalFileName	Yam diseases and its management in Nigeria.pdf	string
+201	username	rbaiyewu	string
+202	fileStage	2	int
+202	sourceSubmissionFileId	\N	string
+202	submissionFileId	19	int
+202	fileId	16	int
+202	submissionId	15	int
+202	username	rbaiyewu	string
+202	originalFileName	Yam diseases and its management in Nigeria.pdf	string
+202	name	Yam diseases and its management in Nigeria.pdf	string
+205	editorName	Daniel Barnes	string
+205	submissionId	15	int
+205	decision	Send to Review	string
+206	reviewAssignmentId	22	string
+206	reviewerName	Paul Hudson	string
+206	submissionId	15	int
+206	stageId	3	int
+206	round	1	int
+207	reviewAssignmentId	23	string
+207	reviewerName	Aisla McCrae	string
+207	submissionId	15	int
+207	stageId	3	int
+207	round	1	int
+208	editorName	Daniel Barnes	string
+208	submissionId	15	int
+208	decision	Accept Submission	string
+209	name	Sarah Vogt	string
+209	username	svogt	string
+209	userGroupName	Copyeditor	string
+210	editorName	Daniel Barnes	string
+210	submissionId	15	int
+210	decision	Send To Production	string
+211	name	Stephen Hellier	string
+211	username	shellier	string
+211	userGroupName	Layout Editor	string
 213	fileStage	2	int
 213	sourceSubmissionFileId	\N	string
-213	submissionFileId	24	int
-213	fileId	16	int
-213	submissionId	15	int
-213	originalFileName	Yam diseases and its management in Nigeria.pdf	string
-213	username	rbaiyewu	string
+213	submissionFileId	20	int
+213	fileId	17	int
+213	submissionId	16	int
+213	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+213	username	rrossi	string
 214	fileStage	2	int
-214	sourceSubmissionFileId	\N	string
-214	submissionFileId	24	int
-214	fileId	16	int
-214	submissionId	15	int
-214	username	rbaiyewu	string
-214	originalFileName	Yam diseases and its management in Nigeria.pdf	string
-214	name	Yam diseases and its management in Nigeria.pdf	string
-217	editorName	Daniel Barnes	string
-217	submissionId	15	int
-217	decision	Send to Review	string
-218	fileStage	4	int
-218	sourceSubmissionFileId	24	int
-218	submissionFileId	25	int
-218	fileId	16	int
-218	submissionId	15	int
-218	originalFileName	Yam diseases and its management in Nigeria.pdf	string
-218	username	dbarnes	string
-219	fileStage	4	int
-219	submissionFileId	25	int
-219	fileId	16	int
-219	submissionId	15	int
-219	username	dbarnes	string
-219	name	Yam diseases and its management in Nigeria.pdf	string
-220	reviewAssignmentId	22	string
-220	reviewerName	Paul Hudson	string
-220	submissionId	15	int
-220	stageId	3	int
-220	round	1	int
-221	reviewAssignmentId	23	string
-221	reviewerName	Aisla McCrae	string
-221	submissionId	15	int
-221	stageId	3	int
-221	round	1	int
-222	editorName	Daniel Barnes	string
-222	submissionId	15	int
-222	decision	Accept Submission	string
-223	name	Sarah Vogt	string
-223	username	svogt	string
-223	userGroupName	Copyeditor	string
-224	editorName	Daniel Barnes	string
-224	submissionId	15	int
-224	decision	Send To Production	string
-225	name	Stephen Hellier	string
-225	username	shellier	string
-225	userGroupName	Layout Editor	string
-227	fileStage	2	int
-227	sourceSubmissionFileId	\N	string
-227	submissionFileId	26	int
-227	fileId	17	int
-227	submissionId	16	int
-227	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-227	username	rrossi	string
-228	fileStage	2	int
-228	submissionFileId	26	int
-228	fileId	17	int
-228	submissionId	16	int
-228	username	rrossi	string
-228	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-229	fileStage	2	int
-229	sourceSubmissionFileId	\N	string
-229	submissionFileId	26	int
-229	fileId	17	int
-229	submissionId	16	int
-229	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-229	username	rrossi	string
-230	fileStage	2	int
-230	sourceSubmissionFileId	\N	string
-230	submissionFileId	26	int
-230	fileId	17	int
-230	submissionId	16	int
-230	username	rrossi	string
-230	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-230	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-234	fileStage	2	int
+214	submissionFileId	20	int
+214	fileId	17	int
+214	submissionId	16	int
+214	username	rrossi	string
+214	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+215	fileStage	2	int
+215	sourceSubmissionFileId	\N	string
+215	submissionFileId	20	int
+215	fileId	17	int
+215	submissionId	16	int
+215	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+215	username	rrossi	string
+216	fileStage	2	int
+216	sourceSubmissionFileId	\N	string
+216	submissionFileId	20	int
+216	fileId	17	int
+216	submissionId	16	int
+216	username	rrossi	string
+216	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+216	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+220	fileStage	2	int
+220	sourceSubmissionFileId	\N	string
+220	submissionFileId	21	int
+220	fileId	18	int
+220	submissionId	17	int
+220	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+220	username	vkarbasizaed	string
+221	fileStage	2	int
+221	submissionFileId	21	int
+221	fileId	18	int
+221	submissionId	17	int
+221	username	vkarbasizaed	string
+221	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+222	fileStage	2	int
+222	sourceSubmissionFileId	\N	string
+222	submissionFileId	21	int
+222	fileId	18	int
+222	submissionId	17	int
+260	submissionFileId	24	int
+260	fileId	21	int
+260	submissionId	19	int
+222	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+222	username	vkarbasizaed	string
+223	fileStage	2	int
+223	sourceSubmissionFileId	\N	string
+223	submissionFileId	21	int
+223	fileId	18	int
+223	submissionId	17	int
+223	username	vkarbasizaed	string
+223	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+223	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+226	editorName	Daniel Barnes	string
+226	submissionId	17	int
+226	decision	Send to Review	string
+227	reviewAssignmentId	24	string
+227	reviewerName	Julie Janssen	string
+227	submissionId	17	int
+227	stageId	3	int
+227	round	1	int
+228	reviewAssignmentId	25	string
+228	reviewerName	Paul Hudson	string
+228	submissionId	17	int
+228	stageId	3	int
+228	round	1	int
+229	editorName	Daniel Barnes	string
+229	submissionId	17	int
+229	decision	Accept Submission	string
+230	name	Maria Fritz	string
+230	username	mfritz	string
+230	userGroupName	Copyeditor	string
+231	editorName	Daniel Barnes	string
+231	submissionId	17	int
+231	decision	Send To Production	string
+232	name	Graham Cox	string
+232	username	gcox	string
+232	userGroupName	Layout Editor	string
+233	name	Catherine Turner	string
+233	username	cturner	string
+233	userGroupName	Proofreader	string
+234	fileStage	10	int
 234	sourceSubmissionFileId	\N	string
-234	submissionFileId	27	int
-234	fileId	18	int
+234	submissionFileId	22	int
+234	fileId	19	int
 234	submissionId	17	int
-234	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-234	username	vkarbasizaed	string
-235	fileStage	2	int
-235	submissionFileId	27	int
-235	fileId	18	int
+234	originalFileName	article.pdf	string
+234	username	dbarnes	string
+235	fileStage	10	int
+235	submissionFileId	22	int
+235	fileId	19	int
 235	submissionId	17	int
-235	username	vkarbasizaed	string
-235	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-236	fileStage	2	int
+235	username	dbarnes	string
+235	name	article.pdf	string
+236	fileStage	10	int
 236	sourceSubmissionFileId	\N	string
-236	submissionFileId	27	int
-236	fileId	18	int
+236	submissionFileId	22	int
+236	fileId	19	int
 236	submissionId	17	int
-236	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-236	username	vkarbasizaed	string
-237	fileStage	2	int
+236	originalFileName	article.pdf	string
+236	username	dbarnes	string
+237	fileStage	10	int
 237	sourceSubmissionFileId	\N	string
-237	submissionFileId	27	int
-237	fileId	18	int
+237	submissionFileId	22	int
+237	fileId	19	int
 237	submissionId	17	int
-237	username	vkarbasizaed	string
-237	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-237	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-240	editorName	Daniel Barnes	string
-240	submissionId	17	int
-240	decision	Send to Review	string
-241	fileStage	4	int
-241	sourceSubmissionFileId	27	int
-241	submissionFileId	28	int
-241	fileId	18	int
-241	submissionId	17	int
-241	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-241	username	dbarnes	string
-242	fileStage	4	int
-242	submissionFileId	28	int
-242	fileId	18	int
-242	submissionId	17	int
-242	username	dbarnes	string
-242	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-243	reviewAssignmentId	24	string
-243	reviewerName	Julie Janssen	string
-243	submissionId	17	int
-243	stageId	3	int
-243	round	1	int
-244	reviewAssignmentId	25	string
-244	reviewerName	Paul Hudson	string
-244	submissionId	17	int
-244	stageId	3	int
-244	round	1	int
-245	editorName	Daniel Barnes	string
-245	submissionId	17	int
-245	decision	Accept Submission	string
-246	name	Maria Fritz	string
-246	username	mfritz	string
-246	userGroupName	Copyeditor	string
-247	editorName	Daniel Barnes	string
-247	submissionId	17	int
-247	decision	Send To Production	string
-248	name	Graham Cox	string
-248	username	gcox	string
-248	userGroupName	Layout Editor	string
-249	name	Catherine Turner	string
-249	username	cturner	string
-249	userGroupName	Proofreader	string
-250	fileStage	10	int
-250	sourceSubmissionFileId	\N	string
-250	submissionFileId	29	int
-250	fileId	19	int
-250	submissionId	17	int
-250	originalFileName	article.pdf	string
-250	username	dbarnes	string
-251	fileStage	10	int
-251	submissionFileId	29	int
-251	fileId	19	int
-251	submissionId	17	int
-251	username	dbarnes	string
-251	name	article.pdf	string
-252	fileStage	10	int
+237	username	dbarnes	string
+237	originalFileName	article.pdf	string
+237	name	article.pdf	string
+249	fileStage	2	int
+249	sourceSubmissionFileId	\N	string
+249	submissionFileId	23	int
+249	fileId	20	int
+249	submissionId	18	int
+249	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+249	username	vwilliamson	string
+250	fileStage	2	int
+250	submissionFileId	23	int
+250	fileId	20	int
+250	submissionId	18	int
+250	username	vwilliamson	string
+250	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+251	fileStage	2	int
+251	sourceSubmissionFileId	\N	string
+251	submissionFileId	23	int
+251	fileId	20	int
+251	submissionId	18	int
+251	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+251	username	vwilliamson	string
+252	fileStage	2	int
 252	sourceSubmissionFileId	\N	string
-252	submissionFileId	29	int
-252	fileId	19	int
-252	submissionId	17	int
-252	originalFileName	article.pdf	string
-252	username	dbarnes	string
-253	fileStage	10	int
-253	sourceSubmissionFileId	\N	string
-253	submissionFileId	29	int
-253	fileId	19	int
-253	submissionId	17	int
-253	username	dbarnes	string
-253	originalFileName	article.pdf	string
-253	name	article.pdf	string
-265	fileStage	2	int
-265	sourceSubmissionFileId	\N	string
-265	submissionFileId	30	int
-265	fileId	20	int
-265	submissionId	18	int
-265	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-265	username	vwilliamson	string
-266	fileStage	2	int
-266	submissionFileId	30	int
-266	fileId	20	int
-266	submissionId	18	int
-266	username	vwilliamson	string
-266	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-267	fileStage	2	int
-267	sourceSubmissionFileId	\N	string
-267	submissionFileId	30	int
-267	fileId	20	int
-267	submissionId	18	int
-267	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-267	username	vwilliamson	string
-268	fileStage	2	int
-268	sourceSubmissionFileId	\N	string
-268	submissionFileId	30	int
-268	fileId	20	int
-268	submissionId	18	int
-268	username	vwilliamson	string
-268	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-268	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-271	editorName	Daniel Barnes	string
-271	submissionId	18	int
-271	decision	Decline Submission	string
-273	fileStage	2	int
-273	sourceSubmissionFileId	\N	string
-273	submissionFileId	31	int
-273	fileId	21	int
-273	submissionId	19	int
-273	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
-273	username	zwoods	string
-274	fileStage	2	int
-274	submissionFileId	31	int
-274	fileId	21	int
-274	submissionId	19	int
-274	username	zwoods	string
-274	name	Finocchiaro: Arguments About Arguments.pdf	string
-275	fileStage	2	int
-275	sourceSubmissionFileId	\N	string
-275	submissionFileId	31	int
-275	fileId	21	int
-275	submissionId	19	int
-275	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
-275	username	zwoods	string
-276	fileStage	2	int
-276	sourceSubmissionFileId	\N	string
-276	submissionFileId	31	int
-276	fileId	21	int
-276	submissionId	19	int
-276	username	zwoods	string
-276	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
-276	name	Finocchiaro: Arguments About Arguments.pdf	string
-279	editorName	Daniel Barnes	string
-279	submissionId	19	int
-279	decision	Send to Review	string
-280	reviewAssignmentId	26	string
-280	reviewerName	Paul Hudson	string
-280	submissionId	19	int
-280	stageId	3	int
-280	round	1	int
-281	reviewAssignmentId	27	string
-281	reviewerName	Aisla McCrae	string
-281	submissionId	19	int
-281	stageId	3	int
-281	round	1	int
-282	editorName	Daniel Barnes	string
-282	submissionId	19	int
-282	decision	Accept Submission	string
-283	name	Sarah Vogt	string
-283	username	svogt	string
-283	userGroupName	Copyeditor	string
+252	submissionFileId	23	int
+252	fileId	20	int
+252	submissionId	18	int
+252	username	vwilliamson	string
+252	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+252	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+255	editorName	Daniel Barnes	string
+255	submissionId	18	int
+255	decision	Decline Submission	string
+257	fileStage	2	int
+257	sourceSubmissionFileId	\N	string
+257	submissionFileId	24	int
+257	fileId	21	int
+257	submissionId	19	int
+257	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
+257	username	zwoods	string
+258	fileStage	2	int
+258	submissionFileId	24	int
+258	fileId	21	int
+258	submissionId	19	int
+258	username	zwoods	string
+258	name	Finocchiaro: Arguments About Arguments.pdf	string
+259	fileStage	2	int
+259	sourceSubmissionFileId	\N	string
+259	submissionFileId	24	int
+259	fileId	21	int
+259	submissionId	19	int
+259	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
+259	username	zwoods	string
+260	fileStage	2	int
+260	username	zwoods	string
+260	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
+260	name	Finocchiaro: Arguments About Arguments.pdf	string
+263	editorName	Daniel Barnes	string
+263	submissionId	19	int
+263	decision	Send to Review	string
+264	reviewAssignmentId	26	string
+264	reviewerName	Paul Hudson	string
+264	submissionId	19	int
+264	stageId	3	int
+264	round	1	int
+265	reviewAssignmentId	27	string
+265	reviewerName	Aisla McCrae	string
+265	submissionId	19	int
+265	stageId	3	int
+265	round	1	int
+266	editorName	Daniel Barnes	string
+266	submissionId	19	int
+266	decision	Accept Submission	string
+267	name	Sarah Vogt	string
+267	username	svogt	string
+267	userGroupName	Copyeditor	string
 \.
 
 
@@ -6582,27 +6469,27 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 --
 
 COPY public.files (file_id, path, mimetype) FROM stdin;
-1	journals/1/articles/1/6af84fa184f21.pdf	application/pdf
-2	journals/1/articles/1/6af84fd625d93.pdf	application/pdf
-3	journals/1/articles/2/6af8502ce8e91.pdf	application/pdf
-4	journals/1/articles/3/6af8504d15c3c.pdf	application/pdf
-5	journals/1/articles/4/6af8506a134a1.pdf	application/pdf
-6	journals/1/articles/5/6af850767797a.pdf	application/pdf
-7	journals/1/articles/6/6af8509b18a7e.pdf	application/pdf
-8	journals/1/articles/7/6af850bdb4e42.pdf	application/pdf
-9	journals/1/articles/8/6af850e0cde7e.pdf	application/pdf
-10	journals/1/articles/9/6af850ed12c03.pdf	application/pdf
-11	journals/1/articles/10/6af8511202cbc.pdf	application/pdf
-12	journals/1/articles/11/6af85139ad9f5.pdf	application/pdf
-13	journals/1/articles/12/6af851460d793.pdf	application/pdf
-14	journals/1/articles/13/6af8515e778a8.pdf	application/pdf
-15	journals/1/articles/14/6af8519d3bafe.pdf	application/pdf
-16	journals/1/articles/15/6af851a702ff7.pdf	application/pdf
-17	journals/1/articles/16/6af851ca6448e.pdf	application/pdf
-18	journals/1/articles/17/6af851d42d5a4.pdf	application/pdf
-19	journals/1/articles/17/6af851f9f1ef0.pdf	application/pdf
-20	journals/1/articles/18/6af85232365d2.pdf	application/pdf
-21	journals/1/articles/19/6af85241efe5f.pdf	application/pdf
+1	journals/1/articles/1/6af9a950277fa.pdf	application/pdf
+2	journals/1/articles/1/6af9a979a3df9.pdf	application/pdf
+3	journals/1/articles/2/6af9a9c14bcee.pdf	application/pdf
+4	journals/1/articles/3/6af9a9d8cbad3.pdf	application/pdf
+5	journals/1/articles/4/6af9a9ef56f82.pdf	application/pdf
+6	journals/1/articles/5/6af9a9f94b7ef.pdf	application/pdf
+7	journals/1/articles/6/6af9aa14cdf62.pdf	application/pdf
+8	journals/1/articles/7/6af9aa2ee9d4a.pdf	application/pdf
+9	journals/1/articles/8/6af9aa4aa0791.pdf	application/pdf
+10	journals/1/articles/9/6af9aa54573d0.pdf	application/pdf
+11	journals/1/articles/10/6af9aa6ff1c30.pdf	application/pdf
+12	journals/1/articles/11/6af9aa8f4066b.pdf	application/pdf
+13	journals/1/articles/12/6af9aa98ee536.pdf	application/pdf
+14	journals/1/articles/13/6af9aaac01397.pdf	application/pdf
+15	journals/1/articles/14/6af9aadae776e.pdf	application/pdf
+16	journals/1/articles/15/6af9aae29b708.pdf	application/pdf
+17	journals/1/articles/16/6af9aafc9dff7.pdf	application/pdf
+18	journals/1/articles/17/6af9ab04747f8.pdf	application/pdf
+19	journals/1/articles/17/6af9ab1f3eb18.pdf	application/pdf
+20	journals/1/articles/18/6af9ab4578c72.pdf	application/pdf
+21	journals/1/articles/19/6af9ab512db88.pdf	application/pdf
 \.
 
 
@@ -6612,32 +6499,32 @@ COPY public.files (file_id, path, mimetype) FROM stdin;
 
 COPY public.filter_groups (filter_group_id, symbolic, display_name, description, input_type, output_type) FROM stdin;
 1	article=>dc11	plugins.metadata.dc11.articleAdapter.displayName	plugins.metadata.dc11.articleAdapter.description	class::classes.submission.Submission	metadata::plugins.metadata.dc11.schema.Dc11Schema(ARTICLE)
-2	article=>pubmed-xml	plugins.importexport.pubmed.displayName	plugins.importexport.pubmed.description	class::classes.submission.Submission[]	xml::dtd
-3	article=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/native/native.xsd)
-4	native-xml=>article	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.submission.Submission[]
-5	issue=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.Issue[]	xml::schema(plugins/importexport/native/native.xsd)
-6	native-xml=>issue	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.Issue[]
-7	issuegalley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.IssueGalley[]	xml::schema(plugins/importexport/native/native.xsd)
-8	native-xml=>issuegalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.IssueGalley[]
-9	author=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.Author[]	xml::schema(plugins/importexport/native/native.xsd)
-10	native-xml=>author	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.Author[]
-11	SubmissionFile=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::lib.pkp.classes.submission.SubmissionFile	xml::schema(plugins/importexport/native/native.xsd)
-12	native-xml=>SubmissionFile	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::lib.pkp.classes.submission.SubmissionFile
-13	article-galley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.ArticleGalley	xml::schema(plugins/importexport/native/native.xsd)
-14	native-xml=>ArticleGalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.ArticleGalley[]
-15	publication=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publication.Publication	xml::schema(plugins/importexport/native/native.xsd)
-16	native-xml=>Publication	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publication.Publication
-17	article=>doaj-xml	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/doaj/doajArticles.xsd)
-18	article=>doaj-json	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission	primitive::string
-19	issue=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.issue.Issue	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
-20	article=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.submission.Submission	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
-21	galley=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.article.ArticleGalley	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
-22	issue=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.issue.Issue[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
-23	article=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.submission.Submission[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
-24	user=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.user.User[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
-25	user-xml=>user	plugins.importexport.users.displayName	plugins.importexport.users.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::classes.users.User[]
-26	usergroup=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.security.UserGroup[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
-27	user-xml=>usergroup	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::lib.pkp.classes.security.UserGroup[]
+2	issue=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.issue.Issue[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
+3	article=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.submission.Submission[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
+4	article=>doaj-xml	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/doaj/doajArticles.xsd)
+5	article=>doaj-json	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission	primitive::string
+6	article=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/native/native.xsd)
+7	native-xml=>article	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.submission.Submission[]
+8	issue=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.Issue[]	xml::schema(plugins/importexport/native/native.xsd)
+9	native-xml=>issue	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.Issue[]
+10	issuegalley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.IssueGalley[]	xml::schema(plugins/importexport/native/native.xsd)
+11	native-xml=>issuegalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.IssueGalley[]
+12	author=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.Author[]	xml::schema(plugins/importexport/native/native.xsd)
+13	native-xml=>author	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.Author[]
+14	SubmissionFile=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::lib.pkp.classes.submission.SubmissionFile	xml::schema(plugins/importexport/native/native.xsd)
+15	native-xml=>SubmissionFile	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::lib.pkp.classes.submission.SubmissionFile
+16	article-galley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.ArticleGalley	xml::schema(plugins/importexport/native/native.xsd)
+17	native-xml=>ArticleGalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.ArticleGalley[]
+18	publication=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publication.Publication	xml::schema(plugins/importexport/native/native.xsd)
+19	native-xml=>Publication	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publication.Publication
+20	user=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.user.User[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
+21	user-xml=>user	plugins.importexport.users.displayName	plugins.importexport.users.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::classes.users.User[]
+22	usergroup=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.security.UserGroup[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
+23	user-xml=>usergroup	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::lib.pkp.classes.security.UserGroup[]
+24	issue=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.issue.Issue	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
+25	article=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.submission.Submission	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
+26	galley=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.article.ArticleGalley	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
+27	article=>pubmed-xml	plugins.importexport.pubmed.displayName	plugins.importexport.pubmed.description	class::classes.submission.Submission[]	xml::dtd
 \.
 
 
@@ -6655,32 +6542,32 @@ COPY public.filter_settings (filter_id, locale, setting_name, setting_value, set
 
 COPY public.filters (filter_id, filter_group_id, context_id, display_name, class_name, is_template, parent_filter_id, seq) FROM stdin;
 1	1	0	Extract metadata from a(n) Submission	plugins.metadata.dc11.filter.Dc11SchemaArticleAdapter	0	0	0
-2	2	0	ArticlePubMedXmlFilter	plugins.importexport.pubmed.filter.ArticlePubMedXmlFilter	0	0	0
-3	3	0	Native XML submission export	plugins.importexport.native.filter.ArticleNativeXmlFilter	0	0	0
-4	4	0	Native XML submission import	plugins.importexport.native.filter.NativeXmlArticleFilter	0	0	0
-5	5	0	Native XML issue export	plugins.importexport.native.filter.IssueNativeXmlFilter	0	0	0
-6	6	0	Native XML issue import	plugins.importexport.native.filter.NativeXmlIssueFilter	0	0	0
-7	7	0	Native XML issue galley export	plugins.importexport.native.filter.IssueGalleyNativeXmlFilter	0	0	0
-8	8	0	Native XML issue galley import	plugins.importexport.native.filter.NativeXmlIssueGalleyFilter	0	0	0
-9	9	0	Native XML author export	plugins.importexport.native.filter.AuthorNativeXmlFilter	0	0	0
-10	10	0	Native XML author import	plugins.importexport.native.filter.NativeXmlAuthorFilter	0	0	0
-11	12	0	Native XML submission file import	plugins.importexport.native.filter.NativeXmlArticleFileFilter	0	0	0
-12	11	0	Native XML submission file export	lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter	0	0	0
-13	13	0	Native XML representation export	plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter	0	0	0
-14	14	0	Native XML representation import	plugins.importexport.native.filter.NativeXmlArticleGalleyFilter	0	0	0
-15	15	0	Native XML Publication export	plugins.importexport.native.filter.PublicationNativeXmlFilter	0	0	0
-16	16	0	Native XML publication import	plugins.importexport.native.filter.NativeXmlPublicationFilter	0	0	0
-17	17	0	DOAJ XML export	plugins.importexport.doaj.filter.DOAJXmlFilter	0	0	0
-18	18	0	DOAJ JSON export	plugins.importexport.doaj.filter.DOAJJsonFilter	0	0	0
-19	19	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
-20	20	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
-21	21	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
-22	22	0	Crossref XML issue export	plugins.importexport.crossref.filter.IssueCrossrefXmlFilter	0	0	0
-23	23	0	Crossref XML issue export	plugins.importexport.crossref.filter.ArticleCrossrefXmlFilter	0	0	0
-24	24	0	User XML user export	lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter	0	0	0
-25	25	0	User XML user import	lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter	0	0	0
-26	26	0	Native XML user group export	lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter	0	0	0
-27	27	0	Native XML user group import	lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter	0	0	0
+2	2	0	Crossref XML issue export	plugins.importexport.crossref.filter.IssueCrossrefXmlFilter	0	0	0
+3	3	0	Crossref XML issue export	plugins.importexport.crossref.filter.ArticleCrossrefXmlFilter	0	0	0
+4	4	0	DOAJ XML export	plugins.importexport.doaj.filter.DOAJXmlFilter	0	0	0
+5	5	0	DOAJ JSON export	plugins.importexport.doaj.filter.DOAJJsonFilter	0	0	0
+6	6	0	Native XML submission export	plugins.importexport.native.filter.ArticleNativeXmlFilter	0	0	0
+7	7	0	Native XML submission import	plugins.importexport.native.filter.NativeXmlArticleFilter	0	0	0
+8	8	0	Native XML issue export	plugins.importexport.native.filter.IssueNativeXmlFilter	0	0	0
+9	9	0	Native XML issue import	plugins.importexport.native.filter.NativeXmlIssueFilter	0	0	0
+10	10	0	Native XML issue galley export	plugins.importexport.native.filter.IssueGalleyNativeXmlFilter	0	0	0
+11	11	0	Native XML issue galley import	plugins.importexport.native.filter.NativeXmlIssueGalleyFilter	0	0	0
+12	12	0	Native XML author export	plugins.importexport.native.filter.AuthorNativeXmlFilter	0	0	0
+13	13	0	Native XML author import	plugins.importexport.native.filter.NativeXmlAuthorFilter	0	0	0
+14	15	0	Native XML submission file import	plugins.importexport.native.filter.NativeXmlArticleFileFilter	0	0	0
+15	14	0	Native XML submission file export	lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter	0	0	0
+16	16	0	Native XML representation export	plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter	0	0	0
+17	17	0	Native XML representation import	plugins.importexport.native.filter.NativeXmlArticleGalleyFilter	0	0	0
+18	18	0	Native XML Publication export	plugins.importexport.native.filter.PublicationNativeXmlFilter	0	0	0
+19	19	0	Native XML publication import	plugins.importexport.native.filter.NativeXmlPublicationFilter	0	0	0
+20	20	0	User XML user export	lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter	0	0	0
+21	21	0	User XML user import	lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter	0	0	0
+22	22	0	Native XML user group export	lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter	0	0	0
+23	23	0	Native XML user group import	lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter	0	0	0
+24	24	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
+25	25	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
+26	26	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
+27	27	0	ArticlePubMedXmlFilter	plugins.importexport.pubmed.filter.ArticlePubMedXmlFilter	0	0	0
 \.
 
 
@@ -6797,8 +6684,8 @@ COPY public.issue_settings (issue_id, locale, setting_name, setting_value, setti
 --
 
 COPY public.issues (issue_id, journal_id, volume, number, year, published, current, date_published, date_notified, last_modified, access_status, open_access_date, show_volume, show_number, show_year, show_title, style_file_name, original_style_file_name, url_path) FROM stdin;
-2	1	2	1	2015	0	0	\N	\N	2026-11-14 12:20:57	1	\N	1	1	1	0	\N	\N	
-1	1	1	2	2014	1	1	2026-11-14 12:09:49	\N	2026-11-14 12:20:58	1	\N	1	1	1	0	\N	\N	
+2	1	2	1	2015	0	0	\N	\N	2026-11-15 12:53:19	1	\N	1	1	1	0	\N	\N	
+1	1	1	2	2014	1	1	2026-11-15 12:44:47	\N	2026-11-15 12:53:19	1	\N	1	1	1	0	\N	\N	
 \.
 
 
@@ -7041,7 +6928,7 @@ COPY public.navigation_menus (navigation_menu_id, context_id, area_name, title) 
 --
 
 COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_modified, title, contents) FROM stdin;
-1	1048586	1	6	2026-11-14 12:12:48	2026-11-14 12:12:48	Recommendation	<p>Daniel Barnes, David Buskins, Stephanie Berardo:<br><br>The recommendation regarding the submission to Journal of Public Knowledge, "The influence of lactation on the quantity and quality of cashmere production" is: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+1	1048586	1	6	2026-11-15 12:47:11	2026-11-15 12:47:11	Recommendation	<p>Daniel Barnes, David Buskins, Stephanie Berardo:<br><br>The recommendation regarding the submission to Journal of Public Knowledge, "The influence of lactation on the quantity and quality of cashmere production" is: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
 \.
 
 
@@ -7112,192 +6999,190 @@ COPY public.notification_subscription_settings (setting_id, setting_name, settin
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-173	1	3	2	16777219	2026-11-14 12:16:50	\N	517	16
-56	1	0	2	16777243	2026-11-14 12:13:03	\N	1048585	3
-174	1	4	2	16777219	2026-11-14 12:16:50	\N	517	16
-57	1	0	2	16777245	2026-11-14 12:13:03	\N	1048585	3
-5	0	1	1	1	2026-11-14 12:10:02	\N	0	0
-6	1	3	2	16777217	2026-11-14 12:10:11	\N	1048585	1
-7	1	5	2	16777217	2026-11-14 12:10:11	\N	1048585	1
-8	1	4	2	16777217	2026-11-14 12:10:11	\N	1048585	1
-9	1	0	2	16777243	2026-11-14 12:10:12	\N	1048585	1
-10	1	0	2	16777245	2026-11-14 12:10:12	\N	1048585	1
-11	1	0	2	16777236	2026-11-14 12:10:16	2026-11-14 12:10:17	523	1
-13	1	7	3	16777227	2026-11-14 12:10:20	\N	517	1
-58	1	0	2	16777236	2026-11-14 12:13:08	2026-11-14 12:13:09	523	3
-15	1	9	3	16777227	2026-11-14 12:10:24	\N	517	2
-60	1	9	3	16777227	2026-11-14 12:13:13	\N	517	4
-17	1	10	3	16777227	2026-11-14 12:10:28	\N	517	3
-62	1	10	3	16777227	2026-11-14 12:13:16	\N	517	5
-24	1	17	2	16777235	2026-11-14 12:10:35	\N	1048585	1
-100	1	0	2	16777243	2026-11-14 12:14:22	\N	1048585	6
-64	1	19	2	16777230	2026-11-14 12:13:18	\N	1048585	3
-66	1	4	2	16777251	2026-11-14 12:13:18	\N	1048585	3
-32	1	17	3	16777259	2026-11-14 12:11:35	\N	1048585	1
-33	1	16	3	16777259	2026-11-14 12:11:35	\N	1048585	1
-34	1	14	3	16777259	2026-11-14 12:11:35	\N	1048585	1
-35	1	12	3	16777259	2026-11-14 12:11:35	\N	1048585	1
-36	1	5	3	16777259	2026-11-14 12:11:35	\N	1048585	1
-37	1	4	3	16777259	2026-11-14 12:11:35	\N	1048585	1
-38	1	3	3	16777259	2026-11-14 12:11:35	\N	1048585	1
-67	1	5	2	16777251	2026-11-14 12:13:18	\N	1048585	3
-65	1	3	2	16777251	2026-11-14 12:13:18	2026-11-14 12:13:19	1048585	3
-42	1	3	2	16777217	2026-11-14 12:12:31	\N	1048585	2
-43	1	5	2	16777217	2026-11-14 12:12:31	\N	1048585	2
-44	1	4	2	16777217	2026-11-14 12:12:31	\N	1048585	2
-45	1	0	2	16777243	2026-11-14 12:12:31	\N	1048585	2
-46	1	0	2	16777245	2026-11-14 12:12:31	\N	1048585	2
-48	1	18	2	16777231	2026-11-14 12:12:36	\N	1048585	2
-47	1	0	2	16777236	2026-11-14 12:12:36	2026-11-14 12:12:37	523	2
-50	1	3	3	16777249	2026-11-14 12:12:48	\N	1048586	1
-51	1	4	3	16777249	2026-11-14 12:12:48	\N	1048586	1
-52	1	5	3	16777249	2026-11-14 12:12:48	\N	1048586	1
-53	1	3	2	16777217	2026-11-14 12:13:03	\N	1048585	3
-54	1	5	2	16777217	2026-11-14 12:13:03	\N	1048585	3
-55	1	4	2	16777217	2026-11-14 12:13:03	\N	1048585	3
-101	1	0	2	16777245	2026-11-14 12:14:22	\N	1048585	6
-70	1	3	2	16777217	2026-11-14 12:13:35	\N	1048585	4
-71	1	5	2	16777217	2026-11-14 12:13:35	\N	1048585	4
-72	1	4	2	16777217	2026-11-14 12:13:35	\N	1048585	4
-73	1	0	2	16777243	2026-11-14 12:13:35	\N	1048585	4
-74	1	0	2	16777245	2026-11-14 12:13:35	\N	1048585	4
-75	1	3	2	16777217	2026-11-14 12:13:44	\N	1048585	5
-76	1	5	2	16777217	2026-11-14 12:13:44	\N	1048585	5
-77	1	4	2	16777217	2026-11-14 12:13:44	\N	1048585	5
-78	1	0	2	16777243	2026-11-14 12:13:45	\N	1048585	5
-79	1	0	2	16777245	2026-11-14 12:13:45	\N	1048585	5
-80	1	0	2	16777236	2026-11-14 12:13:49	2026-11-14 12:13:50	523	4
-82	1	8	3	16777227	2026-11-14 12:13:53	\N	517	6
-91	1	21	2	16777235	2026-11-14 12:14:04	\N	1048585	5
-84	1	10	3	16777227	2026-11-14 12:13:57	\N	517	7
-93	1	4	2	16777254	2026-11-14 12:14:04	\N	1048585	5
-94	1	5	2	16777254	2026-11-14 12:14:04	\N	1048585	5
-92	1	3	2	16777254	2026-11-14 12:14:04	2026-11-14 12:14:06	1048585	5
-97	1	3	2	16777217	2026-11-14 12:14:21	\N	1048585	6
-98	1	5	2	16777217	2026-11-14 12:14:22	\N	1048585	6
-99	1	4	2	16777217	2026-11-14 12:14:22	\N	1048585	6
-102	1	0	2	16777236	2026-11-14 12:14:26	2026-11-14 12:14:28	523	5
-104	1	7	3	16777227	2026-11-14 12:14:31	\N	517	8
-106	1	10	3	16777227	2026-11-14 12:14:35	\N	517	9
-115	1	4	2	16777254	2026-11-14 12:14:42	\N	1048585	6
-116	1	5	2	16777254	2026-11-14 12:14:42	\N	1048585	6
-113	1	22	2	16777235	2026-11-14 12:14:42	\N	1048585	6
-114	1	3	2	16777254	2026-11-14 12:14:42	2026-11-14 12:14:43	1048585	6
-121	1	0	2	16777243	2026-11-14 12:14:56	\N	1048585	7
-118	1	3	2	16777217	2026-11-14 12:14:56	\N	1048585	7
-119	1	5	2	16777217	2026-11-14 12:14:56	\N	1048585	7
-120	1	4	2	16777217	2026-11-14 12:14:56	\N	1048585	7
-122	1	0	2	16777245	2026-11-14 12:14:56	\N	1048585	7
-124	1	23	2	16777231	2026-11-14 12:15:01	\N	1048585	7
-123	1	0	2	16777236	2026-11-14 12:15:01	2026-11-14 12:15:02	523	6
-127	1	9	3	16777227	2026-11-14 12:15:09	\N	517	11
-175	1	5	2	16777219	2026-11-14 12:16:50	\N	517	16
-129	1	10	3	16777227	2026-11-14 12:15:13	\N	517	12
-212	1	3	2	16777219	2026-11-14 12:18:20	\N	517	21
-131	1	3	2	16777219	2026-11-14 12:15:21	\N	517	10
-132	1	4	2	16777219	2026-11-14 12:15:21	\N	517	10
-133	1	5	2	16777219	2026-11-14 12:15:21	\N	517	10
-177	1	3	2	16777217	2026-11-14 12:17:02	\N	1048585	11
-178	1	5	2	16777217	2026-11-14 12:17:02	\N	1048585	11
-135	1	3	2	16777217	2026-11-14 12:15:33	\N	1048585	8
-136	1	5	2	16777217	2026-11-14 12:15:33	\N	1048585	8
-137	1	4	2	16777217	2026-11-14 12:15:34	\N	1048585	8
-138	1	0	2	16777243	2026-11-14 12:15:34	\N	1048585	8
-139	1	0	2	16777245	2026-11-14 12:15:34	\N	1048585	8
-140	1	3	2	16777217	2026-11-14 12:15:43	\N	1048585	9
-141	1	6	2	16777217	2026-11-14 12:15:43	\N	1048585	9
-142	1	0	2	16777243	2026-11-14 12:15:43	\N	1048585	9
-143	1	0	2	16777245	2026-11-14 12:15:43	\N	1048585	9
-179	1	4	2	16777217	2026-11-14 12:17:02	\N	1048585	11
-144	1	0	2	16777236	2026-11-14 12:15:48	2026-11-14 12:15:49	523	7
-146	1	7	3	16777227	2026-11-14 12:15:53	\N	517	13
-180	1	0	2	16777243	2026-11-14 12:17:02	\N	1048585	11
-181	1	0	2	16777245	2026-11-14 12:17:02	\N	1048585	11
-148	1	10	3	16777227	2026-11-14 12:15:56	\N	517	14
-182	1	3	2	16777217	2026-11-14 12:17:12	\N	1048585	12
-183	1	5	2	16777217	2026-11-14 12:17:12	\N	1048585	12
-184	1	4	2	16777217	2026-11-14 12:17:12	\N	1048585	12
-185	1	0	2	16777243	2026-11-14 12:17:13	\N	1048585	12
-186	1	0	2	16777245	2026-11-14 12:17:13	\N	1048585	12
-188	1	28	2	16777231	2026-11-14 12:17:18	\N	1048585	12
-187	1	0	2	16777236	2026-11-14 12:17:18	2026-11-14 12:17:20	523	9
-154	1	25	2	16777235	2026-11-14 12:16:03	\N	1048585	9
-156	1	6	2	16777254	2026-11-14 12:16:03	\N	1048585	9
-155	1	3	2	16777254	2026-11-14 12:16:03	2026-11-14 12:16:05	1048585	9
-189	1	7	3	16777227	2026-11-14 12:17:23	\N	517	17
-213	1	5	2	16777219	2026-11-14 12:18:20	\N	517	21
-191	1	8	3	16777227	2026-11-14 12:17:27	\N	517	18
-159	1	3	2	16777217	2026-11-14 12:16:20	\N	1048585	10
-160	1	5	2	16777217	2026-11-14 12:16:20	\N	1048585	10
-161	1	4	2	16777217	2026-11-14 12:16:20	\N	1048585	10
-162	1	0	2	16777243	2026-11-14 12:16:20	\N	1048585	10
-163	1	0	2	16777245	2026-11-14 12:16:20	\N	1048585	10
-165	1	26	2	16777231	2026-11-14 12:16:25	\N	1048585	10
-164	1	0	2	16777236	2026-11-14 12:16:25	2026-11-14 12:16:27	523	8
-214	1	4	2	16777219	2026-11-14 12:18:20	\N	517	21
-193	1	3	2	16777217	2026-11-14 12:17:37	\N	1048585	13
-194	1	5	2	16777217	2026-11-14 12:17:37	\N	1048585	13
-195	1	4	2	16777217	2026-11-14 12:17:37	\N	1048585	13
-170	1	3	2	16777219	2026-11-14 12:16:42	\N	517	15
-171	1	4	2	16777219	2026-11-14 12:16:42	\N	517	15
-172	1	5	2	16777219	2026-11-14 12:16:42	\N	517	15
-196	1	0	2	16777243	2026-11-14 12:17:37	\N	1048585	13
-197	1	0	2	16777245	2026-11-14 12:17:37	\N	1048585	13
-198	1	0	2	16777236	2026-11-14 12:17:43	2026-11-14 12:17:44	523	10
-215	1	29	3	16777232	2026-11-14 12:18:30	\N	1048585	13
-216	1	3	2	16777217	2026-11-14 12:18:39	\N	1048585	14
-217	1	5	2	16777217	2026-11-14 12:18:40	\N	1048585	14
-206	1	3	2	16777219	2026-11-14 12:18:03	\N	517	19
-207	1	5	2	16777219	2026-11-14 12:18:03	\N	517	19
-208	1	4	2	16777219	2026-11-14 12:18:03	\N	517	19
-209	1	3	2	16777219	2026-11-14 12:18:11	\N	517	20
-210	1	5	2	16777219	2026-11-14 12:18:11	\N	517	20
-211	1	4	2	16777219	2026-11-14 12:18:11	\N	517	20
-218	1	4	2	16777217	2026-11-14 12:18:40	\N	1048585	14
-219	1	0	2	16777243	2026-11-14 12:18:40	\N	1048585	14
-220	1	0	2	16777245	2026-11-14 12:18:40	\N	1048585	14
-221	1	3	2	16777217	2026-11-14 12:18:49	\N	1048585	15
-222	1	5	2	16777217	2026-11-14 12:18:49	\N	1048585	15
-223	1	4	2	16777217	2026-11-14 12:18:49	\N	1048585	15
-224	1	0	2	16777243	2026-11-14 12:18:49	\N	1048585	15
-225	1	0	2	16777245	2026-11-14 12:18:49	\N	1048585	15
-226	1	0	2	16777236	2026-11-14 12:18:55	2026-11-14 12:18:57	523	11
-228	1	8	3	16777227	2026-11-14 12:19:00	\N	517	22
-230	1	9	3	16777227	2026-11-14 12:19:04	\N	517	23
-237	1	31	2	16777235	2026-11-14 12:19:11	\N	1048585	15
-239	1	5	2	16777254	2026-11-14 12:19:11	\N	1048585	15
-240	1	4	2	16777254	2026-11-14 12:19:11	\N	1048585	15
-238	1	3	2	16777254	2026-11-14 12:19:11	2026-11-14 12:19:12	1048585	15
-242	1	3	2	16777217	2026-11-14 12:19:25	\N	1048585	16
-243	1	5	2	16777217	2026-11-14 12:19:25	\N	1048585	16
-244	1	4	2	16777217	2026-11-14 12:19:25	\N	1048585	16
-245	1	0	2	16777243	2026-11-14 12:19:25	\N	1048585	16
-246	1	0	2	16777245	2026-11-14 12:19:25	\N	1048585	16
-247	1	3	2	16777217	2026-11-14 12:19:35	\N	1048585	17
-248	1	5	2	16777217	2026-11-14 12:19:35	\N	1048585	17
-249	1	4	2	16777217	2026-11-14 12:19:35	\N	1048585	17
-250	1	0	2	16777243	2026-11-14 12:19:35	\N	1048585	17
-251	1	0	2	16777245	2026-11-14 12:19:35	\N	1048585	17
-252	1	0	2	16777236	2026-11-14 12:19:42	2026-11-14 12:19:43	523	12
-254	1	7	3	16777227	2026-11-14 12:19:46	\N	517	24
-256	1	8	3	16777227	2026-11-14 12:19:50	\N	517	25
-263	1	33	2	16777235	2026-11-14 12:19:57	\N	1048585	17
-269	1	3	2	16777217	2026-11-14 12:21:08	\N	1048585	18
-270	1	5	2	16777217	2026-11-14 12:21:08	\N	1048585	18
-271	1	4	2	16777217	2026-11-14 12:21:08	\N	1048585	18
-272	1	0	2	16777243	2026-11-14 12:21:09	\N	1048585	18
-273	1	0	2	16777245	2026-11-14 12:21:09	\N	1048585	18
-274	1	34	2	16777234	2026-11-14 12:21:15	\N	1048585	18
-275	1	3	2	16777217	2026-11-14 12:21:24	\N	1048585	19
-276	1	6	2	16777217	2026-11-14 12:21:24	\N	1048585	19
-277	1	0	2	16777243	2026-11-14 12:21:24	\N	1048585	19
-278	1	0	2	16777245	2026-11-14 12:21:24	\N	1048585	19
-279	1	0	2	16777236	2026-11-14 12:21:30	2026-11-14 12:21:32	523	13
-281	1	8	3	16777227	2026-11-14 12:21:35	\N	517	26
-283	1	9	3	16777227	2026-11-14 12:21:39	\N	517	27
-285	1	35	2	16777230	2026-11-14 12:21:40	\N	1048585	19
-287	1	6	2	16777251	2026-11-14 12:21:40	\N	1048585	19
-286	1	3	2	16777251	2026-11-14 12:21:40	2026-11-14 12:21:42	1048585	19
+170	1	3	2	16777219	2026-11-15 12:50:17	\N	517	16
+55	1	0	2	16777245	2026-11-15 12:47:23	\N	1048585	3
+56	1	0	2	16777236	2026-11-15 12:47:26	2026-11-15 12:47:27	523	3
+58	1	9	3	16777227	2026-11-15 12:47:30	\N	517	4
+6	1	3	2	16777217	2026-11-15 12:45:05	\N	1048585	1
+7	1	5	2	16777217	2026-11-15 12:45:05	\N	1048585	1
+8	1	4	2	16777217	2026-11-15 12:45:06	\N	1048585	1
+9	1	0	2	16777243	2026-11-15 12:45:06	\N	1048585	1
+10	1	0	2	16777245	2026-11-15 12:45:06	\N	1048585	1
+11	1	0	2	16777236	2026-11-15 12:45:09	2026-11-15 12:45:10	523	1
+13	1	7	3	16777227	2026-11-15 12:45:13	\N	517	1
+15	1	9	3	16777227	2026-11-15 12:45:16	\N	517	2
+17	1	10	3	16777227	2026-11-15 12:45:19	\N	517	3
+60	1	10	3	16777227	2026-11-15 12:47:33	\N	517	5
+24	1	17	2	16777235	2026-11-15 12:45:25	\N	1048585	1
+62	1	19	2	16777230	2026-11-15 12:47:34	\N	1048585	3
+64	1	4	2	16777251	2026-11-15 12:47:34	\N	1048585	3
+65	1	5	2	16777251	2026-11-15 12:47:34	\N	1048585	3
+31	1	17	3	16777259	2026-11-15 12:46:11	\N	1048585	1
+32	1	14	3	16777259	2026-11-15 12:46:11	\N	1048585	1
+33	1	12	3	16777259	2026-11-15 12:46:11	\N	1048585	1
+34	1	5	3	16777259	2026-11-15 12:46:11	\N	1048585	1
+35	1	4	3	16777259	2026-11-15 12:46:11	\N	1048585	1
+36	1	3	3	16777259	2026-11-15 12:46:11	\N	1048585	1
+63	1	3	2	16777251	2026-11-15 12:47:34	2026-11-15 12:47:35	1048585	3
+89	1	21	2	16777235	2026-11-15 12:48:10	\N	1048585	5
+40	1	3	2	16777217	2026-11-15 12:46:59	\N	1048585	2
+41	1	5	2	16777217	2026-11-15 12:46:59	\N	1048585	2
+42	1	4	2	16777217	2026-11-15 12:46:59	\N	1048585	2
+43	1	0	2	16777243	2026-11-15 12:46:59	\N	1048585	2
+44	1	0	2	16777245	2026-11-15 12:46:59	\N	1048585	2
+46	1	18	2	16777231	2026-11-15 12:47:02	\N	1048585	2
+45	1	0	2	16777236	2026-11-15 12:47:02	2026-11-15 12:47:03	523	2
+48	1	3	3	16777249	2026-11-15 12:47:11	\N	1048586	1
+49	1	4	3	16777249	2026-11-15 12:47:11	\N	1048586	1
+50	1	5	3	16777249	2026-11-15 12:47:11	\N	1048586	1
+51	1	3	2	16777217	2026-11-15 12:47:22	\N	1048585	3
+52	1	5	2	16777217	2026-11-15 12:47:22	\N	1048585	3
+53	1	4	2	16777217	2026-11-15 12:47:22	\N	1048585	3
+54	1	0	2	16777243	2026-11-15 12:47:23	\N	1048585	3
+68	1	3	2	16777217	2026-11-15 12:47:47	\N	1048585	4
+69	1	5	2	16777217	2026-11-15 12:47:47	\N	1048585	4
+70	1	4	2	16777217	2026-11-15 12:47:47	\N	1048585	4
+71	1	0	2	16777243	2026-11-15 12:47:47	\N	1048585	4
+72	1	0	2	16777245	2026-11-15 12:47:47	\N	1048585	4
+73	1	3	2	16777217	2026-11-15 12:47:54	\N	1048585	5
+74	1	5	2	16777217	2026-11-15 12:47:55	\N	1048585	5
+75	1	4	2	16777217	2026-11-15 12:47:55	\N	1048585	5
+76	1	0	2	16777243	2026-11-15 12:47:55	\N	1048585	5
+77	1	0	2	16777245	2026-11-15 12:47:55	\N	1048585	5
+78	1	0	2	16777236	2026-11-15 12:47:58	2026-11-15 12:47:59	523	4
+80	1	8	3	16777227	2026-11-15 12:48:02	\N	517	6
+91	1	4	2	16777254	2026-11-15 12:48:10	\N	1048585	5
+82	1	10	3	16777227	2026-11-15 12:48:05	\N	517	7
+92	1	5	2	16777254	2026-11-15 12:48:10	\N	1048585	5
+100	1	0	2	16777236	2026-11-15 12:48:26	2026-11-15 12:48:27	523	5
+90	1	3	2	16777254	2026-11-15 12:48:10	2026-11-15 12:48:11	1048585	5
+102	1	7	3	16777227	2026-11-15 12:48:30	\N	517	8
+95	1	3	2	16777217	2026-11-15 12:48:22	\N	1048585	6
+96	1	5	2	16777217	2026-11-15 12:48:23	\N	1048585	6
+97	1	4	2	16777217	2026-11-15 12:48:23	\N	1048585	6
+98	1	0	2	16777243	2026-11-15 12:48:23	\N	1048585	6
+99	1	0	2	16777245	2026-11-15 12:48:23	\N	1048585	6
+104	1	10	3	16777227	2026-11-15 12:48:33	\N	517	9
+113	1	4	2	16777254	2026-11-15 12:48:38	\N	1048585	6
+114	1	5	2	16777254	2026-11-15 12:48:38	\N	1048585	6
+111	1	22	2	16777235	2026-11-15 12:48:38	\N	1048585	6
+112	1	3	2	16777254	2026-11-15 12:48:38	2026-11-15 12:48:39	1048585	6
+119	1	0	2	16777243	2026-11-15 12:48:48	\N	1048585	7
+116	1	3	2	16777217	2026-11-15 12:48:48	\N	1048585	7
+117	1	5	2	16777217	2026-11-15 12:48:48	\N	1048585	7
+118	1	4	2	16777217	2026-11-15 12:48:48	\N	1048585	7
+120	1	0	2	16777245	2026-11-15 12:48:48	\N	1048585	7
+122	1	23	2	16777231	2026-11-15 12:48:52	\N	1048585	7
+121	1	0	2	16777236	2026-11-15 12:48:52	2026-11-15 12:48:53	523	6
+125	1	9	3	16777227	2026-11-15 12:48:59	\N	517	11
+127	1	10	3	16777227	2026-11-15 12:49:02	\N	517	12
+129	1	3	2	16777219	2026-11-15 12:49:08	\N	517	10
+130	1	4	2	16777219	2026-11-15 12:49:08	\N	517	10
+131	1	5	2	16777219	2026-11-15 12:49:08	\N	517	10
+171	1	4	2	16777219	2026-11-15 12:50:17	\N	517	16
+172	1	5	2	16777219	2026-11-15 12:50:17	\N	517	16
+133	1	3	2	16777217	2026-11-15 12:49:18	\N	1048585	8
+134	1	5	2	16777217	2026-11-15 12:49:18	\N	1048585	8
+135	1	4	2	16777217	2026-11-15 12:49:18	\N	1048585	8
+136	1	0	2	16777243	2026-11-15 12:49:18	\N	1048585	8
+137	1	0	2	16777245	2026-11-15 12:49:18	\N	1048585	8
+138	1	3	2	16777217	2026-11-15 12:49:25	\N	1048585	9
+139	1	6	2	16777217	2026-11-15 12:49:25	\N	1048585	9
+140	1	0	2	16777243	2026-11-15 12:49:26	\N	1048585	9
+141	1	0	2	16777245	2026-11-15 12:49:26	\N	1048585	9
+142	1	0	2	16777236	2026-11-15 12:49:29	2026-11-15 12:49:30	523	7
+144	1	7	3	16777227	2026-11-15 12:49:33	\N	517	13
+212	1	29	3	16777232	2026-11-15 12:51:33	\N	1048585	13
+174	1	3	2	16777217	2026-11-15 12:50:27	\N	1048585	11
+146	1	10	3	16777227	2026-11-15 12:49:36	\N	517	14
+175	1	5	2	16777217	2026-11-15 12:50:27	\N	1048585	11
+176	1	4	2	16777217	2026-11-15 12:50:27	\N	1048585	11
+177	1	0	2	16777243	2026-11-15 12:50:27	\N	1048585	11
+178	1	0	2	16777245	2026-11-15 12:50:27	\N	1048585	11
+179	1	3	2	16777217	2026-11-15 12:50:35	\N	1048585	12
+180	1	5	2	16777217	2026-11-15 12:50:35	\N	1048585	12
+181	1	4	2	16777217	2026-11-15 12:50:35	\N	1048585	12
+182	1	0	2	16777243	2026-11-15 12:50:35	\N	1048585	12
+152	1	25	2	16777235	2026-11-15 12:49:41	\N	1048585	9
+154	1	6	2	16777254	2026-11-15 12:49:41	\N	1048585	9
+153	1	3	2	16777254	2026-11-15 12:49:41	2026-11-15 12:49:42	1048585	9
+183	1	0	2	16777245	2026-11-15 12:50:35	\N	1048585	12
+156	1	3	2	16777217	2026-11-15 12:49:53	\N	1048585	10
+157	1	5	2	16777217	2026-11-15 12:49:53	\N	1048585	10
+158	1	4	2	16777217	2026-11-15 12:49:54	\N	1048585	10
+159	1	0	2	16777243	2026-11-15 12:49:54	\N	1048585	10
+160	1	0	2	16777245	2026-11-15 12:49:54	\N	1048585	10
+162	1	26	2	16777231	2026-11-15 12:49:57	\N	1048585	10
+161	1	0	2	16777236	2026-11-15 12:49:57	2026-11-15 12:49:58	523	8
+185	1	28	2	16777231	2026-11-15 12:50:38	\N	1048585	12
+184	1	0	2	16777236	2026-11-15 12:50:38	2026-11-15 12:50:39	523	9
+186	1	7	3	16777227	2026-11-15 12:50:42	\N	517	17
+213	1	3	2	16777217	2026-11-15 12:51:40	\N	1048585	14
+167	1	3	2	16777219	2026-11-15 12:50:10	\N	517	15
+168	1	4	2	16777219	2026-11-15 12:50:10	\N	517	15
+169	1	5	2	16777219	2026-11-15 12:50:10	\N	517	15
+188	1	8	3	16777227	2026-11-15 12:50:46	\N	517	18
+214	1	5	2	16777217	2026-11-15 12:51:41	\N	1048585	14
+190	1	3	2	16777217	2026-11-15 12:50:54	\N	1048585	13
+191	1	5	2	16777217	2026-11-15 12:50:54	\N	1048585	13
+192	1	4	2	16777217	2026-11-15 12:50:54	\N	1048585	13
+193	1	0	2	16777243	2026-11-15 12:50:54	\N	1048585	13
+194	1	0	2	16777245	2026-11-15 12:50:54	\N	1048585	13
+195	1	0	2	16777236	2026-11-15 12:50:58	2026-11-15 12:50:59	523	10
+215	1	4	2	16777217	2026-11-15 12:51:41	\N	1048585	14
+216	1	0	2	16777243	2026-11-15 12:51:41	\N	1048585	14
+217	1	0	2	16777245	2026-11-15 12:51:41	\N	1048585	14
+203	1	3	2	16777219	2026-11-15 12:51:14	\N	517	19
+204	1	5	2	16777219	2026-11-15 12:51:14	\N	517	19
+205	1	4	2	16777219	2026-11-15 12:51:14	\N	517	19
+206	1	3	2	16777219	2026-11-15 12:51:20	\N	517	20
+207	1	5	2	16777219	2026-11-15 12:51:20	\N	517	20
+208	1	4	2	16777219	2026-11-15 12:51:21	\N	517	20
+209	1	3	2	16777219	2026-11-15 12:51:27	\N	517	21
+210	1	5	2	16777219	2026-11-15 12:51:27	\N	517	21
+211	1	4	2	16777219	2026-11-15 12:51:27	\N	517	21
+218	1	3	2	16777217	2026-11-15 12:51:48	\N	1048585	15
+219	1	5	2	16777217	2026-11-15 12:51:48	\N	1048585	15
+220	1	4	2	16777217	2026-11-15 12:51:48	\N	1048585	15
+221	1	0	2	16777243	2026-11-15 12:51:48	\N	1048585	15
+222	1	0	2	16777245	2026-11-15 12:51:48	\N	1048585	15
+223	1	0	2	16777236	2026-11-15 12:51:52	2026-11-15 12:51:53	523	11
+225	1	8	3	16777227	2026-11-15 12:51:56	\N	517	22
+227	1	9	3	16777227	2026-11-15 12:51:59	\N	517	23
+234	1	31	2	16777235	2026-11-15 12:52:04	\N	1048585	15
+236	1	5	2	16777254	2026-11-15 12:52:04	\N	1048585	15
+237	1	4	2	16777254	2026-11-15 12:52:04	\N	1048585	15
+235	1	3	2	16777254	2026-11-15 12:52:04	2026-11-15 12:52:05	1048585	15
+239	1	3	2	16777217	2026-11-15 12:52:14	\N	1048585	16
+240	1	5	2	16777217	2026-11-15 12:52:14	\N	1048585	16
+241	1	4	2	16777217	2026-11-15 12:52:14	\N	1048585	16
+242	1	0	2	16777243	2026-11-15 12:52:14	\N	1048585	16
+243	1	0	2	16777245	2026-11-15 12:52:14	\N	1048585	16
+244	1	3	2	16777217	2026-11-15 12:52:22	\N	1048585	17
+245	1	5	2	16777217	2026-11-15 12:52:22	\N	1048585	17
+246	1	4	2	16777217	2026-11-15 12:52:22	\N	1048585	17
+247	1	0	2	16777243	2026-11-15 12:52:22	\N	1048585	17
+248	1	0	2	16777245	2026-11-15 12:52:22	\N	1048585	17
+249	1	0	2	16777236	2026-11-15 12:52:27	2026-11-15 12:52:27	523	12
+251	1	7	3	16777227	2026-11-15 12:52:30	\N	517	24
+253	1	8	3	16777227	2026-11-15 12:52:34	\N	517	25
+260	1	33	2	16777235	2026-11-15 12:52:38	\N	1048585	17
+266	1	3	2	16777217	2026-11-15 12:53:27	\N	1048585	18
+267	1	5	2	16777217	2026-11-15 12:53:27	\N	1048585	18
+268	1	4	2	16777217	2026-11-15 12:53:27	\N	1048585	18
+269	1	0	2	16777243	2026-11-15 12:53:27	\N	1048585	18
+270	1	0	2	16777245	2026-11-15 12:53:27	\N	1048585	18
+271	1	34	2	16777234	2026-11-15 12:53:31	\N	1048585	18
+272	1	3	2	16777217	2026-11-15 12:53:38	\N	1048585	19
+273	1	6	2	16777217	2026-11-15 12:53:38	\N	1048585	19
+274	1	0	2	16777243	2026-11-15 12:53:39	\N	1048585	19
+275	1	0	2	16777245	2026-11-15 12:53:39	\N	1048585	19
+276	1	0	2	16777236	2026-11-15 12:53:43	2026-11-15 12:53:44	523	13
+278	1	8	3	16777227	2026-11-15 12:53:47	\N	517	26
+280	1	9	3	16777227	2026-11-15 12:53:50	\N	517	27
+282	1	35	2	16777230	2026-11-15 12:53:51	\N	1048585	19
+284	1	6	2	16777251	2026-11-15 12:53:51	\N	1048585	19
+283	1	3	2	16777251	2026-11-15 12:53:51	2026-11-15 12:53:52	1048585	19
 \.
 
 
@@ -7315,6 +7200,7 @@ COPY public.oai_resumption_tokens (token, expire, record_offset, params) FROM st
 
 COPY public.plugin_settings (plugin_name, context_id, setting_name, setting_value, setting_type) FROM stdin;
 defaultthemeplugin	0	enabled	1	bool
+acronplugin	0	enabled	1	bool
 usagestatsplugin	0	enabled	1	bool
 usagestatsplugin	0	createLogFiles	1	bool
 usagestatsplugin	0	accessLogFileParseRegex	/^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<date>.*?)\\] "\\S+ (?P<url>\\S+).*?" (?P<returnCode>\\S+) \\S+ ".*?" "(?P<userAgent>.*?)"/	string
@@ -7322,33 +7208,32 @@ usagestatsplugin	0	optionalColumns	["city","region"]	object
 usagestatsplugin	0	chartType	bar	string
 usagestatsplugin	0	datasetMaxCount	4	string
 tinymceplugin	0	enabled	1	bool
-acronplugin	0	enabled	1	bool
 usageeventplugin	0	enabled	1	bool
 languagetoggleblockplugin	0	enabled	1	bool
 languagetoggleblockplugin	0	seq	4	int
 developedbyblockplugin	0	enabled	0	bool
 developedbyblockplugin	0	seq	0	int
-acronplugin	0	crontab	[{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.ReviewReminder","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.StatisticsReport","frequency":{"day":"1"},"args":[]},{"className":"classes.tasks.SubscriptionExpiryReminder","frequency":{"day":"1"},"args":[]}]	object
-defaultthemeplugin	1	enabled	1	bool
+acronplugin	0	crontab	[{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.ReviewReminder","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.StatisticsReport","frequency":{"day":"1"},"args":[]},{"className":"classes.tasks.SubscriptionExpiryReminder","frequency":{"day":"1"},"args":[]}]	object
 tinymceplugin	1	enabled	1	bool
-informationblockplugin	1	enabled	1	bool
-informationblockplugin	1	seq	7	int
+defaultthemeplugin	1	enabled	1	bool
 languagetoggleblockplugin	1	enabled	1	bool
 languagetoggleblockplugin	1	seq	4	int
-developedbyblockplugin	1	enabled	0	bool
-developedbyblockplugin	1	seq	0	int
 subscriptionblockplugin	1	enabled	1	bool
 subscriptionblockplugin	1	seq	2	int
+informationblockplugin	1	enabled	1	bool
+informationblockplugin	1	seq	7	int
+developedbyblockplugin	1	enabled	0	bool
+developedbyblockplugin	1	seq	0	int
 resolverplugin	1	enabled	1	bool
-pdfjsviewerplugin	1	enabled	1	bool
-lensgalleyplugin	1	enabled	1	bool
-dublincoremetaplugin	1	enabled	1	bool
+htmlarticlegalleyplugin	1	enabled	1	bool
 googlescholarplugin	1	enabled	1	bool
 webfeedplugin	1	enabled	1	bool
 webfeedplugin	1	displayPage	homepage	string
 webfeedplugin	1	displayItems	1	bool
-htmlarticlegalleyplugin	1	enabled	1	bool
-usageeventplugin	0	uniqueSiteId	6af84ee82627c	string
+dublincoremetaplugin	1	enabled	1	bool
+lensgalleyplugin	1	enabled	1	bool
+pdfjsviewerplugin	1	enabled	1	bool
+usageeventplugin	0	uniqueSiteId	6af9a8bc36de0	string
 defaultthemeplugin	1	typography	notoSans	string
 defaultthemeplugin	1	baseColour	#1E6292	string
 defaultthemeplugin	1	showDescriptionInJournalIndex	false	string
@@ -7377,9 +7262,9 @@ COPY public.publication_galley_settings (galley_id, locale, setting_name, settin
 --
 
 COPY public.publication_galleys (galley_id, locale, publication_id, label, submission_file_id, seq, remote_url, is_approved, url_path) FROM stdin;
-1	en_US	1	PDF	2	0		0	
-2	en_US	2	PDF Version 2	3	0		0	pdf
-3	en_US	18	PDF	29	0		0	
+1	en_US	1	PDF	3	0		0	
+2	en_US	2	PDF Version 2	4	0		0	pdf
+3	en_US	18	PDF	22	0		0	
 \.
 
 
@@ -7582,26 +7467,26 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 --
 
 COPY public.publications (publication_id, access_status, date_published, last_modified, locale, primary_contact_id, section_id, seq, submission_id, status, url_path, version) FROM stdin;
-17	0	\N	2026-11-14 12:19:24	\N	22	1	0	16	1	\N	1
-1	0	2026-11-14	2026-11-14 12:11:31	\N	1	1	0	1	3	mwandenga-signalling-theory	1
-2	0	2026-11-14	2026-11-14 12:12:07	\N	3	1	0	1	1	mwandenga	2
-18	0	2026-11-14	2026-11-14 12:20:55	\N	23	1	0	17	3	\N	1
-3	0	\N	2026-11-14 12:12:42	\N	5	1	0	2	1	\N	1
-4	0	\N	2026-11-14 12:13:03	\N	6	1	0	3	1	\N	1
-19	0	\N	2026-11-14 12:21:08	\N	24	1	0	18	1	\N	1
-5	0	\N	2026-11-14 12:13:34	\N	7	1	0	4	1	\N	1
-6	0	\N	2026-11-14 12:13:44	\N	9	1	0	5	1	\N	1
-20	0	\N	2026-11-14 12:21:23	\N	25	2	0	19	1	\N	1
-7	0	\N	2026-11-14 12:14:21	\N	10	1	0	6	1	\N	1
-8	0	\N	2026-11-14 12:14:55	\N	11	1	0	7	1	\N	1
-9	0	\N	2026-11-14 12:15:33	\N	12	1	0	8	1	\N	1
-10	0	\N	2026-11-14 12:15:42	\N	14	2	0	9	1	\N	1
-11	0	\N	2026-11-14 12:16:19	\N	15	1	0	10	1	\N	1
-12	0	\N	2026-11-14 12:17:01	\N	16	1	0	11	1	\N	1
-13	0	\N	2026-11-14 12:17:12	\N	18	1	0	12	1	\N	1
-14	0	\N	2026-11-14 12:17:36	\N	19	1	0	13	1	\N	1
-15	0	\N	2026-11-14 12:18:39	\N	20	1	0	14	1	\N	1
-16	0	\N	2026-11-14 12:18:48	\N	21	1	0	15	1	\N	1
+17	0	\N	2026-11-15 12:52:14	\N	22	1	0	16	1	\N	1
+1	0	2026-11-15	2026-11-15 12:46:08	\N	1	1	0	1	3	mwandenga-signalling-theory	1
+2	0	2026-11-15	2026-11-15 12:46:40	\N	3	1	0	1	1	mwandenga	2
+18	0	2026-11-15	2026-11-15 12:53:17	\N	23	1	0	17	3	\N	1
+3	0	\N	2026-11-15 12:47:07	\N	5	1	0	2	1	\N	1
+4	0	\N	2026-11-15 12:47:22	\N	6	1	0	3	1	\N	1
+19	0	\N	2026-11-15 12:53:26	\N	24	1	0	18	1	\N	1
+5	0	\N	2026-11-15 12:47:47	\N	7	1	0	4	1	\N	1
+6	0	\N	2026-11-15 12:47:54	\N	9	1	0	5	1	\N	1
+20	0	\N	2026-11-15 12:53:38	\N	25	2	0	19	1	\N	1
+7	0	\N	2026-11-15 12:48:22	\N	10	1	0	6	1	\N	1
+8	0	\N	2026-11-15 12:48:48	\N	11	1	0	7	1	\N	1
+9	0	\N	2026-11-15 12:49:18	\N	12	1	0	8	1	\N	1
+10	0	\N	2026-11-15 12:49:25	\N	14	2	0	9	1	\N	1
+11	0	\N	2026-11-15 12:49:53	\N	15	1	0	10	1	\N	1
+12	0	\N	2026-11-15 12:50:26	\N	16	1	0	11	1	\N	1
+13	0	\N	2026-11-15 12:50:34	\N	18	1	0	12	1	\N	1
+14	0	\N	2026-11-15 12:50:53	\N	19	1	0	13	1	\N	1
+15	0	\N	2026-11-15 12:51:40	\N	20	1	0	14	1	\N	1
+16	0	\N	2026-11-15 12:51:47	\N	21	1	0	15	1	\N	1
 \.
 
 
@@ -7638,33 +7523,33 @@ COPY public.queued_payments (queued_payment_id, date_created, date_modified, exp
 --
 
 COPY public.review_assignments (review_id, submission_id, reviewer_id, competing_interests, recommendation, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, date_response_due, last_modified, reminder_was_automatic, declined, cancelled, reviewer_file_id, date_rated, date_reminded, quality, review_round_id, stage_id, review_method, round, step, review_form_id, unconsidered) FROM stdin;
-1	1	7	\N	\N	2026-11-14 12:10:20	2026-11-14 12:10:20	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:10:20	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-2	1	9	\N	\N	2026-11-14 12:10:24	2026-11-14 12:10:24	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:10:24	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-16	10	10	\N	3	2026-11-14 12:16:34	2026-11-14 12:16:34	2026-11-14 12:16:46	2026-11-14 12:16:50	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:16:50	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
-3	1	10	\N	\N	2026-11-14 12:10:28	2026-11-14 12:10:28	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:10:28	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-4	3	9	\N	\N	2026-11-14 12:13:13	2026-11-14 12:13:13	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:13:13	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
-24	17	7	\N	\N	2026-11-14 12:19:46	2026-11-14 12:19:46	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:19:46	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
-5	3	10	\N	\N	2026-11-14 12:13:16	2026-11-14 12:13:16	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:13:16	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
-17	12	7	\N	\N	2026-11-14 12:17:23	2026-11-14 12:17:23	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:17:23	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
-6	5	8	\N	\N	2026-11-14 12:13:53	2026-11-14 12:13:53	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:13:53	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-7	5	10	\N	\N	2026-11-14 12:13:57	2026-11-14 12:13:57	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:13:57	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-8	6	7	\N	\N	2026-11-14 12:14:31	2026-11-14 12:14:31	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:14:31	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
-18	12	8	\N	\N	2026-11-14 12:17:27	2026-11-14 12:17:27	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:17:27	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
-9	6	10	\N	\N	2026-11-14 12:14:35	2026-11-14 12:14:35	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:14:35	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
-25	17	8	\N	\N	2026-11-14 12:19:50	2026-11-14 12:19:50	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:19:50	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
-11	7	9	\N	\N	2026-11-14 12:15:09	2026-11-14 12:15:09	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:15:09	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-12	7	10	\N	\N	2026-11-14 12:15:13	2026-11-14 12:15:13	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:15:13	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-26	19	8	\N	\N	2026-11-14 12:21:35	2026-11-14 12:21:35	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:21:35	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
-10	7	8	\N	5	2026-11-14 12:15:05	2026-11-14 12:15:05	2026-11-14 12:15:18	2026-11-14 12:15:21	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:15:21	0	0	0	\N	\N	\N	\N	6	3	2	1	4	\N	0
-13	9	7	\N	\N	2026-11-14 12:15:53	2026-11-14 12:15:53	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:15:53	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
-14	9	10	\N	\N	2026-11-14 12:15:56	2026-11-14 12:15:56	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:15:56	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
-27	19	9	\N	\N	2026-11-14 12:21:39	2026-11-14 12:21:39	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:21:39	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
-19	13	7	\N	2	2026-11-14 12:17:48	2026-11-14 12:17:48	2026-11-14 12:18:00	2026-11-14 12:18:03	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:18:03	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
-15	10	9	\N	2	2026-11-14 12:16:30	2026-11-14 12:16:30	2026-11-14 12:16:38	2026-11-14 12:16:42	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:16:42	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
-20	13	9	\N	2	2026-11-14 12:17:52	2026-11-14 12:17:52	2026-11-14 12:18:08	2026-11-14 12:18:12	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:18:12	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
-21	13	10	\N	3	2026-11-14 12:17:55	2026-11-14 12:17:56	2026-11-14 12:18:17	2026-11-14 12:18:21	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:18:21	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
-22	15	8	\N	\N	2026-11-14 12:19:00	2026-11-14 12:19:00	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:19:00	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
-23	15	9	\N	\N	2026-11-14 12:19:04	2026-11-14 12:19:04	\N	\N	\N	2026-12-12 00:00:00	2026-12-12 00:00:00	2026-11-14 12:19:04	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
+1	1	7	\N	\N	2026-11-15 12:45:13	2026-11-15 12:45:13	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:45:13	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+2	1	9	\N	\N	2026-11-15 12:45:16	2026-11-15 12:45:16	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:45:16	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+16	10	10	\N	3	2026-11-15 12:50:04	2026-11-15 12:50:04	2026-11-15 12:50:14	2026-11-15 12:50:17	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:50:17	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
+3	1	10	\N	\N	2026-11-15 12:45:19	2026-11-15 12:45:19	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:45:19	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+4	3	9	\N	\N	2026-11-15 12:47:30	2026-11-15 12:47:30	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:47:30	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
+24	17	7	\N	\N	2026-11-15 12:52:30	2026-11-15 12:52:30	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:52:30	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
+5	3	10	\N	\N	2026-11-15 12:47:33	2026-11-15 12:47:33	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:47:33	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
+17	12	7	\N	\N	2026-11-15 12:50:42	2026-11-15 12:50:42	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:50:42	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
+6	5	8	\N	\N	2026-11-15 12:48:02	2026-11-15 12:48:02	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:48:02	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+7	5	10	\N	\N	2026-11-15 12:48:05	2026-11-15 12:48:05	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:48:05	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+8	6	7	\N	\N	2026-11-15 12:48:30	2026-11-15 12:48:30	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:48:30	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
+18	12	8	\N	\N	2026-11-15 12:50:46	2026-11-15 12:50:46	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:50:46	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
+9	6	10	\N	\N	2026-11-15 12:48:33	2026-11-15 12:48:33	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:48:33	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
+25	17	8	\N	\N	2026-11-15 12:52:34	2026-11-15 12:52:34	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:52:34	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
+11	7	9	\N	\N	2026-11-15 12:48:59	2026-11-15 12:48:59	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:48:59	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+12	7	10	\N	\N	2026-11-15 12:49:02	2026-11-15 12:49:02	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:49:02	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+26	19	8	\N	\N	2026-11-15 12:53:47	2026-11-15 12:53:47	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:53:47	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
+10	7	8	\N	5	2026-11-15 12:48:55	2026-11-15 12:48:55	2026-11-15 12:49:05	2026-11-15 12:49:08	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:49:08	0	0	0	\N	\N	\N	\N	6	3	2	1	4	\N	0
+13	9	7	\N	\N	2026-11-15 12:49:33	2026-11-15 12:49:33	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:49:33	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
+14	9	10	\N	\N	2026-11-15 12:49:36	2026-11-15 12:49:36	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:49:36	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
+27	19	9	\N	\N	2026-11-15 12:53:50	2026-11-15 12:53:50	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:53:50	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
+19	13	7	\N	2	2026-11-15 12:51:02	2026-11-15 12:51:02	2026-11-15 12:51:11	2026-11-15 12:51:14	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:51:14	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
+15	10	9	\N	2	2026-11-15 12:50:01	2026-11-15 12:50:01	2026-11-15 12:50:07	2026-11-15 12:50:10	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:50:10	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
+20	13	9	\N	2	2026-11-15 12:51:05	2026-11-15 12:51:05	2026-11-15 12:51:17	2026-11-15 12:51:21	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:51:21	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
+21	13	10	\N	3	2026-11-15 12:51:08	2026-11-15 12:51:08	2026-11-15 12:51:24	2026-11-15 12:51:27	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:51:27	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
+22	15	8	\N	\N	2026-11-15 12:51:56	2026-11-15 12:51:56	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:51:56	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
+23	15	9	\N	\N	2026-11-15 12:51:59	2026-11-15 12:51:59	\N	\N	\N	2026-12-13 00:00:00	2026-12-13 00:00:00	2026-11-15 12:51:59	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
 \.
 
 
@@ -7673,24 +7558,11 @@ COPY public.review_assignments (review_id, submission_id, reviewer_id, competing
 --
 
 COPY public.review_files (review_id, submission_file_id) FROM stdin;
-4	7
-5	7
-8	11
-9	11
-10	13
-11	13
-12	13
-13	16
-14	16
-15	18
-16	18
-19	22
-20	22
-21	22
-22	25
-23	25
-24	28
-25	28
+1	2
+2	2
+3	2
+15	14
+16	14
 \.
 
 
@@ -7739,15 +7611,8 @@ COPY public.review_forms (review_form_id, assoc_type, assoc_id, seq, is_active) 
 --
 
 COPY public.review_round_files (submission_id, review_round_id, stage_id, submission_file_id) FROM stdin;
-2	2	3	5
-3	3	3	7
-6	5	3	11
-7	6	3	13
-9	7	3	16
-10	8	3	18
-13	10	3	22
-15	11	3	25
-17	12	3	28
+1	1	3	2
+10	8	3	14
 \.
 
 
@@ -7777,13 +7642,13 @@ COPY public.review_rounds (review_round_id, submission_id, stage_id, round, revi
 --
 
 COPY public.scheduled_tasks (class_name, last_run) FROM stdin;
-plugins.generic.usageStats.UsageStatsLoader	2026-11-14 12:06:51
-plugins.importexport.doaj.DOAJInfoSender	2026-11-14 12:06:51
-plugins.importexport.datacite.DataciteInfoSender	2026-11-14 12:06:51
-plugins.importexport.crossref.CrossrefInfoSender	2026-11-14 12:06:51
-lib.pkp.classes.task.ReviewReminder	2026-11-14 12:06:51
-lib.pkp.classes.task.StatisticsReport	2026-11-14 12:06:51
-classes.tasks.SubscriptionExpiryReminder	2026-11-14 12:06:51
+plugins.generic.usageStats.UsageStatsLoader	2026-11-15 12:42:26
+plugins.importexport.crossref.CrossrefInfoSender	2026-11-15 12:42:26
+plugins.importexport.doaj.DOAJInfoSender	2026-11-15 12:42:26
+plugins.importexport.datacite.DataciteInfoSender	2026-11-15 12:42:26
+lib.pkp.classes.task.ReviewReminder	2026-11-15 12:42:26
+lib.pkp.classes.task.StatisticsReport	2026-11-15 12:42:26
+classes.tasks.SubscriptionExpiryReminder	2026-11-15 12:42:26
 \.
 
 
@@ -7826,49 +7691,49 @@ COPY public.sections (section_id, journal_id, review_form_id, seq, editor_restri
 --
 
 COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
-pfgemjq64h8t42ljbegp00m6ph	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658009	1794658009	0		localhost
-4n4j5njjkn085ea7aqlj1cc8jp	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658263	1794658268	0	csrf|a:2:{s:9:"timestamp";i:1794658268;s:5:"token";s:32:"4cbab2728759905d4a6d9cce00beaae3";}username|s:10:"amwandenga";	localhost
-lmp48lr38sgiusudc3smkundr0	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658044	1794658050	1	csrf|a:2:{s:9:"timestamp";i:1794658050;s:5:"token";s:32:"43ea30401f6202ef57b650c0372654d0";}userId|i:1;username|s:5:"admin";	localhost
-ufb46gke6eg97lt5kngdaqolos	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658204	1794658243	0	csrf|a:2:{s:9:"timestamp";i:1794658243;s:5:"token";s:32:"2401476e4a7925de4b4a7dd7a75f4abc";}username|s:7:"dbarnes";	localhost
-du4f4kk36v9h6m4rroont73unk	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658194	1794658202	0	csrf|a:2:{s:9:"timestamp";i:1794658202;s:5:"token";s:32:"71e1cdb036057d386cca54890e8579a1";}username|s:5:"admin";	localhost
-h7drv3p99dts5681o8g5c72koj	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658343	1794658374	0	csrf|a:2:{s:9:"timestamp";i:1794658374;s:5:"token";s:32:"7933dd801f12d7df9c548934d712b9d4";}username|s:7:"dbarnes";	localhost
-mhh00k89o3gkb75bivr18megle	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658023	1794658035	1	csrf|a:2:{s:9:"timestamp";i:1794658035;s:5:"token";s:32:"7c01f93b2616ef4cc27e7f9afbd74254";}userId|i:1;username|s:5:"admin";	localhost
-mba3pphn70k6lj5ge6u7jgeai3	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658011	1794658022	1	csrf|a:2:{s:9:"timestamp";i:1794658022;s:5:"token";s:32:"ccd3e9c3a9f29b50bd2f6333a046ec15";}userId|i:1;username|s:5:"admin";	localhost
-cdd2e950tcmgvrtdfjdfq6ggc3	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658036	1794658044	1	csrf|a:2:{s:9:"timestamp";i:1794658044;s:5:"token";s:32:"f70252c4efa434e8c4a0df59159b0a38";}userId|i:1;username|s:5:"admin";	localhost
-qhb7s7dnee5tberqbjq1obn6jd	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658184	1794658192	1	csrf|a:2:{s:9:"timestamp";i:1794658192;s:5:"token";s:32:"6a097cc41ce98e162c49208364bc097a";}userId|i:1;username|s:5:"admin";	localhost
-4p0cl0al04vu3jghu9jmvkjffs	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658051	1794658182	0	csrf|a:2:{s:9:"timestamp";i:1794658182;s:5:"token";s:32:"b64b707488cc357d583696dfa3d72f78";}username|s:5:"rvaca";	localhost
-3jguu7ciprc331t0e35ul73sa6	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658244	1794658263	0	csrf|a:2:{s:9:"timestamp";i:1794658263;s:5:"token";s:32:"9fca5e78a3c2ae2bc2931e1996627138";}username|s:7:"dbarnes";	localhost
-g4ipdpdav9kgn1l3ev5fl12pkj	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658285	1794658292	0	csrf|a:2:{s:9:"timestamp";i:1794658292;s:5:"token";s:32:"0c256d904747047b6307e0c75c518172";}username|s:7:"dbarnes";	localhost
-vo5pljludt150dicrmqaom98cl	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658268	1794658276	0	csrf|a:2:{s:9:"timestamp";i:1794658276;s:5:"token";s:32:"e712708fe90f1b98dcb9ae1a5bc66e63";}username|s:10:"amwandenga";	localhost
-kj3smdefo8no5b6ufvktti3hvg	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658277	1794658285	0	csrf|a:2:{s:9:"timestamp";i:1794658285;s:5:"token";s:32:"cfef50a987c78bf399ba2c3d36e95afa";}username|s:7:"dbarnes";	localhost
-i2sr8g4gc354an5pp0l5kfiati	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658320	1794658324	0		localhost
-pohm4719vb36353ch2ofrmeqk9	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658292	1794658319	0	csrf|a:2:{s:9:"timestamp";i:1794658319;s:5:"token";s:32:"cb74379d3eae58126ffe07ac342c7699";}username|s:7:"dbarnes";	localhost
-b9fast2cmu2801sj8mh1lh206h	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658324	1794658328	0	csrf|a:2:{s:9:"timestamp";i:1794658328;s:5:"token";s:32:"dab3cab9384ddb80e50e5d8e0adc8540";}username|s:7:"dbarnes";	localhost
-mjpv206f44ehejjcdomtndgi3n	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658328	1794658335	0	csrf|a:2:{s:9:"timestamp";i:1794658335;s:5:"token";s:32:"b76624ab367787a7649c4bb84d48fdfe";}username|s:8:"sberardo";	localhost
-24hklh9tbsob9abmg2769bo066	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658336	1794658342	0	csrf|a:2:{s:9:"timestamp";i:1794658342;s:5:"token";s:32:"e67a9c709f038b14358266e639572038";}username|s:8:"sberardo";	localhost
-8o6g0defb9430vdb4bb1hegvtc	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658375	1794658403	1	csrf|a:2:{s:9:"timestamp";i:1794658403;s:5:"token";s:32:"778be86a6df5b8182bb8ea1d7535bcd5";}username|s:7:"dbarnes";userId|i:3;	localhost
-09gn36e895nfoj26u7pgkdrl4f	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658417	1794658452	1	csrf|a:2:{s:9:"timestamp";i:1794658452;s:5:"token";s:32:"ecac5f7351cc7aacc24115cceaf8fbe1";}username|s:7:"dbarnes";userId|i:3;	localhost
-mbljs7a9qkjbubkghese7a7kbk	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658453	1794658486	1	csrf|a:2:{s:9:"timestamp";i:1794658486;s:5:"token";s:32:"9b5987111db560d3de4a769aeafdda7d";}username|s:7:"dbarnes";userId|i:3;	localhost
-f8q50a3mr11jb8ce2vn8jlkokn	30	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658711	1794658720	0	csrf|a:2:{s:9:"timestamp";i:1794658719;s:5:"token";s:32:"df0d67470854ac2bae2b62cafb770dfd";}username|s:7:"pdaniel";userId|i:30;	localhost
-fqmsh4rq09oodvss8np1di5r0l	20	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658404	1794658415	0	csrf|a:2:{s:9:"timestamp";i:1794658415;s:5:"token";s:32:"f66ab551363c3ed55229feeb9479e006";}username|s:12:"cmontgomerie";userId|i:20;	localhost
-lq5ovoktc2am1pa1fbvgmt12h3	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658649	1794658710	1	csrf|a:2:{s:9:"timestamp";i:1794658709;s:5:"token";s:32:"864cb8c915fc842e3f80966632039481";}username|s:7:"dbarnes";userId|i:3;	localhost
-3jgihh23fao04absf9ptghtdd6	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658624	1794658647	1	csrf|a:2:{s:9:"timestamp";i:1794658647;s:5:"token";s:32:"2681fd256edc7b3fe487181bd53f0780";}username|s:7:"dbarnes";userId|i:3;	localhost
-3lr4itppi31e5qecbs7og1pves	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658488	1794658521	0	csrf|a:2:{s:9:"timestamp";i:1794658521;s:5:"token";s:32:"17b90e718e2b615bf95a119445391367";}username|s:7:"phudson";	localhost
-0rpopl3l62pqshv3a64kdev8hs	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658721	1794658755	1	csrf|a:2:{s:9:"timestamp";i:1794658755;s:5:"token";s:32:"f3ec8fc8da2bacb4423d1592d6118fb9";}username|s:7:"dbarnes";userId|i:3;	localhost
-s6moc22hbt3r2f1qddfsd7h47n	32	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658756	1794658765	0	csrf|a:2:{s:9:"timestamp";i:1794658765;s:5:"token";s:32:"41426e1ae8942ab5b38cfce3439167a2";}username|s:6:"rrossi";userId|i:32;	localhost
-lu2bad3hiqealbbahnt621ltlq	24	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658523	1794658534	0	csrf|a:2:{s:9:"timestamp";i:1794658533;s:5:"token";s:32:"cbf7acec81a3c92d5d011659705f4544";}username|s:7:"eostrom";userId|i:24;	localhost
-p4oiipmtdg1qm4tj3f805941p5	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658766	1794658811	0	csrf|a:2:{s:9:"timestamp";i:1794658811;s:5:"token";s:32:"e49c0b60eb4f138cea1ac1c52befe43d";}username|s:7:"dbarnes";	localhost
-iidtstqd8lnif1m2ei3snbghs2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658535	1794658571	1	csrf|a:2:{s:9:"timestamp";i:1794658571;s:5:"token";s:32:"f2cf9275f2a20de0b5f60252edee2326";}username|s:7:"dbarnes";userId|i:3;	localhost
-mb01ah5eqm285vpihjht3l6v8i	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658811	1794658820	0	csrf|a:2:{s:9:"timestamp";i:1794658820;s:5:"token";s:32:"d510793fbbbeb6225c3983f8b53bf65d";}username|s:7:"dbarnes";	localhost
-fqunghu66euqde4p18pm5fduvf	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658572	1794658610	0	csrf|a:2:{s:9:"timestamp";i:1794658610;s:5:"token";s:32:"4fcf4345c2387280c676547f17d2ab12";}username|s:8:"agallego";	localhost
-fibsb2lkk6h8n1beveqd757ge4	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658820	1794658827	0	csrf|a:2:{s:9:"timestamp";i:1794658827;s:5:"token";s:32:"31a3877eb1cd366293967acc2d356e6b";}username|s:7:"dbarnes";	localhost
-vrf0ptoi2i1sahro5r6k2lmpgv	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658612	1794658623	0	csrf|a:2:{s:9:"timestamp";i:1794658622;s:5:"token";s:32:"5fc7f985e8edbd27169817b891c0793c";}username|s:10:"kalkhafaji";userId|i:27;	localhost
-1cidsl7d8ls4t9k43cgaqh5ogb	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658828	1794658834	0	csrf|a:2:{s:9:"timestamp";i:1794658834;s:5:"token";s:32:"e6a8ddb4346a88576c9ce5be5a5614e7";}username|s:7:"dbarnes";	localhost
-3b01pshd09f2ve3mi5n9rrveve	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658834	1794658841	0	csrf|a:2:{s:9:"timestamp";i:1794658841;s:5:"token";s:32:"d814229632b633f70127664ee09ba852";}username|s:7:"dbarnes";	localhost
-0f4nb2rqmulbq7btf6igp48evn	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658841	1794658848	0	csrf|a:2:{s:9:"timestamp";i:1794658848;s:5:"token";s:32:"e10f969e3803cb33e9389130bce47eb5";}username|s:7:"dbarnes";	localhost
-t3rr4ju603brqfdfktlfkth056	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658876	1794658905	1	csrf|a:2:{s:9:"timestamp";i:1794658905;s:5:"token";s:32:"e3681f2de151e06377c58784b52e0376";}username|s:7:"dbarnes";userId|i:3;	localhost
-81jap4g9alfc34mvj8g92cq46c	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658848	1794658859	0	csrf|a:2:{s:9:"timestamp";i:1794658859;s:5:"token";s:32:"05f9c9afcb40ad67dc2944deb59bc69c";}username|s:7:"dbarnes";	localhost
-54a8dlh4goi3dg5ot79rscu72d	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794658860	1794658875	1	csrf|a:2:{s:9:"timestamp";i:1794658875;s:5:"token";s:32:"0bc30a7f48165130d60d371d0854576d";}username|s:7:"dbarnes";userId|i:3;	localhost
+pka5ieuv7kd18mcgtjivom4tb9	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746545	1794746545	0		localhost
+b2027o2cc54js0llnhd4nqbh66	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746812	1794746835	0	csrf|a:2:{s:9:"timestamp";i:1794746835;s:5:"token";s:32:"1cc4eb4753e6b8136d8f9a1724f845ec";}username|s:7:"dbarnes";	localhost
+ih6vs6dtmff1cm27nfjb394g8q	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746570	1794746575	1	csrf|a:2:{s:9:"timestamp";i:1794746575;s:5:"token";s:32:"9c8e64a187c330b59f613ef007e2ff2c";}userId|i:1;username|s:5:"admin";	localhost
+dc8rqhl2u7n3hjcfr37ml4tndm	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746555	1794746564	1	csrf|a:2:{s:9:"timestamp";i:1794746564;s:5:"token";s:32:"bf02f91534046d7f63ea9fe185867c7d";}userId|i:1;username|s:5:"admin";	localhost
+hla0lladh60o3jugg1nj32pv74	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746546	1794746555	1	csrf|a:2:{s:9:"timestamp";i:1794746555;s:5:"token";s:32:"9112494c9bd471010f364c0ddcb92070";}userId|i:1;username|s:5:"admin";	localhost
+mlques50f9ksgjtvasls99arcv	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746564	1794746570	1	csrf|a:2:{s:9:"timestamp";i:1794746570;s:5:"token";s:32:"e09785522b76be9f62420fcc05e501b7";}userId|i:1;username|s:5:"admin";	localhost
+lmibd57h1g4e3rluv45n04140h	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746691	1794746698	0	csrf|a:2:{s:9:"timestamp";i:1794746698;s:5:"token";s:32:"14a164db04e99380fa3250fbbe740d69";}username|s:5:"admin";	localhost
+55cp0b2g4hksuemgnu9m676s64	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746576	1794746681	0	csrf|a:2:{s:9:"timestamp";i:1794746681;s:5:"token";s:32:"aa1a15091c2fe834b95870e8dc25dc67";}username|s:5:"rvaca";	localhost
+do61nj8ggpe1iig0f5ko3h4tgq	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746682	1794746690	1	csrf|a:2:{s:9:"timestamp";i:1794746690;s:5:"token";s:32:"467ebd38f7fbc3a50ec51b77f5b32284";}userId|i:1;username|s:5:"admin";	localhost
+j77cnrf04lkjgiqjm226obqrl7	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746731	1794746746	0	csrf|a:2:{s:9:"timestamp";i:1794746746;s:5:"token";s:32:"823cfbed4abd21d1b916377ffbb665ec";}username|s:7:"dbarnes";	localhost
+l3psivt44mkk3tlpdjjn0n5u0m	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746699	1794746730	0	csrf|a:2:{s:9:"timestamp";i:1794746730;s:5:"token";s:32:"e3dbbbb1946fd7a16566c9ff3c3370d8";}username|s:7:"dbarnes";	localhost
+q21ovai4v7m20g7rueh0q9vq9m	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746750	1794746757	0	csrf|a:2:{s:9:"timestamp";i:1794746757;s:5:"token";s:32:"79acba4bf4071daa091ca2027df216be";}username|s:10:"amwandenga";	localhost
+agdknqftn8rpd3ntdrnea7qmuo	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746746	1794746750	0	csrf|a:2:{s:9:"timestamp";i:1794746750;s:5:"token";s:32:"39187c660f6d33b7b4d7855b5aa59214";}username|s:10:"amwandenga";	localhost
+61cvagnmco9eumo5ks333haeij	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746757	1794746764	0	csrf|a:2:{s:9:"timestamp";i:1794746764;s:5:"token";s:32:"ba66f9c6627ffa0b30a19d2e32044334";}username|s:7:"dbarnes";	localhost
+t7c63up4g48lk6vtg09s9q237b	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746794	1794746798	0		localhost
+r6hivghfjslq05bqrmvsk7nh1f	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746764	1794746769	0	csrf|a:2:{s:9:"timestamp";i:1794746769;s:5:"token";s:32:"f52710372206b8b9d17064e811c70c95";}username|s:7:"dbarnes";	localhost
+dglivr9f7rhhd89u84tq6tclk2	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746769	1794746794	0	csrf|a:2:{s:9:"timestamp";i:1794746794;s:5:"token";s:32:"608d6bc0551c411121efa17a8de6ad3b";}username|s:7:"dbarnes";	localhost
+fuaou1ib6pv4dufifktb2gq10q	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746798	1794746802	0	csrf|a:2:{s:9:"timestamp";i:1794746802;s:5:"token";s:32:"2b6acc7496830ed2c606d7043e3449fa";}username|s:7:"dbarnes";	localhost
+7eu3i23d3tmnfrmvps6ku6e6ub	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746802	1794746807	0	csrf|a:2:{s:9:"timestamp";i:1794746807;s:5:"token";s:32:"bbfad1e9a620104c7826591be902ab88";}username|s:8:"sberardo";	localhost
+p07ds5a46b09qf99vo0abvlhqv	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746807	1794746811	0	csrf|a:2:{s:9:"timestamp";i:1794746811;s:5:"token";s:32:"cada025bcf3b769a68c92d02fce6a63c";}username|s:8:"sberardo";	localhost
+dkc6ahhs8tr8qfqqvgqbfr0ond	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746922	1794746949	0	csrf|a:2:{s:9:"timestamp";i:1794746949;s:5:"token";s:32:"901d8df57eca36d4001dd0e9a2c707f6";}username|s:7:"phudson";	localhost
+s392ck439pa4qevr4f6ienc5n1	20	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746858	1794746867	0	csrf|a:2:{s:9:"timestamp";i:1794746867;s:5:"token";s:32:"c7493e621a30eac92b9a3c74ac0fae9b";}username|s:12:"cmontgomerie";userId|i:20;	localhost
+ap74lo5n2trq1r3c8piqfbre4k	30	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794747094	1794747101	0	csrf|a:2:{s:9:"timestamp";i:1794747100;s:5:"token";s:32:"a742e20e1536488fe029c3ffe3dc8c1e";}username|s:7:"pdaniel";userId|i:30;	localhost
+vkm6lrr49vc93ujjr367l011l5	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746836	1794746857	1	csrf|a:2:{s:9:"timestamp";i:1794746857;s:5:"token";s:32:"97b5221cf7813f2403ce7a1da4d872ef";}username|s:7:"dbarnes";userId|i:3;	localhost
+cm1a365j0nuq94dfftt95ud2as	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794747047	1794747093	1	csrf|a:2:{s:9:"timestamp";i:1794747093;s:5:"token";s:32:"8d0c5887d30b833604128cc57c90b479";}username|s:7:"dbarnes";userId|i:3;	localhost
+mjgooas4p0db8k5gp3bjtiqosg	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794747102	1794747127	1	csrf|a:2:{s:9:"timestamp";i:1794747127;s:5:"token";s:32:"4d1328697728603528619e04c60bd19e";}username|s:7:"dbarnes";userId|i:3;	localhost
+1i71hhjnbqte39auufg192t5rg	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746868	1794746895	1	csrf|a:2:{s:9:"timestamp";i:1794746895;s:5:"token";s:32:"6f2455158c5c2ad498be63d4dec8310d";}username|s:7:"dbarnes";userId|i:3;	localhost
+oc8ahghl2s48ckegs0msm90941	32	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794747128	1794747135	0	csrf|a:2:{s:9:"timestamp";i:1794747134;s:5:"token";s:32:"fb87d10d4cafecc1f7db94c384f8b8b2";}username|s:6:"rrossi";userId|i:32;	localhost
+bsgnjgiqq6b6j5f51mgtltfo4d	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746896	1794746921	1	csrf|a:2:{s:9:"timestamp";i:1794746921;s:5:"token";s:32:"29a3832cb366379ae0c7dd903aa52540";}username|s:7:"dbarnes";userId|i:3;	localhost
+g5thb5v0imid2u50nhune4n929	24	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746950	1794746959	0	csrf|a:2:{s:9:"timestamp";i:1794746958;s:5:"token";s:32:"f0b43cf9416db5ddbb96e60d1ebdbcc5";}username|s:7:"eostrom";userId|i:24;	localhost
+2blsvqbedjmap6lj1jab6hrcn5	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794747136	1794747168	0	csrf|a:2:{s:9:"timestamp";i:1794747168;s:5:"token";s:32:"9bfcedc14def277a76761c6424247097";}username|s:7:"dbarnes";	localhost
+l1n9f54v01f7kg23jegluseqhg	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746987	1794747017	0	csrf|a:2:{s:9:"timestamp";i:1794747017;s:5:"token";s:32:"c1b595965e8fc48ff004c0baec6e9cfb";}username|s:8:"agallego";	localhost
+gr84jinmfrd8hopmfs16voc53h	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794747168	1794747174	0	csrf|a:2:{s:9:"timestamp";i:1794747174;s:5:"token";s:32:"616040335c56d2dcc58522032ad92ed7";}username|s:7:"dbarnes";	localhost
+rseflt9il948lfnkecvj36p65i	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794746959	1794746986	1	csrf|a:2:{s:9:"timestamp";i:1794746986;s:5:"token";s:32:"a5feb4c550c4cf1af6f0b108d11bd625";}username|s:7:"dbarnes";userId|i:3;	localhost
+5qglcnokt9onbeulli6lk4atq5	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794747174	1794747179	0	csrf|a:2:{s:9:"timestamp";i:1794747179;s:5:"token";s:32:"49c2d32676871f3ede5d324e25edf2d7";}username|s:7:"dbarnes";	localhost
+retiajght1aed5gufs4rp4f599	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794747018	1794747027	0	csrf|a:2:{s:9:"timestamp";i:1794747027;s:5:"token";s:32:"3434dcd2d650677990e513e269010f74";}username|s:10:"kalkhafaji";userId|i:27;	localhost
+u000k7e3n5auk740crfvt22h5v	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794747179	1794747183	0	csrf|a:2:{s:9:"timestamp";i:1794747183;s:5:"token";s:32:"b625e2972b16b4b3d6fe19e6842d9f1e";}username|s:7:"dbarnes";	localhost
+f0d909p54rr29upt7u0blnjoa6	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794747183	1794747188	0	csrf|a:2:{s:9:"timestamp";i:1794747188;s:5:"token";s:32:"6eb9df130b2ee15f6e70e546e077805c";}username|s:7:"dbarnes";	localhost
+ertt0dccnfcvhnn1ociv5qhtmr	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794747028	1794747046	1	csrf|a:2:{s:9:"timestamp";i:1794747046;s:5:"token";s:32:"d9b8e3ca8f56628d8d3b18539a5c31e8";}username|s:7:"dbarnes";userId|i:3;	localhost
+ih8s7jsh1uvp178m2qb2t6rnpn	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794747188	1794747192	0	csrf|a:2:{s:9:"timestamp";i:1794747192;s:5:"token";s:32:"ded705c2ad0a99eae0624206ee74549e";}username|s:7:"dbarnes";	localhost
+lqopace3algenrd4oaf8atmq9q	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794747212	1794747234	1	csrf|a:2:{s:9:"timestamp";i:1794747234;s:5:"token";s:32:"5b86f6794bcc97df8b1be7cdb899ecd4";}username|s:7:"dbarnes";userId|i:3;	localhost
+sk5co2rpijin8d3irr81rb8fil	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794747200	1794747211	1	csrf|a:2:{s:9:"timestamp";i:1794747211;s:5:"token";s:32:"fc272fef5c03fd37a47d62a3e4b31c92";}username|s:7:"dbarnes";userId|i:3;	localhost
+iefbfssbl3606cgv5csmacuu8r	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.6.0 Chrome/85.0.4183.121 Electron/10.1.5 Safari/537.36	1794747192	1794747199	0	csrf|a:2:{s:9:"timestamp";i:1794747199;s:5:"token";s:32:"5dad7366f0c3c0e6e0d9bd38a79c834b";}username|s:7:"dbarnes";	localhost
 \.
 
 
@@ -7898,99 +7763,97 @@ themePluginPath		default
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-2	1	3	3	2026-11-14 12:10:11	0	1
-4	1	5	4	2026-11-14 12:10:11	0	1
-5	1	7	12	2026-11-14 12:10:33	0	0
-6	1	11	14	2026-11-14 12:10:39	0	0
-7	1	13	16	2026-11-14 12:10:42	0	0
-1	1	14	17	2026-11-14 12:11:11	0	1
-3	1	5	5	2026-11-14 12:12:19	1	0
-8	2	14	18	2026-11-14 12:12:28	0	0
-9	2	3	3	2026-11-14 12:12:31	0	1
-10	2	5	5	2026-11-14 12:12:31	0	1
-11	2	5	4	2026-11-14 12:12:31	0	1
-12	2	5	6	2026-11-14 12:12:39	1	1
-13	3	14	19	2026-11-14 12:13:00	0	0
-14	3	3	3	2026-11-14 12:13:03	0	1
-15	3	5	5	2026-11-14 12:13:03	0	1
-16	3	5	4	2026-11-14 12:13:03	0	1
-17	3	7	11	2026-11-14 12:13:22	0	0
-18	4	14	20	2026-11-14 12:13:29	0	0
-19	4	3	3	2026-11-14 12:13:35	0	1
-20	4	5	5	2026-11-14 12:13:35	0	1
-21	4	5	4	2026-11-14 12:13:35	0	1
-22	5	14	21	2026-11-14 12:13:41	0	0
-23	5	3	3	2026-11-14 12:13:44	0	1
-24	5	5	5	2026-11-14 12:13:44	0	1
-25	5	5	4	2026-11-14 12:13:44	0	1
-26	5	7	11	2026-11-14 12:14:02	0	0
-27	5	11	13	2026-11-14 12:14:08	0	0
-28	5	13	15	2026-11-14 12:14:11	0	0
-29	6	14	22	2026-11-14 12:14:18	0	0
-30	6	3	3	2026-11-14 12:14:21	0	1
-31	6	5	5	2026-11-14 12:14:21	0	1
-32	6	5	4	2026-11-14 12:14:21	0	1
-33	6	7	11	2026-11-14 12:14:40	0	0
-34	6	11	13	2026-11-14 12:14:46	0	0
-35	7	14	23	2026-11-14 12:14:52	0	0
-36	7	3	3	2026-11-14 12:14:56	0	1
-37	7	5	5	2026-11-14 12:14:56	0	1
-38	7	5	4	2026-11-14 12:14:56	0	1
-39	8	14	24	2026-11-14 12:15:28	0	0
-40	8	3	3	2026-11-14 12:15:33	0	1
-41	8	5	5	2026-11-14 12:15:33	0	1
-42	8	5	4	2026-11-14 12:15:33	0	1
-43	9	14	25	2026-11-14 12:15:40	0	0
-44	9	3	3	2026-11-14 12:15:43	0	1
-45	9	5	6	2026-11-14 12:15:43	0	1
-46	9	7	12	2026-11-14 12:16:02	0	0
-47	9	11	14	2026-11-14 12:16:07	0	0
-48	9	13	16	2026-11-14 12:16:10	0	0
-49	10	14	26	2026-11-14 12:16:17	0	0
-50	10	3	3	2026-11-14 12:16:20	0	1
-51	10	5	5	2026-11-14 12:16:20	0	1
-52	10	5	4	2026-11-14 12:16:20	0	1
-53	11	14	27	2026-11-14 12:16:56	0	0
-54	11	3	3	2026-11-14 12:17:02	0	1
-55	11	5	5	2026-11-14 12:17:02	0	1
-56	11	5	4	2026-11-14 12:17:02	0	1
-57	12	14	28	2026-11-14 12:17:09	0	0
-58	12	3	3	2026-11-14 12:17:12	0	1
-59	12	5	5	2026-11-14 12:17:12	0	1
-60	12	5	4	2026-11-14 12:17:12	0	1
-61	13	14	29	2026-11-14 12:17:33	0	0
-62	13	3	3	2026-11-14 12:17:37	0	1
-63	13	5	5	2026-11-14 12:17:37	0	1
-64	13	5	4	2026-11-14 12:17:37	0	1
-65	14	14	30	2026-11-14 12:18:36	0	0
-66	14	3	3	2026-11-14 12:18:39	0	1
-67	14	5	5	2026-11-14 12:18:39	0	1
-68	14	5	4	2026-11-14 12:18:39	0	1
-69	15	14	31	2026-11-14 12:18:46	0	0
-70	15	3	3	2026-11-14 12:18:49	0	1
-71	15	5	5	2026-11-14 12:18:49	0	1
-72	15	5	4	2026-11-14 12:18:49	0	1
-73	15	7	12	2026-11-14 12:19:09	0	0
-74	15	11	14	2026-11-14 12:19:14	0	0
-75	16	14	32	2026-11-14 12:19:21	0	0
-76	16	3	3	2026-11-14 12:19:25	0	1
-77	16	5	5	2026-11-14 12:19:25	0	1
-78	16	5	4	2026-11-14 12:19:25	0	1
-79	17	14	33	2026-11-14 12:19:31	0	0
-80	17	3	3	2026-11-14 12:19:35	0	1
-81	17	5	5	2026-11-14 12:19:35	0	1
-82	17	5	4	2026-11-14 12:19:35	0	1
-83	17	7	11	2026-11-14 12:19:56	0	0
-84	17	11	13	2026-11-14 12:20:01	0	0
-85	17	13	15	2026-11-14 12:20:04	0	0
-86	18	14	34	2026-11-14 12:21:05	0	0
-87	18	3	3	2026-11-14 12:21:08	0	1
-88	18	5	5	2026-11-14 12:21:08	0	1
-89	18	5	4	2026-11-14 12:21:08	0	1
-90	19	14	35	2026-11-14 12:21:21	0	0
-91	19	3	3	2026-11-14 12:21:24	0	1
-92	19	5	6	2026-11-14 12:21:24	0	1
-93	19	7	12	2026-11-14 12:21:44	0	0
+2	1	3	3	2026-11-15 12:45:05	0	1
+4	1	5	4	2026-11-15 12:45:05	0	1
+5	1	7	12	2026-11-15 12:45:23	0	0
+6	1	11	14	2026-11-15 12:45:28	0	0
+1	1	14	17	2026-11-15 12:45:52	0	1
+3	1	5	5	2026-11-15 12:46:49	1	0
+7	2	14	18	2026-11-15 12:46:56	0	0
+8	2	3	3	2026-11-15 12:46:59	0	1
+9	2	5	5	2026-11-15 12:46:59	0	1
+10	2	5	4	2026-11-15 12:46:59	0	1
+11	2	5	6	2026-11-15 12:47:04	1	1
+12	3	14	19	2026-11-15 12:47:20	0	0
+13	3	3	3	2026-11-15 12:47:22	0	1
+14	3	5	5	2026-11-15 12:47:22	0	1
+15	3	5	4	2026-11-15 12:47:22	0	1
+16	3	7	11	2026-11-15 12:47:37	0	0
+17	4	14	20	2026-11-15 12:47:42	0	0
+18	4	3	3	2026-11-15 12:47:47	0	1
+19	4	5	5	2026-11-15 12:47:47	0	1
+20	4	5	4	2026-11-15 12:47:47	0	1
+21	5	14	21	2026-11-15 12:47:52	0	0
+22	5	3	3	2026-11-15 12:47:54	0	1
+23	5	5	5	2026-11-15 12:47:54	0	1
+24	5	5	4	2026-11-15 12:47:54	0	1
+25	5	7	11	2026-11-15 12:48:09	0	0
+26	5	11	13	2026-11-15 12:48:12	0	0
+27	5	13	15	2026-11-15 12:48:14	0	0
+28	6	14	22	2026-11-15 12:48:20	0	0
+29	6	3	3	2026-11-15 12:48:22	0	1
+30	6	5	5	2026-11-15 12:48:22	0	1
+31	6	5	4	2026-11-15 12:48:22	0	1
+32	6	7	11	2026-11-15 12:48:37	0	0
+33	6	11	13	2026-11-15 12:48:40	0	0
+34	7	14	23	2026-11-15 12:48:46	0	0
+35	7	3	3	2026-11-15 12:48:48	0	1
+36	7	5	5	2026-11-15 12:48:48	0	1
+37	7	5	4	2026-11-15 12:48:48	0	1
+38	8	14	24	2026-11-15 12:49:14	0	0
+39	8	3	3	2026-11-15 12:49:18	0	1
+40	8	5	5	2026-11-15 12:49:18	0	1
+41	8	5	4	2026-11-15 12:49:18	0	1
+42	9	14	25	2026-11-15 12:49:23	0	0
+43	9	3	3	2026-11-15 12:49:25	0	1
+44	9	5	6	2026-11-15 12:49:25	0	1
+45	9	7	12	2026-11-15 12:49:40	0	0
+46	9	11	14	2026-11-15 12:49:44	0	0
+47	10	14	26	2026-11-15 12:49:51	0	0
+48	10	3	3	2026-11-15 12:49:53	0	1
+49	10	5	5	2026-11-15 12:49:53	0	1
+50	10	5	4	2026-11-15 12:49:53	0	1
+51	11	14	27	2026-11-15 12:50:22	0	0
+52	11	3	3	2026-11-15 12:50:27	0	1
+53	11	5	5	2026-11-15 12:50:27	0	1
+54	11	5	4	2026-11-15 12:50:27	0	1
+55	12	14	28	2026-11-15 12:50:32	0	0
+56	12	3	3	2026-11-15 12:50:34	0	1
+57	12	5	5	2026-11-15 12:50:35	0	1
+58	12	5	4	2026-11-15 12:50:35	0	1
+59	13	14	29	2026-11-15 12:50:51	0	0
+60	13	3	3	2026-11-15 12:50:54	0	1
+61	13	5	5	2026-11-15 12:50:54	0	1
+62	13	5	4	2026-11-15 12:50:54	0	1
+63	14	14	30	2026-11-15 12:51:38	0	0
+64	14	3	3	2026-11-15 12:51:40	0	1
+65	14	5	5	2026-11-15 12:51:40	0	1
+66	14	5	4	2026-11-15 12:51:40	0	1
+67	15	14	31	2026-11-15 12:51:46	0	0
+68	15	3	3	2026-11-15 12:51:48	0	1
+69	15	5	5	2026-11-15 12:51:48	0	1
+70	15	5	4	2026-11-15 12:51:48	0	1
+71	15	7	12	2026-11-15 12:52:02	0	0
+72	15	11	14	2026-11-15 12:52:06	0	0
+73	16	14	32	2026-11-15 12:52:12	0	0
+74	16	3	3	2026-11-15 12:52:14	0	1
+75	16	5	5	2026-11-15 12:52:14	0	1
+76	16	5	4	2026-11-15 12:52:14	0	1
+77	17	14	33	2026-11-15 12:52:19	0	0
+78	17	3	3	2026-11-15 12:52:22	0	1
+79	17	5	5	2026-11-15 12:52:22	0	1
+80	17	5	4	2026-11-15 12:52:22	0	1
+81	17	7	11	2026-11-15 12:52:37	0	0
+82	17	11	13	2026-11-15 12:52:41	0	0
+83	17	13	15	2026-11-15 12:52:43	0	0
+84	18	14	34	2026-11-15 12:53:24	0	0
+85	18	3	3	2026-11-15 12:53:27	0	1
+86	18	5	5	2026-11-15 12:53:27	0	1
+87	18	5	4	2026-11-15 12:53:27	0	1
+88	19	14	35	2026-11-15 12:53:36	0	0
+89	19	3	3	2026-11-15 12:53:38	0	1
+90	19	5	6	2026-11-15 12:53:38	0	1
+91	19	7	12	2026-11-15 12:53:54	0	0
 \.
 
 
@@ -8026,12 +7889,12 @@ COPY public.subeditor_submission_group (context_id, assoc_id, assoc_type, user_i
 --
 
 COPY public.submission_comments (comment_id, comment_type, role_id, submission_id, assoc_id, author_id, comment_title, comments, date_posted, date_modified, viewable) FROM stdin;
-1	1	4096	7	10	8		<p>Here are my review comments</p>	2026-11-14 12:15:21	\N	1
-2	1	4096	10	15	9		<p>Here are my review comments</p>	2026-11-14 12:16:42	\N	1
-3	1	4096	10	16	10		<p>Here are my review comments</p>	2026-11-14 12:16:50	\N	1
-4	1	4096	13	19	7		<p>Here are my review comments</p>	2026-11-14 12:18:03	\N	1
-5	1	4096	13	20	9		<p>Here are my review comments</p>	2026-11-14 12:18:11	\N	1
-6	1	4096	13	21	10		<p>Here are my review comments</p>	2026-11-14 12:18:20	\N	1
+1	1	4096	7	10	8		<p>Here are my review comments</p>	2026-11-15 12:49:08	\N	1
+2	1	4096	10	15	9		<p>Here are my review comments</p>	2026-11-15 12:50:10	\N	1
+3	1	4096	10	16	10		<p>Here are my review comments</p>	2026-11-15 12:50:17	\N	1
+4	1	4096	13	19	7		<p>Here are my review comments</p>	2026-11-15 12:51:14	\N	1
+5	1	4096	13	20	9		<p>Here are my review comments</p>	2026-11-15 12:51:20	\N	1
+6	1	4096	13	21	10		<p>Here are my review comments</p>	2026-11-15 12:51:27	\N	1
 \.
 
 
@@ -8041,36 +7904,29 @@ COPY public.submission_comments (comment_id, comment_type, role_id, submission_i
 
 COPY public.submission_file_revisions (revision_id, submission_file_id, file_id) FROM stdin;
 1	1	1
-2	2	2
+2	2	1
 3	3	2
-4	4	3
+4	4	2
 5	5	3
 6	6	4
-7	7	4
-8	8	5
-9	9	6
-10	10	7
-11	11	7
-12	12	8
-13	13	8
-14	14	9
-15	15	10
-16	16	10
-17	17	11
-18	18	11
-19	19	12
-20	20	13
-21	21	14
-22	22	14
-23	23	15
-24	24	16
-25	25	16
-26	26	17
-27	27	18
-28	28	18
-29	29	19
-30	30	20
-31	31	21
+7	7	5
+8	8	6
+9	9	7
+10	10	8
+11	11	9
+12	12	10
+13	13	11
+14	14	11
+15	15	12
+16	16	13
+17	17	14
+18	18	15
+19	19	16
+20	20	17
+21	21	18
+22	22	19
+23	23	20
+24	24	21
 \.
 
 
@@ -8080,39 +7936,32 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 
 COPY public.submission_file_settings (submission_file_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 1	en_US	name	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
-2	en_US	name	article.pdf	string
-2	fr_CA	name		string
+2	en_US	name	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
 3	en_US	name	article.pdf	string
 3	fr_CA	name		string
-4	en_US	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
+4	en_US	name	article.pdf	string
+4	fr_CA	name		string
 5	en_US	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
 6	en_US	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-7	en_US	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-8	en_US	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
-9	en_US	name	Genetic transformation of forest trees.pdf	string
-10	en_US	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-11	en_US	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-12	en_US	name	Developing efficacy beliefs in the classroom.pdf	string
-13	en_US	name	Developing efficacy beliefs in the classroom.pdf	string
-14	en_US	name	Traditions and Trends in the Study of the Commons.pdf	string
-15	en_US	name	Hansen & Pinto: Reason Reclaimed.pdf	string
-16	en_US	name	Hansen & Pinto: Reason Reclaimed.pdf	string
-17	en_US	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-18	en_US	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-19	en_US	name	Learning Sustainable Design through Service.pdf	string
-20	en_US	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-21	en_US	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-22	en_US	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-23	en_US	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-24	en_US	name	Yam diseases and its management in Nigeria.pdf	string
-25	en_US	name	Yam diseases and its management in Nigeria.pdf	string
-26	en_US	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-27	en_US	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-28	en_US	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-29	en_US	name	article.pdf	string
-29	fr_CA	name		string
-30	en_US	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-31	en_US	name	Finocchiaro: Arguments About Arguments.pdf	string
+7	en_US	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+8	en_US	name	Genetic transformation of forest trees.pdf	string
+9	en_US	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+10	en_US	name	Developing efficacy beliefs in the classroom.pdf	string
+11	en_US	name	Traditions and Trends in the Study of the Commons.pdf	string
+12	en_US	name	Hansen & Pinto: Reason Reclaimed.pdf	string
+13	en_US	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+14	en_US	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+15	en_US	name	Learning Sustainable Design through Service.pdf	string
+16	en_US	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+17	en_US	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+18	en_US	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+19	en_US	name	Yam diseases and its management in Nigeria.pdf	string
+20	en_US	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+21	en_US	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+22	en_US	name	article.pdf	string
+22	fr_CA	name		string
+23	en_US	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+24	en_US	name	Finocchiaro: Arguments About Arguments.pdf	string
 \.
 
 
@@ -8121,37 +7970,30 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 --
 
 COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id) FROM stdin;
-1	1	1	\N	1	2	\N	\N	\N	2026-11-14 12:10:09	2026-11-14 12:10:09	17	\N	\N
-2	1	2	\N	1	10	\N	\N	\N	2026-11-14 12:11:02	2026-11-14 12:11:02	3	521	1
-3	1	2	\N	1	10	\N	\N	\N	2026-11-14 12:11:35	2026-11-14 12:11:35	3	521	2
-4	2	3	\N	1	2	\N	\N	\N	2026-11-14 12:12:28	2026-11-14 12:12:29	18	\N	\N
-5	2	3	4	1	4	\N	\N	\N	2026-11-14 12:12:36	2026-11-14 12:12:36	18	\N	\N
-6	3	4	\N	1	2	\N	\N	\N	2026-11-14 12:13:01	2026-11-14 12:13:01	19	\N	\N
-7	3	4	6	1	4	\N	\N	\N	2026-11-14 12:13:08	2026-11-14 12:13:08	19	\N	\N
-8	4	5	\N	1	2	\N	\N	\N	2026-11-14 12:13:30	2026-11-14 12:13:30	20	\N	\N
-9	5	6	\N	1	2	\N	\N	\N	2026-11-14 12:13:42	2026-11-14 12:13:42	21	\N	\N
-10	6	7	\N	1	2	\N	\N	\N	2026-11-14 12:14:19	2026-11-14 12:14:19	22	\N	\N
-11	6	7	10	1	4	\N	\N	\N	2026-11-14 12:14:26	2026-11-14 12:14:26	22	\N	\N
-12	7	8	\N	1	2	\N	\N	\N	2026-11-14 12:14:53	2026-11-14 12:14:53	23	\N	\N
-13	7	8	12	1	4	\N	\N	\N	2026-11-14 12:15:01	2026-11-14 12:15:01	23	\N	\N
-14	8	9	\N	1	2	\N	\N	\N	2026-11-14 12:15:28	2026-11-14 12:15:29	24	\N	\N
-15	9	10	\N	1	2	\N	\N	\N	2026-11-14 12:15:41	2026-11-14 12:15:41	25	\N	\N
-16	9	10	15	1	4	\N	\N	\N	2026-11-14 12:15:48	2026-11-14 12:15:48	25	\N	\N
-17	10	11	\N	1	2	\N	\N	\N	2026-11-14 12:16:18	2026-11-14 12:16:18	26	\N	\N
-18	10	11	17	1	4	\N	\N	\N	2026-11-14 12:16:25	2026-11-14 12:16:25	26	\N	\N
-19	11	12	\N	1	2	\N	\N	\N	2026-11-14 12:16:57	2026-11-14 12:16:57	27	\N	\N
-20	12	13	\N	1	2	\N	\N	\N	2026-11-14 12:17:10	2026-11-14 12:17:10	28	\N	\N
-21	13	14	\N	1	2	\N	\N	\N	2026-11-14 12:17:34	2026-11-14 12:17:34	29	\N	\N
-22	13	14	21	1	4	\N	\N	\N	2026-11-14 12:17:43	2026-11-14 12:17:43	29	\N	\N
-23	14	15	\N	1	2	\N	\N	\N	2026-11-14 12:18:37	2026-11-14 12:18:37	30	\N	\N
-24	15	16	\N	1	2	\N	\N	\N	2026-11-14 12:18:47	2026-11-14 12:18:47	31	\N	\N
-25	15	16	24	1	4	\N	\N	\N	2026-11-14 12:18:55	2026-11-14 12:18:55	31	\N	\N
-26	16	17	\N	1	2	\N	\N	\N	2026-11-14 12:19:22	2026-11-14 12:19:22	32	\N	\N
-27	17	18	\N	1	2	\N	\N	\N	2026-11-14 12:19:32	2026-11-14 12:19:32	33	\N	\N
-28	17	18	27	1	4	\N	\N	\N	2026-11-14 12:19:42	2026-11-14 12:19:42	33	\N	\N
-29	17	19	\N	1	10	\N	\N	\N	2026-11-14 12:20:09	2026-11-14 12:20:10	3	521	3
-30	18	20	\N	1	2	\N	\N	\N	2026-11-14 12:21:06	2026-11-14 12:21:06	34	\N	\N
-31	19	21	\N	1	2	\N	\N	\N	2026-11-14 12:21:21	2026-11-14 12:21:22	35	\N	\N
+1	1	1	\N	1	2	\N	\N	\N	2026-11-15 12:45:04	2026-11-15 12:45:04	17	\N	\N
+2	1	1	1	1	4	\N	\N	\N	2026-11-15 12:45:09	2026-11-15 12:45:09	17	\N	\N
+3	1	2	\N	1	10	\N	\N	\N	2026-11-15 12:45:45	2026-11-15 12:45:45	3	521	1
+4	1	2	\N	1	10	\N	\N	\N	2026-11-15 12:46:11	2026-11-15 12:46:11	3	521	2
+5	2	3	\N	1	2	\N	\N	\N	2026-11-15 12:46:57	2026-11-15 12:46:57	18	\N	\N
+6	3	4	\N	1	2	\N	\N	\N	2026-11-15 12:47:20	2026-11-15 12:47:20	19	\N	\N
+7	4	5	\N	1	2	\N	\N	\N	2026-11-15 12:47:43	2026-11-15 12:47:43	20	\N	\N
+8	5	6	\N	1	2	\N	\N	\N	2026-11-15 12:47:53	2026-11-15 12:47:53	21	\N	\N
+9	6	7	\N	1	2	\N	\N	\N	2026-11-15 12:48:20	2026-11-15 12:48:20	22	\N	\N
+10	7	8	\N	1	2	\N	\N	\N	2026-11-15 12:48:46	2026-11-15 12:48:47	23	\N	\N
+11	8	9	\N	1	2	\N	\N	\N	2026-11-15 12:49:14	2026-11-15 12:49:14	24	\N	\N
+12	9	10	\N	1	2	\N	\N	\N	2026-11-15 12:49:24	2026-11-15 12:49:24	25	\N	\N
+13	10	11	\N	1	2	\N	\N	\N	2026-11-15 12:49:51	2026-11-15 12:49:52	26	\N	\N
+14	10	11	13	1	4	\N	\N	\N	2026-11-15 12:49:57	2026-11-15 12:49:57	26	\N	\N
+15	11	12	\N	1	2	\N	\N	\N	2026-11-15 12:50:23	2026-11-15 12:50:23	27	\N	\N
+16	12	13	\N	1	2	\N	\N	\N	2026-11-15 12:50:32	2026-11-15 12:50:33	28	\N	\N
+17	13	14	\N	1	2	\N	\N	\N	2026-11-15 12:50:52	2026-11-15 12:50:52	29	\N	\N
+18	14	15	\N	1	2	\N	\N	\N	2026-11-15 12:51:38	2026-11-15 12:51:39	30	\N	\N
+19	15	16	\N	1	2	\N	\N	\N	2026-11-15 12:51:46	2026-11-15 12:51:46	31	\N	\N
+20	16	17	\N	1	2	\N	\N	\N	2026-11-15 12:52:12	2026-11-15 12:52:12	32	\N	\N
+21	17	18	\N	1	2	\N	\N	\N	2026-11-15 12:52:20	2026-11-15 12:52:20	33	\N	\N
+22	17	19	\N	1	10	\N	\N	\N	2026-11-15 12:52:47	2026-11-15 12:52:47	3	521	3
+23	18	20	\N	1	2	\N	\N	\N	2026-11-15 12:53:25	2026-11-15 12:53:25	34	\N	\N
+24	19	21	\N	1	2	\N	\N	\N	2026-11-15 12:53:37	2026-11-15 12:53:37	35	\N	\N
 \.
 
 
@@ -8495,25 +8337,25 @@ COPY public.submission_tombstones (tombstone_id, submission_id, date_deleted, jo
 --
 
 COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
-2	1	3	2026-11-14 12:12:48	2026-11-14 12:12:31	2026-11-14 12:12:31	3	en_US	1	0	0
-6	1	7	2026-11-14 12:14:46	2026-11-14 12:14:21	2026-11-14 12:14:21	5	en_US	1	0	0
-10	1	11	2026-11-14 12:16:50	2026-11-14 12:16:20	2026-11-14 12:16:20	3	en_US	1	0	0
-13	1	14	2026-11-14 12:18:29	2026-11-14 12:17:37	2026-11-14 12:17:37	3	en_US	1	0	0
-3	1	4	2026-11-14 12:13:22	2026-11-14 12:13:03	2026-11-14 12:13:03	4	en_US	1	0	0
-19	1	20	2026-11-14 12:21:44	2026-11-14 12:21:24	2026-11-14 12:21:24	4	en_US	1	0	0
-7	1	8	2026-11-14 12:15:21	2026-11-14 12:14:56	2026-11-14 12:14:56	3	en_US	1	0	0
-4	1	5	2026-11-14 12:13:35	2026-11-14 12:13:35	2026-11-14 12:13:35	1	en_US	1	0	0
-14	1	15	2026-11-14 12:18:40	2026-11-14 12:18:39	2026-11-14 12:18:39	1	en_US	1	0	0
-11	1	12	2026-11-14 12:17:03	2026-11-14 12:17:02	2026-11-14 12:17:02	1	en_US	1	0	0
-8	1	9	2026-11-14 12:15:34	2026-11-14 12:15:33	2026-11-14 12:15:33	1	en_US	1	0	0
-1	1	1	2026-11-14 12:12:19	2026-11-14 12:10:11	2026-11-14 12:10:11	5	en_US	3	0	0
-5	1	6	2026-11-14 12:14:11	2026-11-14 12:13:44	2026-11-14 12:13:44	5	en_US	1	0	0
-12	1	13	2026-11-14 12:17:27	2026-11-14 12:17:12	2026-11-14 12:17:12	3	en_US	1	0	0
-17	1	18	2026-11-14 12:20:55	2026-11-14 12:19:35	2026-11-14 12:19:35	5	en_US	3	0	0
-15	1	16	2026-11-14 12:19:15	2026-11-14 12:18:49	2026-11-14 12:18:49	5	en_US	1	0	0
-9	1	10	2026-11-14 12:16:10	2026-11-14 12:15:43	2026-11-14 12:15:43	5	en_US	1	0	0
-16	1	17	2026-11-14 12:19:25	2026-11-14 12:19:25	2026-11-14 12:19:25	1	en_US	1	0	0
-18	1	19	2026-11-14 12:21:15	2026-11-14 12:21:08	2026-11-14 12:21:08	1	en_US	4	0	0
+6	1	7	2026-11-15 12:48:40	2026-11-15 12:48:22	2026-11-15 12:48:22	5	en_US	1	0	0
+19	1	20	2026-11-15 12:53:54	2026-11-15 12:53:38	2026-11-15 12:53:38	4	en_US	1	0	0
+10	1	11	2026-11-15 12:50:17	2026-11-15 12:49:53	2026-11-15 12:49:53	3	en_US	1	0	0
+13	1	14	2026-11-15 12:51:33	2026-11-15 12:50:54	2026-11-15 12:50:54	3	en_US	1	0	0
+3	1	4	2026-11-15 12:47:37	2026-11-15 12:47:22	2026-11-15 12:47:22	4	en_US	1	0	0
+7	1	8	2026-11-15 12:49:08	2026-11-15 12:48:48	2026-11-15 12:48:48	3	en_US	1	0	0
+14	1	15	2026-11-15 12:51:41	2026-11-15 12:51:40	2026-11-15 12:51:40	1	en_US	1	0	0
+11	1	12	2026-11-15 12:50:27	2026-11-15 12:50:27	2026-11-15 12:50:27	1	en_US	1	0	0
+4	1	5	2026-11-15 12:47:47	2026-11-15 12:47:47	2026-11-15 12:47:47	1	en_US	1	0	0
+8	1	9	2026-11-15 12:49:18	2026-11-15 12:49:18	2026-11-15 12:49:18	1	en_US	1	0	0
+12	1	13	2026-11-15 12:50:46	2026-11-15 12:50:34	2026-11-15 12:50:34	3	en_US	1	0	0
+1	1	1	2026-11-15 12:46:49	2026-11-15 12:45:05	2026-11-15 12:45:05	5	en_US	3	0	0
+5	1	6	2026-11-15 12:48:14	2026-11-15 12:47:54	2026-11-15 12:47:54	5	en_US	1	0	0
+17	1	18	2026-11-15 12:53:17	2026-11-15 12:52:22	2026-11-15 12:52:22	5	en_US	3	0	0
+15	1	16	2026-11-15 12:52:06	2026-11-15 12:51:48	2026-11-15 12:51:48	5	en_US	1	0	0
+9	1	10	2026-11-15 12:49:44	2026-11-15 12:49:25	2026-11-15 12:49:25	5	en_US	1	0	0
+2	1	3	2026-11-15 12:47:11	2026-11-15 12:46:59	2026-11-15 12:46:59	3	en_US	1	0	0
+16	1	17	2026-11-15 12:52:15	2026-11-15 12:52:14	2026-11-15 12:52:14	1	en_US	1	0	0
+18	1	19	2026-11-15 12:53:31	2026-11-15 12:53:27	2026-11-15 12:53:27	1	en_US	4	0	0
 \.
 
 
@@ -9072,41 +8914,41 @@ COPY public.user_user_groups (user_group_id, user_id) FROM stdin;
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
-19	ckwantes	$2y$10$0sUveOhRXiT1.G1nnCN0/OvpUr6B01s436dIixjHNQ.8Bi.HlAu8G	ckwantes@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-11-14 12:12:58	\N	2026-11-14 12:12:58	0	\N	\N	0	\N	1
-20	cmontgomerie	$2y$10$HmyrLZeZ8x5IXMTiFYyBku3yRXE9Gh8lc6qyQa.aXnSvu23jArQ8S	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-11-14 12:13:26	\N	2026-11-14 12:13:27	0	\N	\N	0	\N	1
-4	dbuskins	$2y$10$3YzQPh72f3ZQ5N.aXdtJGeyq7Q9XW0NMhErNpo9SnkYJW56hyKjRq	dbuskins@mailinator.com				\N	US		\N	\N	2026-11-14 12:07:50	\N	2026-11-14 12:07:50	0	\N	\N	0	\N	1
-5	sberardo	$2y$10$Y5bsVBnFAKtfvAVYanoxcusbIxoBbUSdFzHqLuSfGSXpJAMU4zMt6	sberardo@mailinator.com				\N	CA		\N	\N	2026-11-14 12:07:57	\N	2026-11-14 12:07:57	0	\N	\N	0	\N	1
-11	mfritz	$2y$10$mBYkSYqhg5fCqIeGi6rPIOzu7nIvytO0D3fWNVNTlbyd2zmlQKadq	mfritz@mailinator.com				\N	BE		\N	\N	2026-11-14 12:08:42	\N	2026-11-14 12:08:42	0	\N	\N	0	\N	1
-12	svogt	$2y$10$G2.J/FyP..7XywS3ykJgT.n/MO8O657OZWDGLuoSCiMZkYaZD5wi.	svogt@mailinator.com				\N	CL		\N	\N	2026-11-14 12:08:51	\N	2026-11-14 12:08:51	0	\N	\N	0	\N	1
-13	gcox	$2y$10$qwnp3b7e2bGGQCmfln3jIeyvSQzu.QJbHWXlCDcQIRAG1ugXLVqJS	gcox@mailinator.com				\N	US		\N	\N	2026-11-14 12:09:00	\N	2026-11-14 12:09:00	0	\N	\N	0	\N	1
-14	shellier	$2y$10$Q7K3AtuMFoj94jMa748EkeHHNr2xdLDI8pv4r1v4lQSCCWYiiFgBC	shellier@mailinator.com				\N	ZA		\N	\N	2026-11-14 12:09:10	\N	2026-11-14 12:09:10	0	\N	\N	0	\N	1
-15	cturner	$2y$10$aTlE5OQ9U1JA67uyMNhWz.TDogDm8XTWlhjoJv3fH7Wm2FMM2GAkK	cturner@mailinator.com				\N	GB		\N	\N	2026-11-14 12:09:21	\N	2026-11-14 12:09:21	0	\N	\N	0	\N	1
-16	skumar	$2y$10$C1ygxrDbrhvdz7HWPhAB2.Vk.zSkRMQOGxLqNjkFppVhm3Yx.VPXi	skumar@mailinator.com				\N	SG		\N	\N	2026-11-14 12:09:32	\N	2026-11-14 12:09:32	0	\N	\N	0	\N	1
-21	ddiouf	$2y$10$3wpm8qBe/jjlaOJ7ltyqcufCGHOQulnu2WQ5IBpoDqm9orfl/BWKK	ddiouf@mailinator.com	\N	\N	\N	\N	EG		\N	\N	2026-11-14 12:13:39	\N	2026-11-14 12:13:39	0	\N	\N	0	\N	1
-2	rvaca	$2y$10$NS3gHS0G1mcxECdn7kyWOeTSxJM1NstMw6eSl4/k7nxg3f.hXdfIi	rvaca@mailinator.com				\N	MX		\N	\N	2026-11-14 12:07:39	\N	2026-11-14 12:09:41	0	\N	\N	0	\N	1
-27	kalkhafaji	$2y$10$TMhPhf6PrElTmtYpEC9DTu73ECFfWfXxZfusghUmogCqhvkwsJ6Ja	kalkhafaji@mailinator.com	\N	\N	\N	\N	US		\N	\N	2026-11-14 12:16:54	\N	2026-11-14 12:16:54	0	\N	\N	0	\N	1
-1	admin	$2y$10$sNPivaPMQ.GhqDQI3/oK2ePfgf1KPXju9.JVBwKs7IxTrOed6Nlka	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2026-11-14 12:06:49	\N	2026-11-14 12:09:55	0	\N	\N	0	\N	1
-22	dphillips	$2y$10$wQsu1QHxgAIGZaDByIi3EesjY6.WeGSI9nCK5evzd5TTkW3Hhc2gC	dphillips@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-11-14 12:14:16	\N	2026-11-14 12:14:16	0	\N	\N	0	\N	1
-23	dsokoloff	$2y$10$0sL//ivUHnvtiR2/OlzCZ.S2bjOmlFIwBP8L1gfdjEK6t0NqzkMXi	dsokoloff@mailinator.com	\N	\N	\N	\N	IE		\N	\N	2026-11-14 12:14:50	\N	2026-11-14 12:14:50	0	\N	\N	0	\N	1
-17	amwandenga	$2y$10$.Ek97j2El9kfIoaeFvcYour.7d6SlcPntL9U0rjvaShk7pWZ.efaO	amwandenga@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2026-11-14 12:10:06	\N	2026-11-14 12:11:15	0	\N	\N	0	\N	1
-28	lchristopher	$2y$10$Fw9tQxMj0HdxSCp8yTZGl.boRUw4D5c6U8ZE75p9YVs54zMOZfmSq	lchristopher@mailinator.com	\N	\N	\N	\N	AU		\N	\N	2026-11-14 12:17:06	\N	2026-11-14 12:17:07	0	\N	\N	0	\N	1
-8	phudson	$2y$10$GIEzNRWwVBXFuty4vkCtne4NBUjA3YxsMlJqchkn5UxjEePY1Q31m	phudson@mailinator.com				\N	CA		\N	\N	2026-11-14 12:08:17	\N	2026-11-14 12:15:15	0	\N	\N	0	\N	1
-24	eostrom	$2y$10$5IwLDxdR6F9MInoCLzkdzukP5odroNhRfeLzh1TNi9wX1vGA2SijS	eostrom@mailinator.com	\N	\N	\N	\N	US		\N	\N	2026-11-14 12:15:25	\N	2026-11-14 12:15:25	0	\N	\N	0	\N	1
-25	fpaglieri	$2y$10$BOzxK.6gPX4kIS4VywtTP.A53Kg63P0.sigJoHSTBhoxVrv28/M.y	fpaglieri@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2026-11-14 12:15:37	\N	2026-11-14 12:15:38	0	\N	\N	0	\N	1
-18	ccorino	$2y$10$rlb4I/JWHZhWiZhZqQNvqONzbRU.UkTTjb5xcDrKs0kfjXuwb6K5u	ccorino@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2026-11-14 12:12:25	\N	2026-11-14 12:12:25	0	\N	\N	0	\N	1
-6	minoue	$2y$10$ZJGpUSW8Og1Qa5hPO6Ygz.4BxECib7F.8XTtPOudU4OgCdcMQ3N9.	minoue@mailinator.com				\N	JP		\N	\N	2026-11-14 12:08:03	\N	2026-11-14 12:12:44	0	\N	\N	0	\N	1
-26	jnovak	$2y$10$4yNrL/wIz.2GwQWRamElZuCX.sIM/.Q6YIudmYkZhTkQJmqi25Wbi	jnovak@mailinator.com	\N	\N	\N	\N	DK		\N	\N	2026-11-14 12:16:15	\N	2026-11-14 12:16:15	0	\N	\N	0	\N	1
-32	rrossi	$2y$10$cTks2.9EEHU2g4Diz0Rer.UYnOax3LjEWrlahS9zm2B.yTJRb0L1m	rrossi@mailinator.com	\N	\N	\N	\N	ES		\N	\N	2026-11-14 12:19:19	\N	2026-11-14 12:19:19	0	\N	\N	0	\N	1
-33	vkarbasizaed	$2y$10$tSM9Cx68D6GgsBa6hcF89uqxXEgWRGggUeD8yHKqVMgMZX7Q9lURG	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR		\N	\N	2026-11-14 12:19:29	\N	2026-11-14 12:19:29	0	\N	\N	0	\N	1
-29	lkumiega	$2y$10$QdM/LuwE48OWz6Xp/4VO.ufHXog5/6MY7J5d2F8WBv7YwgS0tVlfS	lkumiega@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2026-11-14 12:17:31	\N	2026-11-14 12:17:31	0	\N	\N	0	\N	1
-34	vwilliamson	$2y$10$461N.zzWtPnVgz.PHabYBuwG0QM3fohbvzL2dVKjoH.GDjKYNpZwi	vwilliamson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-11-14 12:21:03	\N	2026-11-14 12:21:03	0	\N	\N	0	\N	1
-7	jjanssen	$2y$10$TYhu3h.p7x/.t0m1EdAbKebtDSpCjCoNbsmAOS/6522sF.IXr6MBy	jjanssen@mailinator.com				\N	NL		\N	\N	2026-11-14 12:08:10	\N	2026-11-14 12:17:58	0	\N	\N	0	\N	1
-9	amccrae	$2y$10$frF0JqDR6njft3U0ENunD.yyeMtXuU4jHmjmUiLrh9T5spQ4hYt7a	amccrae@mailinator.com				\N	CA		\N	\N	2026-11-14 12:08:25	\N	2026-11-14 12:18:05	0	\N	\N	0	\N	1
-10	agallego	$2y$10$glHIk0IZb.5CWnbJDsjV5e0cgx5HV.1PFZcnHgU1B4C8M6cMbEhEG	agallego@mailinator.com				\N	US		\N	\N	2026-11-14 12:08:33	\N	2026-11-14 12:18:14	0	\N	\N	0	\N	1
-30	pdaniel	$2y$10$wLeM24vhN7yxaA3/FIUQ6.r5hQW.JvQNPaeSe8Ic.HY67Lhi0Iz0.	pdaniel@mailinator.com	\N	\N	\N	\N	GB		\N	\N	2026-11-14 12:18:34	\N	2026-11-14 12:18:34	0	\N	\N	0	\N	1
-31	rbaiyewu	$2y$10$sGqmmBJkgj44DlDIhxJsAu3nahMVhLzK6NnTL4yimj4qZRLaIlY2e	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE		\N	\N	2026-11-14 12:18:43	\N	2026-11-14 12:18:44	0	\N	\N	0	\N	1
-35	zwoods	$2y$10$ks2Yx2yoXfWRnterKClbduUyGiQgfXIll7Rxc9SZlITAwnB6Elqqy	zwoods@mailinator.com	\N	\N	\N	\N	US		\N	\N	2026-11-14 12:21:18	\N	2026-11-14 12:21:19	0	\N	\N	0	\N	1
-3	dbarnes	$2y$10$ei06gF.yZBtdHAxScufzre1s5vob.aQgvm4i2SuX5EbYp6.CSa5Cm	dbarnes@mailinator.com				\N	AU		\N	\N	2026-11-14 12:07:44	\N	2026-11-14 12:21:25	0	\N	\N	0	\N	1
+19	ckwantes	$2y$10$GVnt7f2SM9IW7S4YoOALhu7HINcXH0IGmKW9/HquEMxUIpA7PbdA.	ckwantes@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-11-15 12:47:18	\N	2026-11-15 12:47:18	0	\N	\N	0	\N	1
+20	cmontgomerie	$2y$10$3wA/EEXj.ZAAA5Y8adDGsOs70IQ9CImTrvG1rhV9OgxAEcFsYJ2se	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-11-15 12:47:40	\N	2026-11-15 12:47:41	0	\N	\N	0	\N	1
+4	dbuskins	$2y$10$oSKDL/KJrNnygY7WM.RiFezb5odvz9tgH6aL2Pvpgp9clVm8DdPVC	dbuskins@mailinator.com				\N	US		\N	\N	2026-11-15 12:43:13	\N	2026-11-15 12:43:13	0	\N	\N	0	\N	1
+5	sberardo	$2y$10$tdMa3UUptK3/4mmsCUOe6umtZrf5bQAzlVozXKeME4691LZbpDm/6	sberardo@mailinator.com				\N	CA		\N	\N	2026-11-15 12:43:19	\N	2026-11-15 12:43:19	0	\N	\N	0	\N	1
+11	mfritz	$2y$10$E.CNPPIIyu/9vZXP9LhmWe9yFvJJWRcAZ9HjITg11oIuBy4bJZ6gK	mfritz@mailinator.com				\N	BE		\N	\N	2026-11-15 12:43:56	\N	2026-11-15 12:43:56	0	\N	\N	0	\N	1
+12	svogt	$2y$10$TgzKlugWtzSKZPyl5C1he.94xzdMNTXkBsKVVsqtN6c8vFv9urmke	svogt@mailinator.com				\N	CL		\N	\N	2026-11-15 12:44:02	\N	2026-11-15 12:44:02	0	\N	\N	0	\N	1
+13	gcox	$2y$10$dz8iTgSoHnHmsirCiZcRWOUUHls2cXPZ55NnaEzcB4IFEY3x9/Fi2	gcox@mailinator.com				\N	US		\N	\N	2026-11-15 12:44:10	\N	2026-11-15 12:44:10	0	\N	\N	0	\N	1
+14	shellier	$2y$10$Ag1AcHJT/OXsEIAEMxiHkuwIRTm55yks/BrQtMzxjGMGeU/4GtP66	shellier@mailinator.com				\N	ZA		\N	\N	2026-11-15 12:44:17	\N	2026-11-15 12:44:17	0	\N	\N	0	\N	1
+15	cturner	$2y$10$KcWW4EJH9yu0K4ZN5tNeAOuU5SuZuHe7K5nruvVKz1QOBUbv6MBmm	cturner@mailinator.com				\N	GB		\N	\N	2026-11-15 12:44:25	\N	2026-11-15 12:44:25	0	\N	\N	0	\N	1
+16	skumar	$2y$10$95YqEku4MQejvljpso0.YOQGkkJkKlN3/txTxc9hWBl1rA8YgJeqK	skumar@mailinator.com				\N	SG		\N	\N	2026-11-15 12:44:34	\N	2026-11-15 12:44:34	0	\N	\N	0	\N	1
+21	ddiouf	$2y$10$1PWB7GnYww/Bmc4d/HTKAuTrrRd4mEiUqTvMHEmBQi1Fk8KiZAhlO	ddiouf@mailinator.com	\N	\N	\N	\N	EG		\N	\N	2026-11-15 12:47:50	\N	2026-11-15 12:47:51	0	\N	\N	0	\N	1
+2	rvaca	$2y$10$i.zwEKbXatFYJw54RT.n3e20sVmVLzjgkQKyaIwuQskbSO3i1kMvy	rvaca@mailinator.com				\N	MX		\N	\N	2026-11-15 12:43:02	\N	2026-11-15 12:44:40	0	\N	\N	0	\N	1
+27	kalkhafaji	$2y$10$yJUMUQUVOsqE3xLlwghkgO1PgFtEhTmNkgNC4nduiXS5H7ktFg2Bu	kalkhafaji@mailinator.com	\N	\N	\N	\N	US		\N	\N	2026-11-15 12:50:20	\N	2026-11-15 12:50:20	0	\N	\N	0	\N	1
+1	admin	$2y$10$KjlTwzmqYxQ154robAl0G.RP4T8LR1lQNu4o3UKOXZIwtB2zTVpom	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2026-11-15 12:42:25	\N	2026-11-15 12:44:51	0	\N	\N	0	\N	1
+22	dphillips	$2y$10$Da7TJbwGjRxEzB/knT8psOk2sXPzGabG7MJs6re4A0/jzrxlXtpxm	dphillips@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-11-15 12:48:18	\N	2026-11-15 12:48:18	0	\N	\N	0	\N	1
+23	dsokoloff	$2y$10$Hihs3yj02IGAdhyeofydf.y.NFp6a90lccV0dEvdFsrMVQ/VZKoaa	dsokoloff@mailinator.com	\N	\N	\N	\N	IE		\N	\N	2026-11-15 12:48:44	\N	2026-11-15 12:48:44	0	\N	\N	0	\N	1
+17	amwandenga	$2y$10$5ygggMfvg4IIkVWaPxCSfOsCxuEijhNBl4Qo2kxHAxKlWgEE7Aa1S	amwandenga@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2026-11-15 12:45:01	\N	2026-11-15 12:45:56	0	\N	\N	0	\N	1
+28	lchristopher	$2y$10$2OanAK5CE9DoUsV79AIT1.uBxyXergrCLChWb7GObakzbwECoca1q	lchristopher@mailinator.com	\N	\N	\N	\N	AU		\N	\N	2026-11-15 12:50:30	\N	2026-11-15 12:50:30	0	\N	\N	0	\N	1
+8	phudson	$2y$10$fWa5KxcMqxyfILZrlgvLaO7ENvTaGr.GZw3ftkBCHjyjlWokEMkJq	phudson@mailinator.com				\N	CA		\N	\N	2026-11-15 12:43:36	\N	2026-11-15 12:49:04	0	\N	\N	0	\N	1
+24	eostrom	$2y$10$n7qB4o1ffnPj.lsH9dHsb.jMwchAxG75kvmHH2O0p9lxjLdDEzWsO	eostrom@mailinator.com	\N	\N	\N	\N	US		\N	\N	2026-11-15 12:49:12	\N	2026-11-15 12:49:12	0	\N	\N	0	\N	1
+25	fpaglieri	$2y$10$ycSwpt/BEQO30Jl9yxUKquAlaswRbpokCXB8atYOjb0PnJpjfXadG	fpaglieri@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2026-11-15 12:49:22	\N	2026-11-15 12:49:22	0	\N	\N	0	\N	1
+18	ccorino	$2y$10$/B/v/xMoqDTrRa/cl8KdMufU0cGOwe5txeKPPKcr3ovSMeg2F5Hve	ccorino@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2026-11-15 12:46:54	\N	2026-11-15 12:46:55	0	\N	\N	0	\N	1
+6	minoue	$2y$10$f2DtfDOaWfwyAT471qg7lOdf6nzjNUofz2gQXmrHC1eMymTZDHmpm	minoue@mailinator.com				\N	JP		\N	\N	2026-11-15 12:43:24	\N	2026-11-15 12:47:08	0	\N	\N	0	\N	1
+26	jnovak	$2y$10$7TK8n.7hVjZO6QiKS0WWveNrMnd2JpdIi1Iq7VNHoS89Gq/pRcHS6	jnovak@mailinator.com	\N	\N	\N	\N	DK		\N	\N	2026-11-15 12:49:49	\N	2026-11-15 12:49:49	0	\N	\N	0	\N	1
+32	rrossi	$2y$10$DdIR2aaCehQhVPbbW3AypuYQl9EsMQo2re4PsuuVZyYo3W91YdlD2	rrossi@mailinator.com	\N	\N	\N	\N	ES		\N	\N	2026-11-15 12:52:10	\N	2026-11-15 12:52:10	0	\N	\N	0	\N	1
+33	vkarbasizaed	$2y$10$1JIhWPL5CZto5qKTgj24UOjjlQuP9857PEBfZ6UcMWyNp0N8It2bK	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR		\N	\N	2026-11-15 12:52:18	\N	2026-11-15 12:52:18	0	\N	\N	0	\N	1
+29	lkumiega	$2y$10$uhbic1UxVW04N9qkkwtvn.kROA3XViiXN6XF.puLFua7WIeKaLgcS	lkumiega@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2026-11-15 12:50:49	\N	2026-11-15 12:50:49	0	\N	\N	0	\N	1
+34	vwilliamson	$2y$10$SqKSvTwro7EbXdzmnZVt7u6s/m4D/.iSlvypJzhIjHMMzbJzC7G16	vwilliamson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-11-15 12:53:23	\N	2026-11-15 12:53:23	0	\N	\N	0	\N	1
+7	jjanssen	$2y$10$25j8qMmmYG0UIqHymhETQOTzoK9RgU76a7V.i0HW9X.pMc2XoDIta	jjanssen@mailinator.com				\N	NL		\N	\N	2026-11-15 12:43:30	\N	2026-11-15 12:51:10	0	\N	\N	0	\N	1
+9	amccrae	$2y$10$AStzuaXRqV6X5Vdb8AL6WORj3CREqxXusC5FLHqTYwkQ/M4Bfc7c6	amccrae@mailinator.com				\N	CA		\N	\N	2026-11-15 12:43:43	\N	2026-11-15 12:51:16	0	\N	\N	0	\N	1
+10	agallego	$2y$10$5GEefgumT/iE8UFCq38Okuo1roTgYOXmLvelgIKGLY5s2uHH9H0Oe	agallego@mailinator.com				\N	US		\N	\N	2026-11-15 12:43:49	\N	2026-11-15 12:51:22	0	\N	\N	0	\N	1
+30	pdaniel	$2y$10$jup8fzew5WGhf9.oI6dVFu73OntrsbIBURrBO3wMKZqUDQMGd8aBG	pdaniel@mailinator.com	\N	\N	\N	\N	GB		\N	\N	2026-11-15 12:51:36	\N	2026-11-15 12:51:36	0	\N	\N	0	\N	1
+31	rbaiyewu	$2y$10$TSH01mOaF7aoM4LjEy9xMuqMiXFlOW1QU9LBNz2VwxAP/c26CTRxO	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE		\N	\N	2026-11-15 12:51:44	\N	2026-11-15 12:51:44	0	\N	\N	0	\N	1
+35	zwoods	$2y$10$iTSNirNtD17M5JUyG3b1Y.yPmASNwmtJxBKFFUVRc/yPS10/WfU3W	zwoods@mailinator.com	\N	\N	\N	\N	US		\N	\N	2026-11-15 12:53:34	\N	2026-11-15 12:53:34	0	\N	\N	0	\N	1
+3	dbarnes	$2y$10$.Oue6jGm2C2qqPMGciLEO.x2hDpMSDRrfHUu1JpTK8gPbIKQr8K.i	dbarnes@mailinator.com				\N	AU		\N	\N	2026-11-15 12:43:08	\N	2026-11-15 12:53:40	0	\N	\N	0	\N	1
 \.
 
 
@@ -9115,55 +8957,55 @@ COPY public.users (user_id, username, password, email, url, phone, mailing_addre
 --
 
 COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	0	0	0	2026-11-14 12:06:49	1	plugins.metadata	dc11		0	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.auth	ldap		0	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.blocks	information	InformationBlockPlugin	1	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-1	0	1	0	2026-11-14 12:06:49	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
-1	1	0	0	2026-11-14 12:06:49	1	plugins.blocks	subscription	SubscriptionBlockPlugin	1	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.gateways	resolver		0	0
-1	1	3	15	2026-11-14 12:06:49	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
-1	2	0	0	2026-11-14 12:06:49	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.generic	driver	DRIVERPlugin	1	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.generic	webFeed	WebFeedPlugin	1	0
-1	1	0	0	2026-11-14 12:06:49	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.generic	usageEvent		0	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.generic	recommendBySimilarity	RecommendBySimilarityPlugin	1	1
-0	1	0	0	2026-11-14 12:06:49	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.generic	announcementFeed	AnnouncementFeedPlugin	1	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
-1	0	0	0	2026-11-14 12:06:49	1	plugins.generic	recommendByAuthor	RecommendByAuthorPlugin	1	1
-1	0	0	0	2026-11-14 12:06:49	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
-1	0	1	0	2026-11-14 12:06:49	1	plugins.generic	lensGalley	LensGalleyPlugin	1	0
-1	2	0	0	2026-11-14 12:06:49	1	plugins.generic	acron	AcronPlugin	1	1
-1	2	0	0	2026-11-14 12:06:49	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-1	0	1	0	2026-11-14 12:06:49	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.generic	htmlArticleGalley	HtmlArticleGalleyPlugin	1	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.importexport	pubmed		0	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.importexport	native		0	0
-1	1	0	0	2026-11-14 12:06:49	1	plugins.importexport	doaj		0	0
-2	0	0	0	2026-11-14 12:06:49	1	plugins.importexport	datacite		0	0
-2	1	0	0	2026-11-14 12:06:49	1	plugins.importexport	crossref		0	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.importexport	users		0	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.oaiMetadataFormats	marc		0	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.oaiMetadataFormats	dc		0	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.oaiMetadataFormats	rfc1807		0	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.oaiMetadataFormats	marcxml		0	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.paymethod	manual		0	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.paymethod	paypal		0	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.pubIds	urn	URNPubIdPlugin	1	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.pubIds	doi	DOIPubIdPlugin	1	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.reports	articles		0	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.reports	views		0	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.reports	subscriptions		0	0
-2	0	0	0	2026-11-14 12:06:49	1	plugins.reports	reviewReport		0	0
-1	0	0	0	2026-11-14 12:06:49	1	plugins.themes	default	DefaultThemePlugin	1	0
-3	3	0	24	2026-11-14 12:06:48	1	core	ojs2		0	1
-1	1	0	0	2026-11-14 12:06:49	1	plugins.reports	counterReport		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.metadata	dc11		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.auth	ldap		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+1	0	1	0	2026-11-15 12:42:25	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
+1	1	0	0	2026-11-15 12:42:25	1	plugins.blocks	subscription	SubscriptionBlockPlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.blocks	information	InformationBlockPlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.gateways	resolver		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.generic	announcementFeed	AnnouncementFeedPlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.generic	recommendBySimilarity	RecommendBySimilarityPlugin	1	1
+1	0	1	0	2026-11-15 12:42:25	1	plugins.generic	lensGalley	LensGalleyPlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+1	2	0	0	2026-11-15 12:42:25	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.generic	usageEvent		0	0
+1	1	3	15	2026-11-15 12:42:25	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.generic	driver	DRIVERPlugin	1	0
+1	2	0	0	2026-11-15 12:42:25	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.generic	recommendByAuthor	RecommendByAuthorPlugin	1	1
+1	1	0	0	2026-11-15 12:42:25	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+0	1	0	0	2026-11-15 12:42:25	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.generic	htmlArticleGalley	HtmlArticleGalleyPlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
+1	2	0	0	2026-11-15 12:42:25	1	plugins.generic	acron	AcronPlugin	1	1
+1	0	1	0	2026-11-15 12:42:25	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+2	1	0	0	2026-11-15 12:42:25	1	plugins.importexport	crossref		0	0
+1	1	0	0	2026-11-15 12:42:25	1	plugins.importexport	doaj		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.importexport	native		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.importexport	users		0	0
+2	0	0	0	2026-11-15 12:42:25	1	plugins.importexport	datacite		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.importexport	pubmed		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.oaiMetadataFormats	marc		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.oaiMetadataFormats	rfc1807		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.oaiMetadataFormats	marcxml		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.oaiMetadataFormats	dc		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.paymethod	paypal		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.paymethod	manual		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.pubIds	doi	DOIPubIdPlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.pubIds	urn	URNPubIdPlugin	1	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.reports	articles		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.reports	subscriptions		0	0
+2	0	0	0	2026-11-15 12:42:25	1	plugins.reports	reviewReport		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.reports	views		0	0
+1	0	0	0	2026-11-15 12:42:25	1	plugins.themes	default	DefaultThemePlugin	1	0
+3	3	0	24	2026-11-15 12:42:24	1	core	ojs2		0	1
+1	1	0	0	2026-11-15 12:42:25	1	plugins.reports	counterReport		0	0
 \.
 
 
@@ -9283,7 +9125,7 @@ SELECT pg_catalog.setval('public.email_templates_email_id_seq', 1, false);
 -- Name: event_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
 --
 
-SELECT pg_catalog.setval('public.event_log_log_id_seq', 283, true);
+SELECT pg_catalog.setval('public.event_log_log_id_seq', 267, true);
 
 
 --
@@ -9423,7 +9265,7 @@ SELECT pg_catalog.setval('public.notification_subscription_settings_setting_id_s
 -- Name: notifications_notification_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
 --
 
-SELECT pg_catalog.setval('public.notifications_notification_id_seq', 288, true);
+SELECT pg_catalog.setval('public.notifications_notification_id_seq', 285, true);
 
 
 --
@@ -9493,7 +9335,7 @@ SELECT pg_catalog.setval('public.sections_section_id_seq', 2, true);
 -- Name: stage_assignments_stage_assignment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
 --
 
-SELECT pg_catalog.setval('public.stage_assignments_stage_assignment_id_seq', 93, true);
+SELECT pg_catalog.setval('public.stage_assignments_stage_assignment_id_seq', 91, true);
 
 
 --
@@ -9514,14 +9356,14 @@ SELECT pg_catalog.setval('public.submission_comments_comment_id_seq', 6, true);
 -- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
 --
 
-SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 31, true);
+SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 24, true);
 
 
 --
 -- Name: submission_files_submission_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
 --
 
-SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 31, true);
+SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 24, true);
 
 
 --
@@ -11392,5 +11234,5 @@ ALTER TABLE ONLY public.submission_files
 -- PostgreSQL database dump complete
 --
 
-\unrestrict A8ra9pqhTltJU5mQa1ZqIyV8uftKGdA8lXTEnkrkarn9qu2eceBHBJF5IQvdsV8
+\unrestrict mur9JTqDzjZupJofPDEKlVgmTIr9RJvqCc9AUEbvHV8WUsLj06oLxUIPshIpOZY
 
