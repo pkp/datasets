@@ -1,0 +1,4 @@
+[2026-11-22 13:18:39] http://localhost
+[2026-11-22 13:18:39] [Notice] Task process started.
+[2026-11-22 13:18:50] [Error] cURL error 18: transfer closed with 31453462 bytes remaining to read (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://zenodo.org/api/records/24378467/files/v2.16-2026-11-19-ror-data.zip/content
+[2026-11-22 13:18:50] [Notice] Task process stopped.
