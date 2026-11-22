@@ -1,6 +1,0 @@
-[2026-11-21 13:26:13] production.INFO: http://localhost  
-[2026-11-21 13:26:13] production.NOTICE: Task process started.  
-[2026-11-21 13:26:29] production.ERROR: Server error: `GET https://zenodo.org/api/records/24378467/files/v2.16-2026-11-19-ror-data.zip/content` resulted in a `500 INTERNAL SERVER ERROR` response:
-{"error_id":"0e94f3b6e31740ea8ad314c8513befae","message":"The server encountered an internal error and was unable to com (truncated...)
-  
-[2026-11-21 13:26:29] production.NOTICE: Task process stopped.  
