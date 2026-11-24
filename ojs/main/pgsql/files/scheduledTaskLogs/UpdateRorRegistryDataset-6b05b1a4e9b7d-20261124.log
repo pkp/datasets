@@ -1,0 +1,9 @@
+[2026-11-24 15:47:48] production.INFO: http://localhost  
+[2026-11-24 15:47:48] production.NOTICE: Task process started.  
+[2026-11-24 15:47:49] production.ERROR: Client error: `GET https://zenodo.org/api/records/6347574` resulted in a `403 Forbidden` response:
+
+          <html>
+          <head><title>403 Forbidden</title></head>
+          <body style="max-width: 600px; margin: 4 (truncated...)
+  
+[2026-11-24 15:47:49] production.NOTICE: Task process stopped.  
