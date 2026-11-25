@@ -1,9 +1,0 @@
-[2026-11-24 15:47:38] http://localhost
-[2026-11-24 15:47:38] [Notice] Task process started.
-[2026-11-24 15:47:38] [Error] Client error: `GET https://zenodo.org/api/records/6347574` resulted in a `403 Forbidden` response:
-
-          <html>
-          <head><title>403 Forbidden</title></head>
-          <body style="max-width: 600px; margin: 4 (truncated...)
-
-[2026-11-24 15:47:38] [Notice] Task process stopped.
